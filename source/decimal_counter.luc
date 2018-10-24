@@ -1,0 +1,23 @@
+//Modified from IO Shield Demo as code was initally meant for demo counter
+module decimal_counter (
+    input clk,      // clock
+    input rst,      // reset
+    input inc,      // increment the counter      
+    output bit_value[3] //For output to mojo_top
+  ) {
+  
+  .clk(clk), .rst(rst) {
+    dff bit_count[3]; //3 bit storage for 8 permutation of A,B,Cin
+  }
+
+  always {
+    bit_value = bit_count.q; //Stored in bit_value for usage in mojo_top
+    
+    if (inc) {               // should add 1        
+      if (bit_count.q == 8)        // if max value, 8 is represented by 111, which means A,B,Cin are all lit.
+        bit_count.d = 0;           // reset to 0
+      else                   // otherwise
+        bit_count.d = bit_count.q + 1;   // Increase binary value by 1
+    }
+  }
+}

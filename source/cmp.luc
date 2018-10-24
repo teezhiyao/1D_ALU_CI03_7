@@ -1,0 +1,24 @@
+module cmp ( //performs CMPEQ, CMPLT, CMPLE functions
+    input alufn[4], //input from ALU
+    input z,
+    input v,
+    input n,
+    output cmp_out[16] //output to ALU
+  ) {
+sig cmp; 
+  always {
+    case(alufn[2:1]){ //values of alufn that define comparator function
+    01: //compare equal
+      cmp = z; 
+    10: //compare less than
+      cmp = n ^ v; // ^ represents XOR so n XOR V
+    11: //compare less than equal
+      cmp = z | (n^v); // | represents OR
+    default:
+      cmp = 0; //default needed
+  }
+    cmp_out[0]=cmp; // least significant bit of cmp 
+    cmp_out[15:1] = 15b0;
+
+}
+}

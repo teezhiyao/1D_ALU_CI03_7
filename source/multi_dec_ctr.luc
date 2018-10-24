@@ -1,0 +1,20 @@
+module multi_dec_ctr #(
+    DIGITS = 4 : DIGITS >= 2  // number of digits
+  ) (
+    input clk,                // clock
+    input rst,                // reset
+    input inc,                // increment counter
+    output bit_count[3]
+    ) {
+  
+  .clk(clk), .rst(rst) {
+    decimal_counter dct ; // digit counters
+
+      }
+  
+  always {
+    dct.inc[0] = inc;
+    bit_count = dct.bit_value;
+
+  }
+}

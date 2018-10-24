@@ -1,0 +1,22 @@
+module shift (
+    input alufn[4],
+    input a[16],  
+    input shift_bit[6],
+    output shift_out[16]
+  ) {
+
+  always {
+    case(alufn[1:0]){
+    00:
+    shift_out = a << shift_bit[5:0]; //shifting left
+    01:
+    shift_out = a >> shift_bit[5:0]; //shifting right
+    11:
+    shift_out = $signed(a)>>>shift_bit[5:0]; // arithmetic right shift
+      default:
+      shift_out = a;
+    
+   
+  }
+}
+}
