@@ -15,7 +15,10 @@ sig sum[16]; //9-bit output
     00: 
       sum = a+b; //addition
     01:
-      sum = a-b; //subtraction
+      if(a > b){
+      sum = a-b;}
+      else{
+        sum = b-a;} //subtraction
     10:
       sum = 0;
       //implement additional feature here

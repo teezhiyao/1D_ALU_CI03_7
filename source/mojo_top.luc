@@ -28,7 +28,7 @@ module mojo_top (
         .rst(rst) {
       multi_seven_seg seg_display; //Connecting to multi_seven_seg which would help displaying on the segment
  
-      fsm state = {ALUFN,INPUT_A,INPUT_B,AUTO,DISPLAY};
+      fsm state = {ALUFN,INPUT_A,INPUT_B,AUTO,DISPLAY1,DISPLAY2, DISPLAY3,DISPLAY4};
 
                 }
     dff display_value[4][4]; // Size of LED segments
@@ -39,8 +39,7 @@ module mojo_top (
     dff send[1];
     dff check_input[8];
   }
-  bin_to_dec digits (#DIGITS(4));
-
+  bin_to_dec digits (#DIGITS(5));
    always{
     io_led = io_dip;
     reset_cond.in = ~rst_n; // input raw inverted reset signal
@@ -73,7 +72,7 @@ module mojo_top (
           //Modify so that the led will not light up is ALUFN input is invalid
           check_input.d[7] = 1;}          
           else 
-            {display_value.d = {4d11, 4d12, 4d13, 4d9};} // Array represents the 4 digit to be displayed. 4d9 represents default value as 9 is not defined in digit_lut 
+            {display_value.d = {4d15, 4d12, 4d13, 4d10};} // Array represents the 4 digit to be displayed. 4d9 represents default value as 9 is not defined in digit_lut 
 
       state.INPUT_A:  
           mode.d = 1;
@@ -82,31 +81,46 @@ module mojo_top (
           input_a_st.d = io_dip[15:0];
           check_input.d[6] = 1;}
           else 
-            {display_value.d = {4d11, 4d9, 4d9, 4d9};} // Array represents the 4 digit to be displayed. 4d9 represents default value as 9 is not defined in digit_lut 
+            {display_value.d = {4d15, 4d10, 4d10, 4d10};} // Array represents the 4 digit to be displayed. 4d9 represents default value as 9 is not defined in digit_lut 
 
       state.INPUT_B: 
           mode.d = 3;
           if (send.q)
-          {state.d = state.DISPLAY;
+          {state.d = state.DISPLAY1;
         input_b_st.d = io_dip[15:0];
           check_input.d[5] = 1;}
           else 
-            {display_value.d = {4d14, 4d9, 4d9, 4d9};} // Array represents the 4 digit to be displayed. 4d9 represents default value as 9 is not defined in digit_lut 
-      state.DISPLAY:
-          mode.d = 4;
+            {display_value.d = {4d14, 4d10, 4d10, 4d10};} // Array represents the 4 digit to be displayed. 4d9 represents default value as 9 is not defined in digit_lut 
+      state.DISPLAY1:
+        digits.value = alu.alu;
+        mode.d = 4;
         check_input.d[2:0] = alu.zvn[2] + alu.zvn[1] + alu.zvn[0];
-
+        if (send.q){state.d = state.DISPLAY2;}
         if(io_dip[23]){io_led = alufn_st.q;}
         else if(io_dip[22]){io_led = input_a_st.q;}
         else if(io_dip[21]){io_led = input_b_st.q;}
-        else{ digits.value = alu.alu;
-        display_value.d = digits.digits;
+        else{
+        display_value.d = digits.digits[3:0];
+        io_led[17:0] = alu.alu;        
+        if((input_a_st.q) < input_b_st.q){ check_input.d[3] = 1;}
           }
-      state.AUTO:
+      state.DISPLAY2:
+        mode.d = 4;
+        digits.value = alu.alu; //passing in 16 bits of binary alu into digits
+        check_input.d[2:0] = alu.zvn[2] + alu.zvn[1] + alu.zvn[0];
+        if (send.q){state.d = state.DISPLAY1;}
+        if(io_dip[23]){io_led = alufn_st.q;}
+        else if(io_dip[22]){io_led = input_a_st.q;}
+        else if(io_dip[21]){io_led = input_b_st.q;}
+        else{
+        display_value.d = {4d14, 4d10, 4d15,digits.digits[4]};
+        io_led[17:0] = alu.alu;        
+        if((input_a_st.q) < input_b_st.q){ check_input.d[3] = 1;}
+        }
+        state.AUTO:
           mode.d = 5;                  
                    
     }
-   seg_display.values = display_value.q; //Displaying value from the state_machine on the seven segments 
-
+   seg_display.values = display_value.q; //Displaying value from the state_machine on the seven segments 1
   }
 }
