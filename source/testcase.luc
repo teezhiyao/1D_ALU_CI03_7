@@ -180,7 +180,7 @@ always {
                 display_v.d = {4d1,4d6,4d10,4d15};
             }
             if (button.q) {
-                state.d = state.A;
+                state.d = state.SHL;
             }
 
         state.SHL:
