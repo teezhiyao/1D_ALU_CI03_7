@@ -14,29 +14,29 @@ module adder (
 ) {
   
   sig sum[16]; // 9-bit output
+  var i;
   
   always {
     
     case (alufn[1:0]) { // Alufn value controlling add or subtract operator
       
-      00: 
-        sum = a + b;  // Addition.
-      01:
-        sum = a - b;  // Subtraction.
-      10:
-        sum = 0;  // TODO: Implement additional feature here.
-      11:
-        sum = 0;  // TODO: Implement additional feature here.
+      00: // Addition.
+        sum = a + b;  
+      01: // Subtraction.
+        sum = a - b;  
+      10: // TODO: Add aditional functionality.
+        sum = 0;
+      11: // Multiply.
+        sum = a * b;
         
       default:
-        sum = a + b;
+        sum = 1111;
         
     }
     
     // Assigning values to outputs.
     
     sum_out = sum[15:0]; 
-    zvn = ~|sum + (a[15] & ~b[15] & (~sum[15])) | ((~a[15])&(b[15])&sum[15]) + sum[7];
-    
+    zvn = ~|sum + (a[15] & ~b[15] & (~sum[15])) | ((~a[15])&(b[15])&sum[15]) + sum[7];    
   }
 }

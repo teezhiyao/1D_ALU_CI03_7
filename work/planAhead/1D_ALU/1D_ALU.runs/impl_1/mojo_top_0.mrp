@@ -8,21 +8,21 @@ Target Device  : xc6slx9
 Target Package : tqg144
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Mon Oct 29 19:51:47 2018
+Mapped Date    : Tue Oct 30 01:44:33 2018
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    6
 Slice Logic Utilization:
-  Number of Slice Registers:                   107 out of  11,440    1%
-    Number used as Flip Flops:                 107
+  Number of Slice Registers:                   108 out of  11,440    1%
+    Number used as Flip Flops:                 108
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        519 out of   5,720    9%
-    Number used as logic:                      514 out of   5,720    8%
-      Number using O6 output only:             452
+  Number of Slice LUTs:                        565 out of   5,720    9%
+    Number used as logic:                      558 out of   5,720    9%
+      Number using O6 output only:             496
       Number using O5 output only:              34
       Number using O5 and O6:                   28
       Number used as ROM:                        0
@@ -33,21 +33,21 @@ Slice Logic Utilization:
         Number using O6 output only:             1
         Number using O5 output only:             0
         Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:      4
-      Number with same-slice register load:      2
+    Number used exclusively as route-thrus:      6
+      Number with same-slice register load:      4
       Number with same-slice carry load:         2
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   153 out of   1,430   10%
-  Number of MUXCYs used:                        96 out of   2,860    3%
-  Number of LUT Flip Flop pairs used:          520
-    Number with an unused Flip Flop:           419 out of     520   80%
-    Number with an unused LUT:                   1 out of     520    1%
-    Number of fully used LUT-FF pairs:         100 out of     520   19%
+  Number of occupied Slices:                   188 out of   1,430   13%
+  Number of MUXCYs used:                       112 out of   2,860    3%
+  Number of LUT Flip Flop pairs used:          570
+    Number with an unused Flip Flop:           468 out of     570   82%
+    Number with an unused LUT:                   5 out of     570    1%
+    Number of fully used LUT-FF pairs:          97 out of     570   17%
     Number of unique control sets:               8
     Number of slice register sites lost
-      to control set restrictions:              28 out of  11,440    1%
+      to control set restrictions:              27 out of  11,440    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -87,11 +87,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                4.31
+Average Fanout of Non-Clock Nets:                4.36
 
-Peak Memory Usage:  259 MB
-Total REAL time to MAP completion:  22 secs 
-Total CPU time to MAP completion (all processors):   20 secs 
+Peak Memory Usage:  261 MB
+Total REAL time to MAP completion:  25 secs 
+Total CPU time to MAP completion (all processors):   17 secs 
 
 Table of Contents
 -----------------
@@ -156,7 +156,7 @@ INFO:Pack:1650 - Map created a placed design.
 Section 4 - Removed Logic Summary
 ---------------------------------
   12 block(s) removed
-  10 block(s) optimized away
+  12 block(s) optimized away
    6 signal(s) removed
 
 Section 5 - Removed Logic
@@ -190,6 +190,8 @@ Optimized Block(s):
 TYPE 		BLOCK
 GND 		XST_GND
 VCC 		XST_VCC
+GND 		alu/add_call/XST_GND
+VCC 		alu/add_call/XST_VCC
 GND 		button_condd/XST_GND
 VCC 		button_condd/XST_VCC
 GND 		button_condd/sync/XST_GND
