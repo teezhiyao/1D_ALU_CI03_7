@@ -76,7 +76,7 @@ always {
             alufn_df.d = 6h01;
             input_a_df.d = 120;
             input_b_df.d = 80;
-            if (alu.alu == 50){
+            if (alu.alu == 40){
                 display_v.d = {4d4,4d1,4d1,4d15};
             }
             if (button.q) {
@@ -97,7 +97,7 @@ always {
             button.d = button_alu;
             alufn_df.d = 6h01;
             input_a_df.d = -32768;
-            input_b_df.d = -1;
+            input_b_df.d = 1;
             if (alu.alu == -32769){
                 display_v.d = {4d6,4d1,4d1,4d15};
             }
@@ -137,17 +137,6 @@ always {
                 display_v.d = {4d9,4d1,4d10,4d15};
             }
             if (button.q) {
-                state.d = state.CMPLEI;
-            }
-        state.CMPLEI:
-            button.d = button_alu;
-            alufn_df.d = 6h37;
-            input_a_df.d = -4081;
-            input_b_df.d = 8;
-            if (alu.alu == 1){
-                display_v.d = {4d1,4d0,4d10,4d15};
-            }
-            if (button.q) {
                 state.d = state.CMPLTV;
             }
         state.CMPLTV:
@@ -156,16 +145,6 @@ always {
             input_b_df.d = 8;
             if (alu.alu == 0){
                 display_v.d = {4d1,4d1,4d1,4d15};
-            }
-            if (button.q) {
-                state.d = state.CMPLTI;
-            }
-        state.CMPLTI:
-            alufn_df.d = 6h35;
-            input_a_df.d = -4081;
-            input_b_df.d = 8;
-            if (alu.alu == 1){
-                display_v.d = {4d1,4d2,4d10,4d15};
             }
             if (button.q) {
                 state.d = state.CMPEQ;
@@ -235,9 +214,9 @@ always {
         
         state.SRA:
             alufn_df.d = 6h23;
-            input_a_df.d = 192; // -64
+            input_a_df.d = -8;
             input_b_df.d = 4;
-            if (alu.alu == 252){
+            if (alu.alu == -1){
                 display_v.d = {4d2,4d1,4d10,4d15};
             }
             if (button.q) {
