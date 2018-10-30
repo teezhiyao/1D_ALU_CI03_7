@@ -8,7 +8,7 @@
 <msg type="warning" file="HDLCompiler" num="295" delta="new" >"/home/ryan/p/alu/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/adder_7.v" Line 30: case condition never applies
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="295" delta="new" >"/home/ryan/p/alu/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/adder_7.v" Line 36: case condition never applies
+<msg type="warning" file="HDLCompiler" num="295" delta="new" >"/home/ryan/p/alu/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/adder_7.v" Line 33: case condition never applies
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="295" delta="new" >"/home/ryan/p/alu/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/cmp_8.v" Line 25: case condition never applies
@@ -38,7 +38,7 @@
 <msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/ryan/p/alu/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/bin_to_dec_6.v" Line 52: Result of <arg fmt="%d" index="1">15</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">14</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/ryan/p/alu/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 170: Result of <arg fmt="%d" index="1">16</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">14</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/ryan/p/alu/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 172: Result of <arg fmt="%d" index="1">16</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">14</arg>-bit target.
 </msg>
 
 <msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/ryan/p/alu/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/alu_1.v</arg>&quot; line <arg fmt="%d" index="2">35</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">cmp_call</arg>&gt; of block &lt;<arg fmt="%s" index="4">cmp_8</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">alu_1</arg>&gt;. Underlying logic will be removed.
@@ -93,12 +93,6 @@
 </msg>
 
 <msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">M_check_input_q_4</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">M_check_input_q_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">M_check_input_q_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="info" file="Xst" num="1843" delta="new" >HDL ADVISOR - FlipFlop <arg fmt="%s" index="1">M_alufn_st_q_0</arg> connected to a primary input has been replicated

@@ -157,7 +157,9 @@ module mojo_top_0 (
       end
       DISPLAY_state: begin
         M_mode_d = 3'h4;
-        M_check_input_d[0+2-:3] = M_alu_zvn[2+0-:1] + M_alu_zvn[1+0-:1] + M_alu_zvn[0+0-:1];
+        M_check_input_d[2+0-:1] = M_alu_zvn[2+0-:1];
+        M_check_input_d[1+0-:1] = M_alu_zvn[1+0-:1];
+        M_check_input_d[0+0-:1] = M_alu_zvn[0+0-:1];
         if (io_dip[23+0-:1]) begin
           io_led = M_alufn_st_q;
         end else begin

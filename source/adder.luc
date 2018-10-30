@@ -37,6 +37,8 @@ module adder (
     // Assigning values to outputs.
     
     sum_out = sum[15:0]; 
-    zvn = ~|sum + (a[15] & ~b[15] & (~sum[15])) | ((~a[15])&(b[15])&sum[15]) + sum[7];    
+    zvn[0] = ~|sum;
+    zvn[1] = (a[15] & ~b[15] & (~sum[15])) | ((~a[15])&(b[15])&sum[15]);
+    zvn[2] = sum[15];    
   }
 }

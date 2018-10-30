@@ -29,9 +29,6 @@ module adder_7 (
       end
       4'ha: begin
         sum = 1'h0;
-        for (i = 1'h0; i < b; i = i + 1) begin
-          sum = sum + a;
-        end
       end
       4'hb: begin
         sum = a * b;
@@ -41,6 +38,8 @@ module adder_7 (
       end
     endcase
     sum_out = sum[0+15-:16];
-    zvn = (~|sum + (a[15+0-:1] & ~b[15+0-:1] & (~sum[15+0-:1])) | ((~a[15+0-:1]) & (b[15+0-:1]) & sum[15+0-:1]) + sum[7+0-:1]);
+    zvn[0+0-:1] = (~|sum);
+    zvn[1+0-:1] = (a[15+0-:1] & ~b[15+0-:1] & (~sum[15+0-:1])) | ((~a[15+0-:1]) & (b[15+0-:1]) & sum[15+0-:1]);
+    zvn[2+0-:1] = sum[15+0-:1];
   end
 endmodule

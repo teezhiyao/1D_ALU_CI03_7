@@ -105,7 +105,12 @@ module mojo_top (
         
       state.DISPLAY:
         mode.d = 4;
-        check_input.d[2:0] = alu.zvn[2] + alu.zvn[1] + alu.zvn[0];
+        
+        // Set the LEDs on the right side to display z, v and n.
+        
+        check_input.d[2] = alu.zvn[2];
+        check_input.d[1] = alu.zvn[1];
+        check_input.d[0] = alu.zvn[0];
 
         if(io_dip[23]) {io_led = alufn_st.q;}
         else if(io_dip[22]) {io_led = input_a_st.q;}
