@@ -12,12 +12,12 @@ module shift (
     case(alufn[1:0]) {
       
       00:
-      shift_out = a << shift_bit[5:0]; // Shifting left.
+        shift_out = a << shift_bit[5:0]; // Shifting left.
       01:
-      shift_out = a >> shift_bit[5:0]; // Shifting right.
+        shift_out = a >> shift_bit[5:0]; // Shifting right.
       11:
-      shift_out = $signed(a)>>>shift_bit[5:0]; // Arithmetic right shift.
-        default:
+        shift_out = $signed(a)>>>shift_bit[5:0]; // Arithmetic right shift.
+      default:
         shift_out = a;
       
     }

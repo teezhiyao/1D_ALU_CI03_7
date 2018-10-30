@@ -16,6 +16,8 @@ module adder_7 (
   
   reg [15:0] sum;
   
+  integer i;
+  
   always @* begin
     
     case (alufn[0+1-:2])
@@ -27,12 +29,15 @@ module adder_7 (
       end
       4'ha: begin
         sum = 1'h0;
+        for (i = 1'h0; i < b; i = i + 1) begin
+          sum = sum + a;
+        end
       end
       4'hb: begin
-        sum = 1'h0;
+        sum = a * b;
       end
       default: begin
-        sum = a + b;
+        sum = 11'h457;
       end
     endcase
     sum_out = sum[0+15-:16];
