@@ -112,9 +112,9 @@ module mojo_top (
         check_input.d[1] = alu.zvn[1];
         check_input.d[0] = alu.zvn[0];
 
-        if(io_dip[23]) {io_led = alufn_st.q;}
-        else if(io_dip[22]) {io_led = input_a_st.q;}
-        else if(io_dip[21]) {io_led = input_b_st.q;}
+        if (io_dip[23]) {io_led = alufn_st.q;}
+        else if (io_dip[22]) {io_led = input_a_st.q;}
+        else if (io_dip[21]) {io_led = input_b_st.q;}
         else { 
           digits.value = alu.alu;
           display_value.d = digits.digits;
