@@ -81,8 +81,8 @@ always {
             alufn_df.d = 6h01;
             input_a_df.d = 120;
             input_b_df.d = 80;
-            if (alu.alu == 50){
-                display_v.d = {4d4,4d10,4d1,4d15};
+            if (alu.alu == 40){
+                display_v.d = {4d4,4d1,4d1,4d15};
             }
             else{display_v.d = {4d4,4d10,4d10, 4d3};}
         
@@ -106,7 +106,7 @@ always {
             button.d = button_alu;
             alufn_df.d = 6h01;
             input_a_df.d = -32768;
-            input_b_df.d = -1;
+            input_b_df.d = 1;
             if (alu.alu == -32769){
                 display_v.d = {4d6,4d10,4d1,4d15};
             }
@@ -224,11 +224,11 @@ always {
         
         state.SRA:
             alufn_df.d = 6h23;
-            input_a_df.d = 192; // -64
+            input_a_df.d = -8;
             input_b_df.d = 4;
-            if (alu.alu == 252){
-                display_v.d = {4d1,4d9,4d10,4d15};}
-            else{display_v.d = {4d1,4d9,4d10,4d15};}
+            if (alu.alu == -1){
+                display_v.d = {4d2,4d1,4d10,4d15};
+            }
             if (button.q) {
                 state.d = state.START;
             }        
