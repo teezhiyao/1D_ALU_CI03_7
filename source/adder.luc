@@ -37,8 +37,10 @@ module adder (
     
     // Assigning values to outputs.
     
-    sum_out = sum[15:0]; 
-    z_ = ~sum; //
+    sum_out = sum[15:0];
+    if( sum == 0){
+    z_ = 1;}
+    else{z_ = 0;} //
     v = (~a[15] & ~b[15] & (sum[15])) | ((a[15])&(b[15])& ~(sum[15]));
     n = sum[15]; //   
   }
