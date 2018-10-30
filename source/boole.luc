@@ -22,17 +22,19 @@ module boole (
       ab = (b[i] << 1) + a[i]; 
       
       // a and b input selectors 
-      case(ab){ 
+      case(ab) { 
+        
         b00:
-        boole_out[i]=alufn[0]; 
+          boole_out[i]=alufn[0]; 
         b01:
-        boole_out[i] = alufn[1];
+          boole_out[i] = alufn[1];
         b10:
-        boole_out[i] = alufn[2]; 
+          boole_out[i] = alufn[2]; 
         b11:
-        boole_out[i]= alufn[3]; 
+          boole_out[i]= alufn[3]; 
+          
         default:
-        boole_out[i]=alufn[0];    
+          boole_out[i]=alufn[0];    
       }
       
     } 
