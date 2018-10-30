@@ -71,6 +71,7 @@ module testcase_8 (
     M_alu_b = M_input_b_df_q;
     M_out_d = M_alu_alu;
     M_display_v_d = 16'h0000;
+    M_button_d = button_alu;
     
     case (M_state_q)
       START_state: begin
@@ -96,6 +97,7 @@ module testcase_8 (
         end
       end
       ADDNEG_state: begin
+        M_button_d = button_alu;
         M_alufn_df_d = 6'h00;
         M_input_a_df_d = $signed(7'h5e);
         M_input_b_df_d = $signed(6'h2b);
@@ -107,6 +109,7 @@ module testcase_8 (
         end
       end
       OVERFLOW_state: begin
+        M_button_d = button_alu;
         M_alufn_df_d = 6'h00;
         M_input_a_df_d = 15'h7fff;
         M_input_b_df_d = 1'h1;
@@ -118,6 +121,7 @@ module testcase_8 (
         end
       end
       SUBPOS_state: begin
+        M_button_d = button_alu;
         M_alufn_df_d = 6'h01;
         M_input_a_df_d = 7'h78;
         M_input_b_df_d = 7'h50;
@@ -129,6 +133,7 @@ module testcase_8 (
         end
       end
       SUBNEG_state: begin
+        M_button_d = button_alu;
         M_alufn_df_d = 6'h01;
         M_input_a_df_d = $signed(7'h60);
         M_input_b_df_d = $signed(6'h29);
@@ -140,6 +145,7 @@ module testcase_8 (
         end
       end
       UNDERFLOW_state: begin
+        M_button_d = button_alu;
         M_alufn_df_d = 6'h01;
         M_input_a_df_d = $signed(17'h18000);
         M_input_b_df_d = $signed(2'h3);
@@ -151,6 +157,7 @@ module testcase_8 (
         end
       end
       MULT_state: begin
+        M_button_d = button_alu;
         M_alufn_df_d = 6'h02;
         M_input_a_df_d = 6'h20;
         M_input_b_df_d = 2'h2;
@@ -162,6 +169,7 @@ module testcase_8 (
         end
       end
       DIV_state: begin
+        M_button_d = button_alu;
         M_alufn_df_d = 6'h03;
         M_input_a_df_d = 6'h20;
         M_input_b_df_d = 4'h8;
@@ -173,6 +181,7 @@ module testcase_8 (
         end
       end
       CMPLEV_state: begin
+        M_button_d = button_alu;
         M_alufn_df_d = 6'h37;
         M_input_a_df_d = 4'h8;
         M_input_b_df_d = 4'h8;
@@ -184,6 +193,7 @@ module testcase_8 (
         end
       end
       CMPLEI_state: begin
+        M_button_d = button_alu;
         M_alufn_df_d = 6'h37;
         M_input_a_df_d = $signed(13'h100f);
         M_input_b_df_d = 4'h8;

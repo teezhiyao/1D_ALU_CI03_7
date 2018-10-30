@@ -8,7 +8,7 @@ module testcase (
       .clk(clk){
 
         .rst(rst){
-            fsm state = {START,ADDPOS,ADDNEG,OVERFLOW,SUBPOS,SUBNEG,UNDERFLOW,MULT,DIV,CMPLEV,CMPLEI,CMPLTV,CMPLTI,CMPEQ,XOR,AND,OR,A,B,SHL,SHR,SRA}; // 22 states
+            fsm state = {START,ADDPOS,ADDNEG,OVERFLOW,SUBPOS,SUBNEG,UNDERFLOW,MULT,DIV,CMPLEV,CMPLEI,CMPLTV,CMPLTI,CMPEQ,XOR,AND,OR,SHL,SHR,SRA}; // 22 states
         }
     dff alufn_df[6];
     dff input_a_df[16];
@@ -24,6 +24,7 @@ always {
     alu.b = input_b_df.q;   
     out.d = alu.alu; 
     display_v.d = {4d0,4d0,4d0,4d0};  
+    button.d = button_alu;
     case(state.q){
         state.START:
             button.d = button_alu;
@@ -47,6 +48,8 @@ always {
                 state.d = state.ADDNEG;
             }
         state.ADDNEG:
+                  button.d = button_alu;
+
             alufn_df.d = 6b0;
             input_a_df.d = -34;
             input_b_df.d = -21;
@@ -57,6 +60,7 @@ always {
                 state.d = state.OVERFLOW;
             }
         state.OVERFLOW:
+            button.d = button_alu;
             alufn_df.d = 6b0;
             input_a_df.d = 32767;
             input_b_df.d = 1;
@@ -68,6 +72,7 @@ always {
             }
         
         state.SUBPOS:
+            button.d = button_alu;
             alufn_df.d = 6h01;
             input_a_df.d = 120;
             input_b_df.d = 80;
@@ -78,6 +83,7 @@ always {
                 state.d = state.SUBNEG;
             }
         state.SUBNEG:
+            button.d = button_alu;
             alufn_df.d = 6h01;
             input_a_df.d = -32;
             input_b_df.d = -23;
@@ -88,6 +94,7 @@ always {
                 state.d = state.UNDERFLOW;
             }
         state.UNDERFLOW:
+            button.d = button_alu;
             alufn_df.d = 6h01;
             input_a_df.d = -32768;
             input_b_df.d = -1;
@@ -99,6 +106,7 @@ always {
             }
         
         state.MULT:
+            button.d = button_alu;
             alufn_df.d = 6h02;
             input_a_df.d = 32;
             input_b_df.d = 2;
@@ -110,7 +118,8 @@ always {
             }
         
         state.DIV:
-            alufn_df.d = 6h03;
+             button.d = button_alu;
+           alufn_df.d = 6h03;
             input_a_df.d = 32;
             input_b_df.d = 8;
             if (alu.alu == 4){
@@ -120,6 +129,7 @@ always {
                 state.d = state.CMPLEV;
             }
         state.CMPLEV:
+            button.d = button_alu;
             alufn_df.d = 6h37;
             input_a_df.d = 8;
             input_b_df.d = 8;
@@ -130,6 +140,7 @@ always {
                 state.d = state.CMPLEI;
             }
         state.CMPLEI:
+            button.d = button_alu;
             alufn_df.d = 6h37;
             input_a_df.d = -4081;
             input_b_df.d = 8;
@@ -200,27 +211,6 @@ always {
             }
             if (button.q) {
                 state.d = state.A;
-            }
-        state.A:
-            alufn_df.d = 6h1A;
-            input_a_df.d = 6;
-            input_b_df.d = 8;
-            if (alu.alu == 6){
-                display_v.d = {4d1,4d7,4d10,4d15};
-            }
-            if (button.q) {
-                state.d = state.B;
-            }
-        
-        state.B:
-            alufn_df.d = 6h1A;
-            input_a_df.d = 6;
-            input_b_df.d = 8;
-            if (alu.alu == 8){
-                display_v.d = {4d1,4d8,4d10,4d15};
-            }
-            if (button.q) {
-                state.d = state.SHL;
             }
         state.SHL:
             alufn_df.d = 6h20;

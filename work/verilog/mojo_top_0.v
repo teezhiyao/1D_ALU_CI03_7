@@ -213,6 +213,7 @@ module mojo_top_0 (
               io_led = M_input_b_st_q;
             end else begin
               io_led[0+17-:18] = M_alu_alu;
+              M_display_value_d = 16'h0000;
               if ((M_input_a_st_q) < M_input_b_st_q) begin
                 M_check_input_d[3+0-:1] = 1'h1;
               end

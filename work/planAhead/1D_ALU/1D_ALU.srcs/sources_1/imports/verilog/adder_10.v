@@ -26,10 +26,10 @@ module adder_10 (
         sum = a - b;
       end
       2'h2: begin
-        sum = a / b;
+        sum = a * b;
       end
       2'h3: begin
-        sum = a * b;
+        sum = a / b;
       end
       default: begin
         sum = 14'h270f;

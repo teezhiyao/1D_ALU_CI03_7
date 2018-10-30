@@ -126,11 +126,11 @@ INFO:Xst:3210 - "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/
     Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 122
     Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 122
     Found 1-bit tristate buffer for signal <avr_rx> created at line 122
-    Found 16-bit comparator greater for signal <M_input_a_st_q[15]_M_input_b_st_q[15]_LessThan_16_o> created at line 216
+    Found 16-bit comparator greater for signal <M_input_a_st_q[15]_M_input_b_st_q[15]_LessThan_16_o> created at line 217
     Summary:
 	inferred  64 D-type flip-flop(s).
 	inferred   1 Comparator(s).
-	inferred  18 Multiplexer(s).
+	inferred  19 Multiplexer(s).
 	inferred   6 Tristate(s).
 	inferred   1 Finite State Machine(s).
 Unit <mojo_top_0> synthesized.
@@ -147,7 +147,7 @@ Synthesizing Unit <adder_10>.
 WARNING:Xst:647 - Input <alufn<3:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 16-bit subtractor for signal <a[15]_b[15]_sub_2_OUT> created at line 26.
     Found 16-bit adder for signal <a[15]_b[15]_add_0_OUT> created at line 23.
-    Found 16x16-bit multiplier for signal <n0024> created at line 32.
+    Found 16x16-bit multiplier for signal <n0023> created at line 29.
     Found 16-bit 4-to-1 multiplexer for signal <sum> created at line 21.
     Summary:
 	inferred   1 Multiplier(s).
@@ -158,37 +158,37 @@ Unit <adder_10> synthesized.
 Synthesizing Unit <div_16u_16u>.
     Related source file is "".
     Found 32-bit adder for signal <n0956> created at line 0.
-    Found 32-bit adder for signal <GND_4_o_b[15]_add_1_OUT> created at line 0.
+    Found 32-bit adder for signal <GND_5_o_b[15]_add_1_OUT> created at line 0.
     Found 31-bit adder for signal <n0960> created at line 0.
-    Found 31-bit adder for signal <GND_4_o_b[15]_add_3_OUT> created at line 0.
+    Found 31-bit adder for signal <GND_5_o_b[15]_add_3_OUT> created at line 0.
     Found 30-bit adder for signal <n0964> created at line 0.
-    Found 30-bit adder for signal <GND_4_o_b[15]_add_5_OUT> created at line 0.
+    Found 30-bit adder for signal <GND_5_o_b[15]_add_5_OUT> created at line 0.
     Found 29-bit adder for signal <n0968> created at line 0.
-    Found 29-bit adder for signal <GND_4_o_b[15]_add_7_OUT> created at line 0.
+    Found 29-bit adder for signal <GND_5_o_b[15]_add_7_OUT> created at line 0.
     Found 28-bit adder for signal <n0972> created at line 0.
-    Found 28-bit adder for signal <GND_4_o_b[15]_add_9_OUT> created at line 0.
+    Found 28-bit adder for signal <GND_5_o_b[15]_add_9_OUT> created at line 0.
     Found 27-bit adder for signal <n0976> created at line 0.
-    Found 27-bit adder for signal <GND_4_o_b[15]_add_11_OUT> created at line 0.
+    Found 27-bit adder for signal <GND_5_o_b[15]_add_11_OUT> created at line 0.
     Found 26-bit adder for signal <n0980> created at line 0.
-    Found 26-bit adder for signal <GND_4_o_b[15]_add_13_OUT> created at line 0.
+    Found 26-bit adder for signal <GND_5_o_b[15]_add_13_OUT> created at line 0.
     Found 25-bit adder for signal <n0984> created at line 0.
-    Found 25-bit adder for signal <GND_4_o_b[15]_add_15_OUT> created at line 0.
+    Found 25-bit adder for signal <GND_5_o_b[15]_add_15_OUT> created at line 0.
     Found 24-bit adder for signal <n0988> created at line 0.
-    Found 24-bit adder for signal <GND_4_o_b[15]_add_17_OUT> created at line 0.
+    Found 24-bit adder for signal <GND_5_o_b[15]_add_17_OUT> created at line 0.
     Found 23-bit adder for signal <n0992> created at line 0.
-    Found 23-bit adder for signal <GND_4_o_b[15]_add_19_OUT> created at line 0.
+    Found 23-bit adder for signal <GND_5_o_b[15]_add_19_OUT> created at line 0.
     Found 22-bit adder for signal <n0996> created at line 0.
-    Found 22-bit adder for signal <GND_4_o_b[15]_add_21_OUT> created at line 0.
+    Found 22-bit adder for signal <GND_5_o_b[15]_add_21_OUT> created at line 0.
     Found 21-bit adder for signal <n1000> created at line 0.
-    Found 21-bit adder for signal <GND_4_o_b[15]_add_23_OUT> created at line 0.
+    Found 21-bit adder for signal <GND_5_o_b[15]_add_23_OUT> created at line 0.
     Found 20-bit adder for signal <n1004> created at line 0.
-    Found 20-bit adder for signal <GND_4_o_b[15]_add_25_OUT> created at line 0.
+    Found 20-bit adder for signal <GND_5_o_b[15]_add_25_OUT> created at line 0.
     Found 19-bit adder for signal <n1008> created at line 0.
-    Found 19-bit adder for signal <GND_4_o_b[15]_add_27_OUT> created at line 0.
+    Found 19-bit adder for signal <GND_5_o_b[15]_add_27_OUT> created at line 0.
     Found 18-bit adder for signal <n1012> created at line 0.
-    Found 18-bit adder for signal <GND_4_o_b[15]_add_29_OUT> created at line 0.
+    Found 18-bit adder for signal <GND_5_o_b[15]_add_29_OUT> created at line 0.
     Found 17-bit adder for signal <n1016> created at line 0.
-    Found 17-bit adder for signal <GND_4_o_b[15]_add_31_OUT> created at line 0.
+    Found 17-bit adder for signal <GND_5_o_b[15]_add_31_OUT> created at line 0.
     Found 32-bit comparator lessequal for signal <BUS_0001> created at line 0
     Found 31-bit comparator lessequal for signal <BUS_0002> created at line 0
     Found 30-bit comparator lessequal for signal <BUS_0003> created at line 0
@@ -358,7 +358,7 @@ INFO:Xst:3210 - "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 16-bit 24-to-1 multiplexer for signal <M_display_v_d> created at line 75.
+    Found 16-bit 24-to-1 multiplexer for signal <M_display_v_d> created at line 76.
     Summary:
 	inferred  55 D-type flip-flop(s).
 	inferred   1 Multiplexer(s).
@@ -421,10 +421,10 @@ Macro Statistics
  30-bit comparator lessequal                           : 2
  31-bit comparator lessequal                           : 2
  32-bit comparator lessequal                           : 2
-# Multiplexers                                         : 582
+# Multiplexers                                         : 583
  1-bit 2-to-1 multiplexer                              : 524
  1-bit 4-to-1 multiplexer                              : 34
- 16-bit 2-to-1 multiplexer                             : 14
+ 16-bit 2-to-1 multiplexer                             : 15
  16-bit 24-to-1 multiplexer                            : 1
  16-bit 4-to-1 multiplexer                             : 4
  18-bit 2-to-1 multiplexer                             : 1
@@ -507,10 +507,10 @@ Macro Statistics
  30-bit comparator lessequal                           : 2
  31-bit comparator lessequal                           : 2
  32-bit comparator lessequal                           : 2
-# Multiplexers                                         : 581
+# Multiplexers                                         : 582
  1-bit 2-to-1 multiplexer                              : 524
  1-bit 4-to-1 multiplexer                              : 34
- 16-bit 2-to-1 multiplexer                             : 14
+ 16-bit 2-to-1 multiplexer                             : 15
  16-bit 24-to-1 multiplexer                            : 1
  16-bit 4-to-1 multiplexer                             : 4
  24-bit 2-to-1 multiplexer                             : 4
@@ -571,8 +571,8 @@ Optimizing FSM <testcase/FSM_1> on signal <M_state_q[1:5]> with user encoding.
 WARNING:Xst:1293 - FF/Latch <M_display_v_q_6> has a constant value of 0 in block <testcase_8>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <M_input_b_df_q_7> in Unit <testcase_8> is equivalent to the following 8 FFs/Latches, which will be removed : <M_input_b_df_q_8> <M_input_b_df_q_9> <M_input_b_df_q_10> <M_input_b_df_q_11> <M_input_b_df_q_12> <M_input_b_df_q_13> <M_input_b_df_q_14> <M_input_b_df_q_15> 
 INFO:Xst:2261 - The FF/Latch <M_input_a_df_q_8> in Unit <testcase_8> is equivalent to the following 3 FFs/Latches, which will be removed : <M_input_a_df_q_9> <M_input_a_df_q_10> <M_input_a_df_q_11> 
-INFO:Xst:2261 - The FF/Latch <M_display_v_q_0> in Unit <testcase_8> is equivalent to the following 3 FFs/Latches, which will be removed : <M_display_v_q_1> <M_display_v_q_2> <M_display_v_q_3> 
 INFO:Xst:2261 - The FF/Latch <M_input_a_df_q_12> in Unit <testcase_8> is equivalent to the following 2 FFs/Latches, which will be removed : <M_input_a_df_q_13> <M_input_a_df_q_14> 
+INFO:Xst:2261 - The FF/Latch <M_display_v_q_0> in Unit <testcase_8> is equivalent to the following 3 FFs/Latches, which will be removed : <M_display_v_q_1> <M_display_v_q_2> <M_display_v_q_3> 
 INFO:Xst:2261 - The FF/Latch <M_display_v_q_5> in Unit <testcase_8> is equivalent to the following FF/Latch, which will be removed : <M_display_v_q_7> 
 
 Optimizing unit <mojo_top_0> ...
@@ -582,7 +582,6 @@ Optimizing unit <testcase_8> ...
 Optimizing unit <adder_10> ...
 
 Optimizing unit <div_16u_16u> ...
-WARNING:Xst:1293 - FF/Latch <testcase/M_display_v_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <M_display_value_q_0> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <M_display_value_q_2> 
 INFO:Xst:2261 - The FF/Latch <M_display_value_q_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <M_display_value_q_3> 
 
@@ -612,8 +611,8 @@ Unit <mojo_top_0> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 202
- Flip-Flops                                            : 202
+# Registers                                            : 203
+ Flip-Flops                                            : 203
 # Shift Registers                                      : 2
  2-bit shift register                                  : 2
 
@@ -639,7 +638,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 208   |
+clk                                | BUFGP                  | 209   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -650,9 +649,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 53.312ns (Maximum Frequency: 18.758MHz)
-   Minimum input arrival time before clock: 5.125ns
+   Minimum period: 53.296ns (Maximum Frequency: 18.763MHz)
+   Minimum input arrival time before clock: 5.804ns
    Maximum output required time after clock: 55.996ns
-   Maximum combinational path delay: 12.882ns
+   Maximum combinational path delay: 12.899ns
 
 =========================================================================
