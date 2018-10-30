@@ -23,10 +23,10 @@ module adder (
         sum = a + b;  
       b01: // Subtraction.
         sum = a - b;  
-      b10: // TODO: Add aditional functionality.
-        sum = a/b;
-      b11: // Multiply.
+      b10: // Multiply.
         sum = a * b;
+      b11: // TODO: Add divition function.
+        sum = a/b;
         
       default:
         sum = 9999;
