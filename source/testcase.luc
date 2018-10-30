@@ -159,7 +159,7 @@ always {
             alufn_df.d = 6h35;
             input_a_df.d = 2;
             input_b_df.d = 8;
-            if (alu.alu == 0){
+            if (alu.alu == 1){
                 display_v.d = {4d1,4d0,4d10,4d15};
             }
             else{display_v.d = {4d1,4d0,4d10,4d3};}
