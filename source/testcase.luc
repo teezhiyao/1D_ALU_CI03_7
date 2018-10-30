@@ -8,7 +8,7 @@ module testcase (
       .clk(clk){
 
         .rst(rst){
-            fsm state = {START,ADDPOS,ADDNEG,OVERFLOW,SUBPOS,SUBNEG,UNDERFLOW,MULT,DIV,CMPLEV,CMPLEI,CMPLTV,CMPLTI,CMPEQ,XOR,AND,OR,A,B,SHL,SHR,SRA}; // 22 states
+            fsm state = {START,ADDPOS,ADDNEG,OVERFLOW,SUBPOS,SUBNEG,UNDERFLOW,MULT,DIV,CMPLEV,CMPLTV,CMPEQ,XOR,AND,OR,SHL,SHR,SRA}; // 22 states
         }
     dff alufn_df[6];
     dff input_a_df[16];
@@ -127,34 +127,15 @@ always {
                 display_v.d = {4d9,4d1,4d10,4d15};
             }
             if (button.q) {
-                state.d = state.CMPLEI;
-            }
-        state.CMPLEI:
-            alufn_df.d = 6h37;
-            input_a_df.d = -4081;
-            input_b_df.d = 8;
-            if (alu.alu == 1){
-                display_v.d = {4d1,4d0,4d10,4d15};
-            }
-            if (button.q) {
                 state.d = state.CMPLTV;
             }
+
         state.CMPLTV:
             alufn_df.d = 6h35;
             input_a_df.d = 2;
             input_b_df.d = 8;
             if (alu.alu == 0){
                 display_v.d = {4d1,4d1,4d1,4d15};
-            }
-            if (button.q) {
-                state.d = state.CMPLTI;
-            }
-        state.CMPLTI:
-            alufn_df.d = 6h35;
-            input_a_df.d = -4081;
-            input_b_df.d = 8;
-            if (alu.alu == 1){
-                display_v.d = {4d1,4d2,4d10,4d15};
             }
             if (button.q) {
                 state.d = state.CMPEQ;
@@ -201,27 +182,7 @@ always {
             if (button.q) {
                 state.d = state.A;
             }
-        state.A:
-            alufn_df.d = 6h1A;
-            input_a_df.d = 6;
-            input_b_df.d = 8;
-            if (alu.alu == 6){
-                display_v.d = {4d1,4d7,4d10,4d15};
-            }
-            if (button.q) {
-                state.d = state.B;
-            }
-        
-        state.B:
-            alufn_df.d = 6h1A;
-            input_a_df.d = 6;
-            input_b_df.d = 8;
-            if (alu.alu == 8){
-                display_v.d = {4d1,4d8,4d10,4d15};
-            }
-            if (button.q) {
-                state.d = state.SHL;
-            }
+
         state.SHL:
             alufn_df.d = 6h20;
             input_a_df.d = 15;
