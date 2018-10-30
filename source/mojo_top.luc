@@ -1,154 +1,126 @@
 module mojo_top (
-    
-    input clk,              // 50MHz clock.
-    input rst_n,            // reset button (active low).
-    input cclk,             // configuration clock, AVR ready when high.
-    output spi_miso,        // AVR SPI MISO.
+    input clk,              // 50MHz clock
+    input rst_n,            // reset button (active low)
+    input cclk,             // configuration clock, AVR ready when high
+    output spi_miso,        // AVR SPI MISO
     output led[8],
-    input spi_ss,           // AVR SPI Slave Select.
-    input spi_mosi,         // AVR SPI MOSI.
-    input spi_sck,          // AVR SPI Clock.
-    output spi_channel [4], // AVR general purpose pins (used by default to select ADC channel).
-    input avr_tx,           // AVR TX (FPGA RX).
-    output avr_rx,          // AVR RX (FPGA TX).
-    input avr_rx_busy,      // AVR RX buffer full.
-    output io_led [24],   // LEDs on IO Shield.
-    output io_seg [8],      // 7-segment LEDs on IO Shield.
-    output io_sel [4],      // Digit select on IO Shield.
-    input io_button [5],    // 5 buttons on IO Shield.
-    input io_dip [24] // DIP switches on IO Shield.
+    input spi_ss,           // AVR SPI Slave Select
+    input spi_mosi,         // AVR SPI MOSI
+    input spi_sck,          // AVR SPI Clock
+    output spi_channel [4], // AVR general purpose pins (used by default to select ADC channel)
+    input avr_tx,           // AVR TX (FPGA RX)
+    output avr_rx,          // AVR RX (FPGA TX)
+    input avr_rx_busy,      // AVR RX buffer full
+    output io_led [24],   // LEDs on IO Shield
+    output io_seg [8],      // 7-segment LEDs on IO Shield
+    output io_sel [4],      // Digit select on IO Shield
+    input io_button [5],    // 5 buttons on IO Shield
+    input io_dip [24] // DIP switches on IO Shield
 
-) {
-  
-  // pipeline button_cond[1] (#DEPTH(5), .clk(clk)).
-  sig rst;                  // Reset signal.
+              ) {
+//  pipeline button_cond[1] (#DEPTH(5), .clk(clk));
+  sig rst;                  // reset signal
   alu alu;
-  
   .clk(clk) {
-    
-    reset_conditioner reset_cond;
+   reset_conditioner reset_cond;
     button_conditioner button_condd;
-    button_conditioner button_condd2;
     edge_detector edge (#RISE(1), #FALL(0));
-    edge_detector edge2 (#RISE(1), #FALL(0));
-
         .rst(rst) {
-      multi_seven_seg seg_display; // Connecting to multi_seven_seg which would help displaying on the segment.
+      multi_seven_seg seg_display; //Connecting to multi_seven_seg which would help displaying on the segment
  
-      fsm state = {ALUFN,INPUT_A,INPUT_B,AUTO,DISPLAY};
-      testcase testcase;
+      fsm state = {ALUFN,INPUT_A,INPUT_B,AUTO,DISPLAY1,DISPLAY2, DISPLAY3,DISPLAY4};
 
                 }
-    dff display_value[4][4]; // Size of LED segments.
+    dff display_value[4][4]; // Size of LED segments
     dff mode[5];
     dff alufn_st[6];
     dff input_a_st[16];
     dff input_b_st[16];
     dff send[1];
-    dff send2[1];
     dff check_input[8];
   }
-  
-  bin_to_dec digits (#DIGITS(4));
-   always {
-    
+  bin_to_dec digits (#DIGITS(5));
+   always{
     io_led = io_dip;
-    reset_cond.in = ~rst_n; // Input raw inverted reset signal.
-    rst = reset_cond.out;   // Conditioned reset.
-    spi_miso = bz;          // Not using SPI.
-    spi_channel = bzzzz;    // Not using flags.
-    avr_rx = bz;            // Not using serial port.
+    reset_cond.in = ~rst_n; // input raw inverted reset signal
+    rst = reset_cond.out;   // conditioned reset
+    spi_miso = bz;          // not using SPI
+    spi_channel = bzzzz;    // not using flags
+    avr_rx = bz;            // not using serial port
     
     button_condd.in = io_button[3];
-    button_condd2.in = io_button[0];
-    
+//    send.d = io_button[1];
+//    temp_send.d= send.q;
     edge.in = button_condd.out;
-    edge2.in = button_condd2.out;
-    
     send.d = edge.out;
-    send2.d = edge2.out;
-    
-    seg_display.decimal = 4b0000; //To control decimal point.
+    seg_display.decimal = 4b0000; //To control decimal point
     io_seg = ~seg_display.seg;
     io_sel = ~seg_display.sel;
-    // Storing alufn, a and b data in a register. 
+//storing alufn, a and b data in a register    
     alu.alufn = alufn_st.q;
     alu.a = input_a_st.q;
     alu.b = input_b_st.q;
     digits.value = 0;
     led = check_input.q;
-    testcase.button_alu = 0;
+    
     case (state.q) { 
-      state.ALUFN:
-        check_input.d[7] = 0; 
-        if(io_dip[20]){state.d = state.AUTO;}
-      
-        mode.d = 0;
-        if (send.q) {
-          state.d = state.INPUT_A;
+      state.ALUFN: 
+          mode.d = 0;
+          if (send.q)
+          {state.d = state.INPUT_A;
           alufn_st.d = io_dip[5:0];
-          // TODO: Modify so that the led will not light up is ALUFN input is invalid.
-          check_input.d[7] = 1;
-        } else {
-          display_value.d = {4d11, 4d12, 4d13, 4d10};
-        } // Array represents the 4 digit to be displayed. 4d9 represents default value as 9 is not defined in digit_lut .
+          //Modify so that the led will not light up is ALUFN input is invalid
+          check_input.d[7] = 1;}          
+          else 
+            {display_value.d = {4d15, 4d12, 4d13, 4d10};} // Array represents the 4 digit to be displayed. 4d9 represents default value as 9 is not defined in digit_lut 
 
-      state.INPUT_A:
-        check_input.d[6] = 0;  
-        mode.d = 1;
-        if(io_dip[20]){state.d = state.AUTO;}
-        
-        if (send.q) {
-          state.d = state.INPUT_B;
+      state.INPUT_A:  
+          mode.d = 1;
+          if (send.q)
+          {state.d = state.INPUT_B;
           input_a_st.d = io_dip[15:0];
-          check_input.d[6] = 1;
-        } else {
-          display_value.d = {4d11, 4d10, 4d10, 4d10};
-        } // Array represents the 4 digit to be displayed. 4d9 represents default value as 9 is not defined in digit_lut.
+          check_input.d[6] = 1;}
+          else 
+            {display_value.d = {4d15, 4d10, 4d10, 4d10};} // Array represents the 4 digit to be displayed. 4d9 represents default value as 9 is not defined in digit_lut 
 
       state.INPUT_B: 
-        mode.d = 3;
-        check_input.d[5] = 0;        
-        if(io_dip[20]){state.d = state.AUTO;}
-        
-        if (send.q) {
-          state.d = state.DISPLAY;
-          input_b_st.d = io_dip[15:0];
-          check_input.d[5] = 1;
-        } else {
-          display_value.d = {4d14, 4d10, 4d10, 4d10};
-        } // Array represents the 4 digit to be displayed. 4d9 represents default value as 9 is not defined in digit_lut.
-        
-      state.DISPLAY:
+          mode.d = 3;
+          if (send.q)
+          {state.d = state.DISPLAY1;
+        input_b_st.d = io_dip[15:0];
+          check_input.d[5] = 1;}
+          else 
+            {display_value.d = {4d14, 4d10, 4d10, 4d10};} // Array represents the 4 digit to be displayed. 4d9 represents default value as 9 is not defined in digit_lut 
+      state.DISPLAY1:
+        digits.value = alu.alu;
         mode.d = 4;
-        if(io_dip[20]){state.d = state.AUTO;}
-        // Set the LEDs on the right side to display z, v and n.
-        
-        check_input.d[2] = alu.zvn[2];
-        check_input.d[1] = alu.zvn[1];
-        check_input.d[0] = alu.zvn[0];
-
-        if (io_dip[23]) {io_led = alufn_st.q;}
-        else if (io_dip[22]) {
-        io_led = input_a_st.q;}
-        else if (io_dip[21]) {
-        io_led = input_b_st.q;}
+        check_input.d[2:0] = alu.zvn[2] + alu.zvn[1] + alu.zvn[0];
+        if (send.q){state.d = state.DISPLAY2;}
+        if(io_dip[23]){io_led = alufn_st.q;}
+        else if(io_dip[22]){io_led = input_a_st.q;}
+        else if(io_dip[21]){io_led = input_b_st.q;}
         else{
-        //display_value.d = digits.digits[3:0];
-        io_led[17:0] = alu.alu;
-        display_value.d = {4d0, 4d0,4d0, 4d0};          
+        display_value.d = digits.digits[3:0];
+        io_led[17:0] = alu.alu;        
+        if((input_a_st.q) < input_b_st.q){ check_input.d[3] = 1;}
+          }
+      state.DISPLAY2:
+        mode.d = 4;
+        digits.value = alu.alu; //passing in 16 bits of binary alu into digits
+        check_input.d[2:0] = alu.zvn[2] + alu.zvn[1] + alu.zvn[0];
+        if (send.q){state.d = state.DISPLAY1;}
+        if(io_dip[23]){io_led = alufn_st.q;}
+        else if(io_dip[22]){io_led = input_a_st.q;}
+        else if(io_dip[21]){io_led = input_b_st.q;}
+        else{
+        display_value.d = {4d14, 4d10, 4d15,digits.digits[4]};
+        io_led[17:0] = alu.alu;        
         if((input_a_st.q) < input_b_st.q){ check_input.d[3] = 1;}
         }
-        if (send.q){state.d = state.AUTO;}
-      state.AUTO:
-        mode.d = 5;
-        if(!io_dip[20]){state.d = state.ALUFN;}
-                          
-           display_value.d = testcase.display;
-           testcase.button_alu = send2.q;    
-      }
-    
-   seg_display.values = display_value.q; //Displaying value from the state_machine on the seven segments.
-
+        state.AUTO:
+          mode.d = 5;                  
+                   
+    }
+   seg_display.values = display_value.q; //Displaying value from the state_machine on the seven segments 1
   }
 }
