@@ -178,17 +178,12 @@ module mojo_top_0 (
         M_check_input_d[0+0-:1] = M_alu_zvn[0+0-:1];
         if (io_dip[23+0-:1]) begin
           io_led = M_alufn_st_q;
-        end
-        if (io_dip[23+0-:1] | M_send_q) begin
-          M_state_d = ALUFN_state;
         end else begin
           if (io_dip[22+0-:1]) begin
             io_led = M_input_a_st_q;
-            M_state_d = INPUT_A_state;
           end else begin
             if (io_dip[21+0-:1]) begin
               io_led = M_input_b_st_q;
-              M_state_d = INPUT_B_state;
             end else begin
               M_display_value_d = M_digits_digits[0+15-:16];
               io_led[0+17-:18] = M_alu_alu;

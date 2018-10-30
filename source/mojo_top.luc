@@ -120,13 +120,10 @@ module mojo_top (
         check_input.d[0] = alu.zvn[0];
 
         if (io_dip[23]) {io_led = alufn_st.q;}
-        if (io_dip[23] | send.q ) {state.d = state.ALUFN;}
         else if (io_dip[22]) {
-        io_led = input_a_st.q;
-        state.d = state.INPUT_A;}
+        io_led = input_a_st.q;}
         else if (io_dip[21]) {
-        io_led = input_b_st.q;
-        state.d = state.INPUT_B;}
+        io_led = input_b_st.q;}
         else{
         display_value.d = digits.digits[3:0];
         io_led[17:0] = alu.alu;        
