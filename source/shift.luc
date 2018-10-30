@@ -16,7 +16,7 @@ module shift (
       b01:
         shift_out = a >> shift_bit[4:0]; // Shifting right.
       b11:
-        shift_out = $signed(a)>>>shift_bit[4:0]; // Arithmetic right shift.
+        shift_out = $signed(a) >>> shift_bit[4:0]; // Arithmetic right shift.
       default:
         shift_out = a;
       
