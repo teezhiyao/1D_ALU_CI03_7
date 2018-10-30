@@ -36,7 +36,6 @@ module boole (
         default:
           boole_out[i]=alufn[0];    
       }
-      
     } 
   }
 }
