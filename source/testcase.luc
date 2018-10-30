@@ -42,6 +42,11 @@ always {
             input_a_df.d = 22;
             input_b_df.d = 35;
             if (alu.alu == 57){
+=======
+            input_a_df.d = 16b0000000000010110;
+            input_b_df.d = 16b0000000000100011;
+            if (alu.alu == 16b0000000000111001){
+>>>>>>> 584aa6ad45cf052e54be71e971d192ff43120be7
                 //indicate truth
               display_v.d = {4d1,4d10,4d10,4d15};}
             else{display_v.d = {4d1,4d10,4d10, 4d3};}
@@ -174,6 +179,11 @@ always {
             input_a_df.d = 2;
             input_b_df.d = 8;
             if (alu.alu == 1){
+=======
+            input_a_df.d = 16b0000000000000010;
+            input_b_df.d = 16b0000000000001000;
+            if (alu.alu == 16b0000000000000001){
+>>>>>>> 584aa6ad45cf052e54be71e971d192ff43120be7
                 display_v.d = {4d1,4d0,4d10,4d15};
             }
             else{display_v.d = {4d1,4d0,4d10,4d3};}
@@ -184,6 +194,9 @@ always {
         
         state.CMPEQ:
             alufn_df.d = 6h33;            
+            input_a_df.d = 16b0000000000000111;
+            input_b_df.d = 16b0000000000000111;
+            if (alu.alu == 16b0000000000000001){
                 display_v.d = {4d1,4d1,4d10,4d15};
             }
             else{display_v.d = {4d1,4d1,4d10,4d3};}
@@ -194,6 +207,8 @@ always {
         
         state.XOR:
             alufn_df.d = 6h16;
+            input_a_df.d = 16b0000000000000110;
+            input_b_df.d = 16b0000000000001000;
             if (alu.alu == 16b0000000000001110){
                 display_v.d = {4d1,4d2,4d10,4d15};
             }
@@ -204,6 +219,9 @@ always {
             }
         state.AND:
             alufn_df.d = 6h18;
+            input_a_df.d = 16b0000000000000110;
+            input_b_df.d = 16b0000000000001000;
+            if (alu.alu == 16b0000000000000000){
                 display_v.d = {4d1,4d3,4d10,4d15};
             }
             else{display_v.d = {4d1,4d3,4d10,4d3};}
@@ -213,7 +231,9 @@ always {
             }
         state.OR:
             alufn_df.d = 6h1E;
+            input_a_df.d = 16b0000000000000110;
             input_b_df.d = 16b0000000000001000;
+            if (alu.alu == 16b0000000000001110){
                 display_v.d = {4d1,4d4,4d10,4d15};
             }
             else{display_v.d = {4d1,4d4,4d10,4d3};}
@@ -235,6 +255,8 @@ always {
             }
         state.SHR:
             alufn_df.d = 6h21;
+            input_a_df.d = 16b0000000001000000;
+            input_b_df.d = 16b0000000000000011;
             if (alu.alu == 16b0000000000001000){
                 display_v.d = {4d1,4d6,4d10,4d15};
             }
@@ -246,6 +268,9 @@ always {
         
         state.SRA:
             alufn_df.d = 6h23;
+            input_a_df.d = 16b1111111111111000;
+            input_b_df.d = 16b0000000000000100;
+            if (alu.alu == 16b1111111111111111){
                 display_v.d = {4d1,4d7,4d10,4d15};
             }
             else{display_v.d = {4d1,4d7,4d10,4d3};}
