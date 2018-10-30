@@ -31,7 +31,7 @@ always {
             alufn_df.d = 0;
             input_a_df.d = 0;
             input_b_df.d = 0;
-            display_v.d = {4d1,4d8,4d10,4d15};        
+            display_v.d = {4d0,4d10,4d10,4d15};        
             if (button.q) {
                 state.d = state.ADDPOS;
             }
@@ -42,8 +42,9 @@ always {
             input_b_df.d = 35;
             if ( alu.alu == 77){
                 //indicate truth
-              display_v.d = {4d1,4d1,4d10,4d15};
-            }
+              display_v.d = {4d1,4d10,4d10,4d15};}
+            else{display_v.d = {4d1,4d10,4d10, 4d3};}
+            
             if (button.q) {
                 state.d = state.ADDNEG;
             }
@@ -54,9 +55,11 @@ always {
             input_a_df.d = -34;
             input_b_df.d = -21;
             if (alu.alu == -55){
-                display_v.d = {4d2,4d1,4d10,4d15};
+                display_v.d = {4d2,4d10,4d10,4d15};
             }
-            if (button.q) {
+            else{display_v.d = {4d2,4d10,4d10, 4d3};}
+
+                    if (button.q) {
                 state.d = state.OVERFLOW;
             }
         state.OVERFLOW:
@@ -65,8 +68,10 @@ always {
             input_a_df.d = 32767;
             input_b_df.d = 1;
             if (alu.alu == 32768){
-                display_v.d = {4d3,4d1,4d10,4d15};
+                display_v.d = {4d3,4d10,4d10,4d15};
             }
+            else{display_v.d = {4d3,4d10,4d10, 4d3};}
+        
             if (button.q) {
                 state.d = state.SUBPOS;
             }
@@ -77,8 +82,10 @@ always {
             input_a_df.d = 120;
             input_b_df.d = 80;
             if (alu.alu == 50){
-                display_v.d = {4d4,4d1,4d1,4d15};
+                display_v.d = {4d4,4d10,4d1,4d15};
             }
+            else{display_v.d = {4d4,4d10,4d10, 4d3};}
+        
             if (button.q) {
                 state.d = state.SUBNEG;
             }
@@ -88,8 +95,10 @@ always {
             input_a_df.d = -32;
             input_b_df.d = -23;
             if (alu.alu == -9){
-                display_v.d = {4d5,4d1,4d10,4d15};
+                display_v.d = {4d5,4d10,4d10,4d15};
             }
+            else{display_v.d = {4d5,4d10,4d10,4d3};}
+        
             if (button.q) {
                 state.d = state.UNDERFLOW;
             }
@@ -99,7 +108,7 @@ always {
             input_a_df.d = -32768;
             input_b_df.d = -1;
             if (alu.alu == -32769){
-                display_v.d = {4d6,4d1,4d1,4d15};
+                display_v.d = {4d6,4d10,4d1,4d15};
             }
             if (button.q) {
                 state.d = state.MULT;
@@ -111,7 +120,7 @@ always {
             input_a_df.d = 32;
             input_b_df.d = 2;
             if (alu.alu == 64){
-                display_v.d = {4d7,4d1,4d10,4d15};
+                display_v.d = {4d7,4d10,4d10,4d15};
             }
             if (button.q) {
                 state.d = state.DIV;
@@ -123,7 +132,7 @@ always {
             input_a_df.d = 32;
             input_b_df.d = 8;
             if (alu.alu == 4){
-                display_v.d = {4d8,4d1,4d10,4d15};
+                display_v.d = {4d8,4d10,4d10,4d15};
             }
             if (button.q) {
                 state.d = state.CMPLEV;
@@ -134,7 +143,7 @@ always {
             input_a_df.d = 8;
             input_b_df.d = 8;
             if (alu.alu == 1){
-                display_v.d = {4d9,4d1,4d10,4d15};
+                display_v.d = {4d9,4d10,4d10,4d15};
             }
             if (button.q) {
                 state.d = state.CMPLEI;
@@ -155,7 +164,7 @@ always {
             input_a_df.d = 2;
             input_b_df.d = 8;
             if (alu.alu == 0){
-                display_v.d = {4d1,4d1,4d1,4d15};
+                display_v.d = {4d1,4d1,4d10,4d15};
             }
             if (button.q) {
                 state.d = state.CMPLTI;
@@ -217,7 +226,7 @@ always {
             input_a_df.d = 15;
             input_b_df.d = 2;
             if (alu.alu == 60){
-                display_v.d = {4d1,4d9,4d10,4d15};
+                display_v.d = {4d1,4d7,4d10,4d15};
             }
             if (button.q) {
                 state.d = state.SHR;
@@ -227,7 +236,7 @@ always {
             input_a_df.d = 64;
             input_b_df.d = 3;
             if (alu.alu == 8){
-                display_v.d = {4d2,4d0,4d10,4d15};
+                display_v.d = {4d1,4d8,4d10,4d15};
             }
             if (button.q) {
                 state.d = state.SRA;
@@ -238,8 +247,8 @@ always {
             input_a_df.d = 192; // -64
             input_b_df.d = 4;
             if (alu.alu == 252){
-                display_v.d = {4d2,4d1,4d10,4d15};
-            }
+                display_v.d = {4d1,4d9,4d10,4d15};}
+            else{display_v.d = {4d1,4d9,4d10,4d15};}
             if (button.q) {
                 state.d = state.START;
             }        

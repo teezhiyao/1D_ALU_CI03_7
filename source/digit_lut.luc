@@ -2,7 +2,7 @@
 // multi_seven_seg, numbers can be displayed on the led segment easily.
 
 module digit_lut (
-      input value [4],
+      input value [5],
       output segs [8]
     ){
     always {
@@ -23,6 +23,7 @@ module digit_lut (
         d13: segs = 7b0111110; //U
         d14: segs = 7b1111100; //B
         d15: segs = 7b1110011; //P
+        d16: segs = 7b1111001;
         default: segs = 7b0111111;
           }
         }
