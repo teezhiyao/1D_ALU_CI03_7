@@ -38,15 +38,9 @@ always {
         state.ADDPOS:
             alufn_df.d = 6b000000;
             button.d = button_alu;
-<<<<<<< HEAD
-            input_a_df.d = 22;
-            input_b_df.d = 35;
-            if (alu.alu == 57){
-=======
             input_a_df.d = 16b0000000000010110;
             input_b_df.d = 16b0000000000100011;
             if (alu.alu == 16b0000000000111001){
->>>>>>> 584aa6ad45cf052e54be71e971d192ff43120be7
                 //indicate truth
               display_v.d = {4d1,4d10,4d10,4d15};}
             else{display_v.d = {4d1,4d10,4d10, 4d3};}
