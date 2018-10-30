@@ -14,8 +14,7 @@ module adder (
 ) {
   
   sig sum[16]; // 9-bit output
-  var i;
-  
+    
   always {
     
     case (alufn[1:0]) { // Alufn value controlling add or subtract operator
@@ -25,7 +24,7 @@ module adder (
       b01: // Subtraction.
         sum = a - b;  
       b10: // TODO: Add aditional functionality.
-        sum = 0;
+        sum = a/b;
       b11: // Multiply.
         sum = a * b;
         
