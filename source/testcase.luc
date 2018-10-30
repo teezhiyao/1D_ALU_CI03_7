@@ -146,35 +146,15 @@ always {
                 display_v.d = {4d9,4d10,4d10,4d15};
             }
             if (button.q) {
-                state.d = state.CMPLEI;
-            }
-        state.CMPLEI:
-            button.d = button_alu;
-            alufn_df.d = 6h37;
-            input_a_df.d = -4081;
-            input_b_df.d = 8;
-            if (alu.alu == 1){
-                display_v.d = {4d1,4d0,4d10,4d15};
-            }
-            if (button.q) {
                 state.d = state.CMPLTV;
             }
+
         state.CMPLTV:
             alufn_df.d = 6h35;
             input_a_df.d = 2;
             input_b_df.d = 8;
             if (alu.alu == 0){
                 display_v.d = {4d1,4d1,4d10,4d15};
-            }
-            if (button.q) {
-                state.d = state.CMPLTI;
-            }
-        state.CMPLTI:
-            alufn_df.d = 6h35;
-            input_a_df.d = -4081;
-            input_b_df.d = 8;
-            if (alu.alu == 1){
-                display_v.d = {4d1,4d2,4d10,4d15};
             }
             if (button.q) {
                 state.d = state.CMPEQ;

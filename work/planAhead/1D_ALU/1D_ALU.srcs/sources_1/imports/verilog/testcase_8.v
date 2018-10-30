@@ -36,16 +36,14 @@ module testcase_8 (
   localparam MULT_state = 5'd7;
   localparam DIV_state = 5'd8;
   localparam CMPLEV_state = 5'd9;
-  localparam CMPLEI_state = 5'd10;
-  localparam CMPLTV_state = 5'd11;
-  localparam CMPLTI_state = 5'd12;
-  localparam CMPEQ_state = 5'd13;
-  localparam XOR_state = 5'd14;
-  localparam AND_state = 5'd15;
-  localparam OR_state = 5'd16;
-  localparam SHL_state = 5'd17;
-  localparam SHR_state = 5'd18;
-  localparam SRA_state = 5'd19;
+  localparam CMPLTV_state = 5'd10;
+  localparam CMPEQ_state = 5'd11;
+  localparam XOR_state = 5'd12;
+  localparam AND_state = 5'd13;
+  localparam OR_state = 5'd14;
+  localparam SHL_state = 5'd15;
+  localparam SHR_state = 5'd16;
+  localparam SRA_state = 5'd17;
   
   reg [4:0] M_state_d, M_state_q = START_state;
   reg [5:0] M_alufn_df_d, M_alufn_df_q = 1'h0;
@@ -89,6 +87,8 @@ module testcase_8 (
         M_input_b_df_d = 6'h23;
         if (M_alu_alu == 7'h4d) begin
           M_display_v_d = 16'h1aaf;
+        end else begin
+          M_display_v_d = 16'h1aa3;
         end
         if (M_button_q) begin
           M_state_d = ADDNEG_state;
@@ -101,6 +101,8 @@ module testcase_8 (
         M_input_b_df_d = $signed(6'h2b);
         if (M_alu_alu == $signed(7'h49)) begin
           M_display_v_d = 16'h2aaf;
+        end else begin
+          M_display_v_d = 16'h2aa3;
         end
         if (M_button_q) begin
           M_state_d = OVERFLOW_state;
@@ -113,6 +115,8 @@ module testcase_8 (
         M_input_b_df_d = 1'h1;
         if (M_alu_alu == 16'h8000) begin
           M_display_v_d = 16'h3aaf;
+        end else begin
+          M_display_v_d = 16'h3aa3;
         end
         if (M_button_q) begin
           M_state_d = SUBPOS_state;
@@ -125,6 +129,8 @@ module testcase_8 (
         M_input_b_df_d = 7'h50;
         if (M_alu_alu == 6'h32) begin
           M_display_v_d = 16'h4a1f;
+        end else begin
+          M_display_v_d = 16'h4aa3;
         end
         if (M_button_q) begin
           M_state_d = SUBNEG_state;
@@ -137,6 +143,8 @@ module testcase_8 (
         M_input_b_df_d = $signed(6'h29);
         if (M_alu_alu == $signed(5'h17)) begin
           M_display_v_d = 16'h5aaf;
+        end else begin
+          M_display_v_d = 16'h5aa3;
         end
         if (M_button_q) begin
           M_state_d = UNDERFLOW_state;
@@ -187,18 +195,6 @@ module testcase_8 (
           M_display_v_d = 16'h9aaf;
         end
         if (M_button_q) begin
-          M_state_d = CMPLEI_state;
-        end
-      end
-      CMPLEI_state: begin
-        M_button_d = button_alu;
-        M_alufn_df_d = 6'h37;
-        M_input_a_df_d = $signed(13'h100f);
-        M_input_b_df_d = 4'h8;
-        if (M_alu_alu == 1'h1) begin
-          M_display_v_d = 16'h10af;
-        end
-        if (M_button_q) begin
           M_state_d = CMPLTV_state;
         end
       end
@@ -208,17 +204,6 @@ module testcase_8 (
         M_input_b_df_d = 4'h8;
         if (M_alu_alu == 1'h0) begin
           M_display_v_d = 16'h11af;
-        end
-        if (M_button_q) begin
-          M_state_d = CMPLTI_state;
-        end
-      end
-      CMPLTI_state: begin
-        M_alufn_df_d = 6'h35;
-        M_input_a_df_d = $signed(13'h100f);
-        M_input_b_df_d = 4'h8;
-        if (M_alu_alu == 1'h1) begin
-          M_display_v_d = 16'h12af;
         end
         if (M_button_q) begin
           M_state_d = CMPEQ_state;
@@ -308,18 +293,18 @@ module testcase_8 (
   end
   
   always @(posedge clk) begin
+    if (rst == 1'b1) begin
+      M_state_q <= 1'h0;
+    end else begin
+      M_state_q <= M_state_d;
+    end
+    
     M_alufn_df_q <= M_alufn_df_d;
     M_input_a_df_q <= M_input_a_df_d;
     M_input_b_df_q <= M_input_b_df_d;
     M_display_v_q <= M_display_v_d;
     M_out_q <= M_out_d;
     M_button_q <= M_button_d;
-    
-    if (rst == 1'b1) begin
-      M_state_q <= 1'h0;
-    end else begin
-      M_state_q <= M_state_d;
-    end
   end
   
 endmodule
