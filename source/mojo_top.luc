@@ -29,7 +29,7 @@ module mojo_top (
       multi_seven_seg seg_display; //Connecting to multi_seven_seg which would help displaying on the segment
  
       fsm state = {ALUFN,INPUT_A,INPUT_B,AUTO,DISPLAY};
-
+zszss
                 }
     dff display_value[4][4]; // Size of LED segments
     dff mode[5];

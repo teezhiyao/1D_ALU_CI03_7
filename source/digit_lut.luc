@@ -1,24 +1,31 @@
-//With reference to the book "Learning FPGAs"- Alongside with decoder and multi_seven_seg, numbers can be displayed on the led segment easily. \
+// With reference to the book "Learning FPGAs"- Alongside with decoder and 
+// multi_seven_seg, numbers can be displayed on the led segment easily.
+
 module digit_lut (
-      input value [4],
-      output segs [8]
-    ){
-    always {
-      case (value) {
-        0: segs = 7b0111111;
-        1: segs = 7b0000110;
-        2: segs = 7b1011011;
-        3: segs = 7b1001111;
-        4: segs = 7b1100110;
-        5: segs = 7b1101101;
-        6: segs = 7b1111101;
-        7: segs = 7b0000111;
-        8: segs = 7b1111111;
-        11: segs = 7b1110111; //A
-        12: segs = 7b0111000; //L
-        13: segs = 7b0111110; //U
-        14: segs = 7b1111100; //B
-        default: segs = 7b0000000;
-          }
-        }
-      }
+    
+  input value [4],
+  output segs [8]
+    
+ ){
+    
+  always {
+    
+    case (value) {
+      0: segs = 7b0111111;
+      1: segs = 7b0000110;
+      2: segs = 7b1011011;
+      3: segs = 7b1001111;
+      4: segs = 7b1100110;
+      5: segs = 7b1101101;
+      6: segs = 7b1111101;
+      7: segs = 7b0000111;
+      8: segs = 7b1111111;
+      11: segs = 7b1110111; //A
+      12: segs = 7b0111000; //L
+      13: segs = 7b0111110; //U
+      14: segs = 7b1111100; //B
+      default: segs = 7b0000000;
+    }
+    
+  }
+}
