@@ -36,11 +36,11 @@ always {
                 state.d = state.ADDPOS;
             }
         state.ADDPOS:
-            alufn_df.d = 6b0;
+            alufn_df.d = 6b000000;
             button.d = button_alu;
             input_a_df.d = 22;
             input_b_df.d = 35;
-            if ( alu.alu == 77){
+            if (alu.alu == 77){
                 //indicate truth
               display_v.d = {4d1,4d10,4d10,4d15};}
             else{display_v.d = {4d1,4d10,4d10, 4d3};}
@@ -49,9 +49,8 @@ always {
                 state.d = state.ADDNEG;
             }
         state.ADDNEG:
-                  button.d = button_alu;
-
-            alufn_df.d = 6b0;
+            button.d = button_alu;
+            alufn_df.d = 6b000000;
             input_a_df.d = -34;
             input_b_df.d = -21;
             if (alu.alu == -55){
@@ -82,7 +81,7 @@ always {
             input_a_df.d = 120;
             input_b_df.d = 80;
             if (alu.alu == 40){
-                display_v.d = {4d4,4d1,4d1,4d15};
+                display_v.d = {4d4,4d10,4d10,4d15};
             }
             else{display_v.d = {4d4,4d10,4d10, 4d3};}
         
@@ -108,8 +107,10 @@ always {
             input_a_df.d = -32768;
             input_b_df.d = 1;
             if (alu.alu == -32769){
-                display_v.d = {4d6,4d10,4d1,4d15};
+                display_v.d = {4d6,4d10,4d10,4d15};
             }
+            else{display_v.d = {4d6,4d10,4d10,4d3};}
+        
             if (button.q) {
                 state.d = state.MULT;
             }
@@ -122,6 +123,8 @@ always {
             if (alu.alu == 64){
                 display_v.d = {4d7,4d10,4d10,4d15};
             }
+            else{display_v.d = {4d7,4d10,4d10,4d15};}
+        
             if (button.q) {
                 state.d = state.DIV;
             }
@@ -134,7 +137,8 @@ always {
             if (alu.alu == 4){
                 display_v.d = {4d8,4d10,4d10,4d15};
             }
-            if (button.q) {
+            else{display_v.d = {4d8,4d10,4d10,4d3};}
+                    if (button.q) {
                 state.d = state.CMPLEV;
             }
         state.CMPLEV:
@@ -145,7 +149,9 @@ always {
             if (alu.alu == 1){
                 display_v.d = {4d9,4d10,4d10,4d15};
             }
-            if (button.q) {
+            else{display_v.d = {4d9,4d10,4d10,4d3};}
+
+                    if (button.q) {
                 state.d = state.CMPLTV;
             }
 
@@ -154,9 +160,11 @@ always {
             input_a_df.d = 2;
             input_b_df.d = 8;
             if (alu.alu == 0){
-                display_v.d = {4d1,4d1,4d10,4d15};
+                display_v.d = {4d1,4d0,4d10,4d15};
             }
-            if (button.q) {
+            else{display_v.d = {4d1,4d0,4d10,4d3};}
+
+                    if (button.q) {
                 state.d = state.CMPEQ;
             }
         
@@ -165,8 +173,10 @@ always {
             input_a_df.d = 7;
             input_b_df.d = 7;
             if (alu.alu == 1){
-                display_v.d = {4d1,4d3,4d10,4d15};
+                display_v.d = {4d1,4d1,4d10,4d15};
             }
+            else{display_v.d = {4d1,4d1,4d10,4d3};}
+        
             if (button.q) {
                 state.d = state.XOR;
             }
@@ -176,9 +186,11 @@ always {
             input_a_df.d = 6;
             input_b_df.d = 8;
             if (alu.alu == 14){
-                display_v.d = {4d1,4d4,4d10,4d15};
+                display_v.d = {4d1,4d2,4d10,4d15};
             }
-            if (button.q) {
+            else{display_v.d = {4d1,4d2,4d10,4d3};}
+
+                    if (button.q) {
                 state.d = state.AND;
             }
         state.AND:
@@ -186,8 +198,10 @@ always {
             input_a_df.d = 6;
             input_b_df.d = 8;
             if (alu.alu == 0){
-                display_v.d = {4d1,4d5,4d10,4d15};
+                display_v.d = {4d1,4d3,4d10,4d15};
             }
+            else{display_v.d = {4d1,4d3,4d10,4d3};}
+        
             if (button.q) {
                 state.d = state.OR;
             }
@@ -196,8 +210,10 @@ always {
             input_a_df.d = 6;
             input_b_df.d = 8;
             if (alu.alu == 14){
-                display_v.d = {4d1,4d6,4d10,4d15};
+                display_v.d = {4d1,4d4,4d10,4d15};
             }
+            else{display_v.d = {4d1,4d4,4d10,4d3};}
+        
             if (button.q) {
                 state.d = state.SHL;
             }
@@ -206,8 +222,10 @@ always {
             input_a_df.d = 15;
             input_b_df.d = 2;
             if (alu.alu == 60){
-                display_v.d = {4d1,4d7,4d10,4d15};
+                display_v.d = {4d1,4d5,4d10,4d15};
             }
+            else{display_v.d = {4d1,4d5,4d10,4d3};}
+        
             if (button.q) {
                 state.d = state.SHR;
             }
@@ -216,8 +234,10 @@ always {
             input_a_df.d = 64;
             input_b_df.d = 3;
             if (alu.alu == 8){
-                display_v.d = {4d1,4d8,4d10,4d15};
+                display_v.d = {4d1,4d6,4d10,4d15};
             }
+            else{display_v.d = {4d1,4d6,4d10,4d3};}
+        
             if (button.q) {
                 state.d = state.SRA;
             }
@@ -227,8 +247,10 @@ always {
             input_a_df.d = -8;
             input_b_df.d = 4;
             if (alu.alu == -1){
-                display_v.d = {4d2,4d1,4d10,4d15};
+                display_v.d = {4d1,4d7,4d10,4d15};
             }
+            else{display_v.d = {4d1,4d7,4d10,4d3};}
+        
             if (button.q) {
                 state.d = state.START;
             }        

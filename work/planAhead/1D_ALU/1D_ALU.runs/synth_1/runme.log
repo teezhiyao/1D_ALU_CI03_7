@@ -338,12 +338,12 @@ Unit <decoder_18> synthesized.
 Synthesizing Unit <testcase_8>.
     Related source file is "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/testcase_8.v".
 INFO:Xst:3210 - "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/testcase_8.v" line 21: Output port <zvn> of the instance <alu> is unconnected or connected to loadless signal.
-    Found 6-bit register for signal <M_alufn_df_q>.
     Found 16-bit register for signal <M_input_a_df_q>.
     Found 16-bit register for signal <M_input_b_df_q>.
     Found 16-bit register for signal <M_display_v_q>.
     Found 1-bit register for signal <M_button_q>.
     Found 5-bit register for signal <M_state_q>.
+    Found 6-bit register for signal <M_alufn_df_q>.
     Found finite state machine <FSM_1> for signal <M_state_q>.
     -----------------------------------------------------------------------
     | States             | 18                                             |
@@ -524,7 +524,8 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1293 - FF/Latch <M_display_v_q_6> has a constant value of 0 in block <testcase_8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <M_display_v_q_4> has a constant value of 0 in block <testcase_8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_display_v_q_6> has a constant value of 0 in block <testcase_8>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <M_check_input_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <FSM_0> on signal <M_state_q[1:3]> with user encoding.
@@ -538,113 +539,38 @@ Optimizing FSM <FSM_0> on signal <M_state_q[1:3]> with user encoding.
  100   | 100
 -------------------
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <testcase/FSM_1> on signal <M_state_q[1:5]> with user encoding.
--------------------
+Optimizing FSM <testcase/FSM_1> on signal <M_state_q[1:18]> with one-hot encoding.
+-----------------------------
  State | Encoding
--------------------
- 00000 | 00000
- 00001 | 00001
- 00010 | 00010
- 00011 | 00011
- 00100 | 00100
- 00101 | 00101
- 00110 | 00110
- 00111 | 00111
- 01000 | 01000
- 01001 | 01001
- 01010 | 01010
- 01011 | 01011
- 01100 | 01100
- 01101 | 01101
- 01110 | 01110
- 01111 | 01111
- 10000 | 10000
- 10001 | 10001
--------------------
-INFO:Xst:2261 - The FF/Latch <M_input_a_df_q_8> in Unit <testcase_8> is equivalent to the following 6 FFs/Latches, which will be removed : <M_input_a_df_q_9> <M_input_a_df_q_10> <M_input_a_df_q_11> <M_input_a_df_q_12> <M_input_a_df_q_13> <M_input_a_df_q_14> 
-INFO:Xst:2261 - The FF/Latch <M_input_a_df_q_15> in Unit <testcase_8> is equivalent to the following 9 FFs/Latches, which will be removed : <M_input_b_df_q_7> <M_input_b_df_q_8> <M_input_b_df_q_9> <M_input_b_df_q_10> <M_input_b_df_q_11> <M_input_b_df_q_12> <M_input_b_df_q_13> <M_input_b_df_q_14> <M_input_b_df_q_15> 
+-----------------------------
+ 00000 | 000000000000000001
+ 00001 | 000000000000000010
+ 00010 | 000000000000000100
+ 00011 | 000000000000001000
+ 00100 | 000000000000010000
+ 00101 | 000000000000100000
+ 00110 | 000000000001000000
+ 00111 | 000000000010000000
+ 01000 | 000000000100000000
+ 01001 | 000000001000000000
+ 01010 | 000000010000000000
+ 01011 | 000000100000000000
+ 01100 | 000001000000000000
+ 01101 | 000010000000000000
+ 01110 | 000100000000000000
+ 01111 | 001000000000000000
+ 10000 | 010000000000000000
+ 10001 | 100000000000000000
+-----------------------------
+INFO:Xst:2261 - The FF/Latch <M_input_b_df_q_7> in Unit <testcase_8> is equivalent to the following 8 FFs/Latches, which will be removed : <M_input_b_df_q_8> <M_input_b_df_q_9> <M_input_b_df_q_10> <M_input_b_df_q_11> <M_input_b_df_q_12> <M_input_b_df_q_13> <M_input_b_df_q_14> <M_input_b_df_q_15> 
+INFO:Xst:2261 - The FF/Latch <M_input_a_df_q_7> in Unit <testcase_8> is equivalent to the following 7 FFs/Latches, which will be removed : <M_input_a_df_q_8> <M_input_a_df_q_9> <M_input_a_df_q_10> <M_input_a_df_q_11> <M_input_a_df_q_12> <M_input_a_df_q_13> <M_input_a_df_q_14> 
 
 Optimizing unit <mojo_top_0> ...
 
 Optimizing unit <testcase_8> ...
-INFO:Xst:2261 - The FF/Latch <M_display_v_q_0> in Unit <testcase_8> is equivalent to the following FF/Latch, which will be removed : <M_display_v_q_1> 
+INFO:Xst:2261 - The FF/Latch <M_display_v_q_0> in Unit <testcase_8> is equivalent to the following 3 FFs/Latches, which will be removed : <M_display_v_q_1> <M_display_v_q_5> <M_display_v_q_7> 
 INFO:Xst:2261 - The FF/Latch <M_display_v_q_2> in Unit <testcase_8> is equivalent to the following FF/Latch, which will be removed : <M_display_v_q_3> 
-INFO:Xst:2261 - The FF/Latch <M_display_v_q_5> in Unit <testcase_8> is equivalent to the following FF/Latch, which will be removed : <M_display_v_q_7> 
 
 Optimizing unit <adder_10> ...
 
 Optimizing unit <div_16u_16u> ...
-WARNING:Xst:1293 - FF/Latch <testcase/M_display_v_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <testcase/M_display_v_q_5> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <testcase/M_display_v_q_0> 
-INFO:Xst:2261 - The FF/Latch <M_display_value_q_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <M_display_value_q_7> 
-INFO:Xst:2261 - The FF/Latch <M_display_value_q_4> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <M_display_value_q_6> 
-
-Mapping all equations...
-Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 29.
-FlipFlop testcase/M_input_a_df_q_15 has been replicated 3 time(s)
-FlipFlop testcase/M_input_a_df_q_8 has been replicated 3 time(s)
-FlipFlop testcase/M_input_b_df_q_0 has been replicated 3 time(s)
-FlipFlop testcase/M_input_b_df_q_1 has been replicated 3 time(s)
-FlipFlop testcase/M_input_b_df_q_2 has been replicated 3 time(s)
-FlipFlop testcase/M_input_b_df_q_3 has been replicated 3 time(s)
-FlipFlop testcase/M_input_b_df_q_4 has been replicated 3 time(s)
-FlipFlop testcase/M_input_b_df_q_5 has been replicated 2 time(s)
-FlipFlop testcase/M_input_b_df_q_6 has been replicated 2 time(s)
-
-Final Macro Processing ...
-
-Processing Unit <mojo_top_0> :
-	Found 2-bit shift register for signal <button_condd/sync/M_pipe_q_1>.
-	Found 2-bit shift register for signal <button_condd2/sync/M_pipe_q_1>.
-INFO:Xst:741 - HDL ADVISOR - A 4-bit shift register was found for signal <reset_cond/M_stage_q_3> and currently occupies 4 logic cells (2 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
-Unit <mojo_top_0> processed.
-
-=========================================================================
-Final Register Report
-
-Macro Statistics
-# Registers                                            : 192
- Flip-Flops                                            : 192
-# Shift Registers                                      : 2
- 2-bit shift register                                  : 2
-
-=========================================================================
-
-=========================================================================
-*                           Partition Report                            *
-=========================================================================
-
-Partition Implementation Status
--------------------------------
-
-  No Partitions were found in this design.
-
--------------------------------
-
-=========================================================================
-*                            Design Summary                             *
-=========================================================================
-
-Clock Information:
-------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 198   |
------------------------------------+------------------------+-------+
-
-Asynchronous Control Signals Information:
-----------------------------------------
-No asynchronous control signals found in this design
-
-Timing Summary:
----------------
-Speed Grade: -2
-
-   Minimum period: 53.120ns (Maximum Frequency: 18.825MHz)
-   Minimum input arrival time before clock: 5.804ns
-   Maximum output required time after clock: 56.257ns
-   Maximum combinational path delay: 12.899ns
-
-=========================================================================
