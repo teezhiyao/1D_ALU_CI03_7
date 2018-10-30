@@ -55,18 +55,32 @@ module mojo_top_0 (
     .in(M_button_condd_in),
     .out(M_button_condd_out)
   );
+  wire [1-1:0] M_button_condd2_out;
+  reg [1-1:0] M_button_condd2_in;
+  button_conditioner_3 button_condd2 (
+    .clk(clk),
+    .in(M_button_condd2_in),
+    .out(M_button_condd2_out)
+  );
   wire [1-1:0] M_edge_out;
   reg [1-1:0] M_edge_in;
-  edge_detector_4 L_edge (
+  edge_detector_5 L_edge (
     .clk(clk),
     .in(M_edge_in),
     .out(M_edge_out)
+  );
+  wire [1-1:0] M_edge2_out;
+  reg [1-1:0] M_edge2_in;
+  edge_detector_5 edge2 (
+    .clk(clk),
+    .in(M_edge2_in),
+    .out(M_edge2_out)
   );
   wire [8-1:0] M_seg_display_seg;
   wire [4-1:0] M_seg_display_sel;
   reg [16-1:0] M_seg_display_values;
   reg [4-1:0] M_seg_display_decimal;
-  multi_seven_seg_5 seg_display (
+  multi_seven_seg_7 seg_display (
     .clk(clk),
     .rst(rst),
     .values(M_seg_display_values),
@@ -81,18 +95,26 @@ module mojo_top_0 (
   localparam DISPLAY_state = 3'd4;
   
   reg [2:0] M_state_d, M_state_q = ALUFN_state;
+  wire [16-1:0] M_testcase_display;
+  reg [1-1:0] M_testcase_button_alu;
+  testcase_8 testcase (
+    .clk(clk),
+    .rst(rst),
+    .button_alu(M_testcase_button_alu),
+    .display(M_testcase_display)
+  );
   reg [15:0] M_display_value_d, M_display_value_q = 1'h0;
   reg [4:0] M_mode_d, M_mode_q = 1'h0;
   reg [5:0] M_alufn_st_d, M_alufn_st_q = 1'h0;
   reg [15:0] M_input_a_st_d, M_input_a_st_q = 1'h0;
   reg [15:0] M_input_b_st_d, M_input_b_st_q = 1'h0;
   reg [0:0] M_send_d, M_send_q = 1'h0;
+  reg [0:0] M_send2_d, M_send2_q = 1'h0;
   reg [7:0] M_check_input_d, M_check_input_q = 1'h0;
-  reg [0:0] M_modify_d, M_modify_q = 1'h0;
   
   wire [20-1:0] M_digits_digits;
   reg [17-1:0] M_digits_value;
-  bin_to_dec_6 digits (
+  bin_to_dec_9 digits (
     .value(M_digits_value),
     .digits(M_digits_digits)
   );
@@ -104,6 +126,7 @@ module mojo_top_0 (
     M_display_value_d = M_display_value_q;
     M_send_d = M_send_q;
     M_input_a_st_d = M_input_a_st_q;
+    M_send2_d = M_send2_q;
     M_check_input_d = M_check_input_q;
     M_mode_d = M_mode_q;
     
@@ -114,8 +137,11 @@ module mojo_top_0 (
     spi_channel = 4'bzzzz;
     avr_rx = 1'bz;
     M_button_condd_in = io_button[3+0-:1];
+    M_button_condd2_in = io_button[0+0-:1];
     M_edge_in = M_button_condd_out;
+    M_edge2_in = M_button_condd2_out;
     M_send_d = M_edge_out;
+    M_send2_d = M_edge2_out;
     M_seg_display_decimal = 4'h0;
     io_seg = ~M_seg_display_seg;
     io_sel = ~M_seg_display_sel;
@@ -124,6 +150,7 @@ module mojo_top_0 (
     M_alu_b = M_input_b_st_q;
     M_digits_value = 1'h0;
     led = M_check_input_q;
+    M_testcase_button_alu = 1'h0;
     
     case (M_state_q)
       ALUFN_state: begin
@@ -198,7 +225,8 @@ module mojo_top_0 (
       end
       AUTO_state: begin
         M_mode_d = 3'h5;
-        M_display_value_d = 16'h8888;
+        M_display_value_d = M_testcase_display;
+        M_testcase_button_alu = M_send2_q;
       end
     endcase
     M_seg_display_values = M_display_value_q;
@@ -211,8 +239,8 @@ module mojo_top_0 (
     M_input_a_st_q <= M_input_a_st_d;
     M_input_b_st_q <= M_input_b_st_d;
     M_send_q <= M_send_d;
+    M_send2_q <= M_send2_d;
     M_check_input_q <= M_check_input_d;
-    M_modify_q <= M_modify_d;
     
     if (rst == 1'b1) begin
       M_state_q <= 1'h0;

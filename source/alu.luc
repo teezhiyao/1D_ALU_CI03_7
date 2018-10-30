@@ -26,9 +26,9 @@ module alu (
     
     // Comparator module.
     cmp_call.alufn = alufn[3:0];
-    cmp_call.z = add_call.zvn[2];
+    cmp_call.z = add_call.zvn[0];
     cmp_call.v = add_call.zvn[1];
-    cmp_call.n = add_call.zvn[0];
+    cmp_call.n = add_call.zvn[2];
     
     // Boolean module.
     bool_call.a = a;
@@ -37,7 +37,7 @@ module alu (
     
     // Assigning inputs of ALU to shifter module.
     shift_call.a = a;
-    shift_call.shift_bit = b[5:0];
+    shift_call.shift_bit = b[4:0];
     shift_call.alufn=alufn[3:0];
     
     // 2 most significant bit of alufn --> To select the component to use.

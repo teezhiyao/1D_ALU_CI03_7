@@ -7,34 +7,36 @@ Reading design: mojo_top_0.prj
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/shift_10.v" into library work
-Parsing module <shift_10>.
-Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/pipeline_11.v" into library work
-Parsing module <pipeline_11>.
-Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/digit_lut_13.v" into library work
-Parsing module <digit_lut_13>.
-Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/decoder_14.v" into library work
-Parsing module <decoder_14>.
-Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/counter_12.v" into library work
-Parsing module <counter_12>.
-Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/cmp_8.v" into library work
-Parsing module <cmp_8>.
-Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/boole_9.v" into library work
-Parsing module <boole_9>.
-Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/adder_7.v" into library work
-Parsing module <adder_7>.
-Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/reset_conditioner_2.v" into library work
-Parsing module <reset_conditioner_2>.
-Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/multi_seven_seg_5.v" into library work
-Parsing module <multi_seven_seg_5>.
-Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/edge_detector_4.v" into library work
-Parsing module <edge_detector_4>.
-Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/button_conditioner_3.v" into library work
-Parsing module <button_conditioner_3>.
-Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/bin_to_dec_6.v" into library work
-Parsing module <bin_to_dec_6>.
+Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/shift_13.v" into library work
+Parsing module <shift_13>.
+Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/cmp_11.v" into library work
+Parsing module <cmp_11>.
+Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/boole_12.v" into library work
+Parsing module <boole_12>.
+Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/adder_10.v" into library work
+Parsing module <adder_10>.
+Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/pipeline_14.v" into library work
+Parsing module <pipeline_14>.
+Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/digit_lut_17.v" into library work
+Parsing module <digit_lut_17>.
+Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/decoder_18.v" into library work
+Parsing module <decoder_18>.
+Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/counter_16.v" into library work
+Parsing module <counter_16>.
 Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/alu_1.v" into library work
 Parsing module <alu_1>.
+Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/testcase_8.v" into library work
+Parsing module <testcase_8>.
+Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/reset_conditioner_2.v" into library work
+Parsing module <reset_conditioner_2>.
+Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/multi_seven_seg_7.v" into library work
+Parsing module <multi_seven_seg_7>.
+Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/edge_detector_5.v" into library work
+Parsing module <edge_detector_5>.
+Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/button_conditioner_3.v" into library work
+Parsing module <button_conditioner_3>.
+Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/bin_to_dec_9.v" into library work
+Parsing module <bin_to_dec_9>.
 Analyzing Verilog file "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/mojo_top_0.v" into library work
 Parsing module <mojo_top_0>.
 
@@ -46,39 +48,40 @@ Elaborating module <mojo_top_0>.
 
 Elaborating module <alu_1>.
 
-Elaborating module <adder_7>.
+Elaborating module <adder_10>.
 
-Elaborating module <cmp_8>.
+Elaborating module <cmp_11>.
 
-Elaborating module <boole_9>.
+Elaborating module <boole_12>.
 
-Elaborating module <shift_10>.
-WARNING:HDLCompiler:295 - "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/shift_10.v" Line 25: case condition never applies
+Elaborating module <shift_13>.
 
 Elaborating module <reset_conditioner_2>.
 
 Elaborating module <button_conditioner_3>.
 
-Elaborating module <pipeline_11>.
+Elaborating module <pipeline_14>.
 
-Elaborating module <edge_detector_4>.
+Elaborating module <edge_detector_5>.
 
-Elaborating module <multi_seven_seg_5>.
+Elaborating module <multi_seven_seg_7>.
 
-Elaborating module <counter_12>.
+Elaborating module <counter_16>.
 
-Elaborating module <digit_lut_13>.
+Elaborating module <digit_lut_17>.
 
-Elaborating module <decoder_14>.
-WARNING:HDLCompiler:413 - "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/multi_seven_seg_5.v" Line 50: Result of 9-bit expression is truncated to fit in 8-bit target.
+Elaborating module <decoder_18>.
+WARNING:HDLCompiler:413 - "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/multi_seven_seg_7.v" Line 50: Result of 9-bit expression is truncated to fit in 8-bit target.
 
-Elaborating module <bin_to_dec_6>.
-WARNING:HDLCompiler:413 - "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/bin_to_dec_6.v" Line 39: Result of 64-bit expression is truncated to fit in 32-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/bin_to_dec_6.v" Line 51: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/bin_to_dec_6.v" Line 52: Result of 18-bit expression is truncated to fit in 17-bit target.
-WARNING:HDLCompiler:1127 - "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 97: Assignment to M_digits_digits ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 207: Assignment to M_modify_q ignored, since the identifier is never used
-WARNING:Xst:2972 - "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/mojo_top_0.v" line 95. All outputs of instance <digits> of block <bin_to_dec_6> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
+Elaborating module <testcase_8>.
+WARNING:HDLCompiler:1127 - "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/testcase_8.v" Line 26: Assignment to M_alu_zvn ignored, since the identifier is never used
+
+Elaborating module <bin_to_dec_9>.
+WARNING:HDLCompiler:413 - "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/bin_to_dec_9.v" Line 39: Result of 64-bit expression is truncated to fit in 32-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/bin_to_dec_9.v" Line 51: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/bin_to_dec_9.v" Line 52: Result of 18-bit expression is truncated to fit in 17-bit target.
+WARNING:HDLCompiler:1127 - "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 119: Assignment to M_digits_digits ignored, since the identifier is never used
+WARNING:Xst:2972 - "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/mojo_top_0.v" line 117. All outputs of instance <digits> of block <bin_to_dec_9> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -86,7 +89,7 @@ WARNING:Xst:2972 - "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhe
 
 Synthesizing Unit <mojo_top_0>.
     Related source file is "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/mojo_top_0.v".
-WARNING:Xst:647 - Input <io_button<2:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <io_button<2:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <io_button<4:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <cclk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <spi_ss> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -94,11 +97,12 @@ WARNING:Xst:647 - Input <spi_mosi> is never used. This port will be preserved an
 WARNING:Xst:647 - Input <spi_sck> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <avr_tx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/mojo_top_0.v" line 95: Output port <digits> of the instance <digits> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/mojo_top_0.v" line 117: Output port <digits> of the instance <digits> is unconnected or connected to loadless signal.
     Found 6-bit register for signal <M_alufn_st_q>.
     Found 16-bit register for signal <M_input_a_st_q>.
     Found 16-bit register for signal <M_input_b_st_q>.
     Found 1-bit register for signal <M_send_q>.
+    Found 1-bit register for signal <M_send2_q>.
     Found 8-bit register for signal <led>.
     Found 3-bit register for signal <M_state_q>.
     Found 16-bit register for signal <M_display_value_q>.
@@ -107,7 +111,7 @@ INFO:Xst:3210 - "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/
     | States             | 5                                              |
     | Transitions        | 13                                             |
     | Inputs             | 2                                              |
-    | Outputs            | 16                                             |
+    | Outputs            | 15                                             |
     | Clock              | clk (rising_edge)                              |
     | Reset              | M_reset_cond_out (positive)                    |
     | Reset type         | synchronous                                    |
@@ -116,17 +120,17 @@ INFO:Xst:3210 - "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 1-bit tristate buffer for signal <spi_miso> created at line 100
-    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 100
-    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 100
-    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 100
-    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 100
-    Found 1-bit tristate buffer for signal <avr_rx> created at line 100
-    Found 16-bit comparator greater for signal <M_input_a_st_q[15]_M_input_b_st_q[15]_LessThan_16_o> created at line 189
+    Found 1-bit tristate buffer for signal <spi_miso> created at line 122
+    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 122
+    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 122
+    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 122
+    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 122
+    Found 1-bit tristate buffer for signal <avr_rx> created at line 122
+    Found 16-bit comparator greater for signal <M_input_a_st_q[15]_M_input_b_st_q[15]_LessThan_16_o> created at line 216
     Summary:
-	inferred  63 D-type flip-flop(s).
+	inferred  64 D-type flip-flop(s).
 	inferred   1 Comparator(s).
-	inferred  15 Multiplexer(s).
+	inferred  18 Multiplexer(s).
 	inferred   6 Tristate(s).
 	inferred   1 Finite State Machine(s).
 Unit <mojo_top_0> synthesized.
@@ -138,30 +142,87 @@ Synthesizing Unit <alu_1>.
 	inferred   1 Multiplexer(s).
 Unit <alu_1> synthesized.
 
-Synthesizing Unit <adder_7>.
-    Related source file is "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/adder_7.v".
+Synthesizing Unit <adder_10>.
+    Related source file is "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/adder_10.v".
 WARNING:Xst:647 - Input <alufn<3:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 16-bit subtractor for signal <a[15]_b[15]_sub_2_OUT> created at line 28.
-    Found 16-bit adder for signal <a[15]_b[15]_add_0_OUT> created at line 25.
-    Found 16x16-bit multiplier for signal <n0023> created at line 34.
-    Found 16-bit 4-to-1 multiplexer for signal <sum> created at line 23.
+    Found 16-bit subtractor for signal <a[15]_b[15]_sub_2_OUT> created at line 26.
+    Found 16-bit adder for signal <a[15]_b[15]_add_0_OUT> created at line 23.
+    Found 16x16-bit multiplier for signal <n0024> created at line 32.
+    Found 16-bit 4-to-1 multiplexer for signal <sum> created at line 21.
     Summary:
 	inferred   1 Multiplier(s).
 	inferred   1 Adder/Subtractor(s).
 	inferred   2 Multiplexer(s).
-Unit <adder_7> synthesized.
+Unit <adder_10> synthesized.
 
-Synthesizing Unit <cmp_8>.
-    Related source file is "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/cmp_8.v".
+Synthesizing Unit <div_16u_16u>.
+    Related source file is "".
+    Found 32-bit adder for signal <n0956> created at line 0.
+    Found 32-bit adder for signal <GND_4_o_b[15]_add_1_OUT> created at line 0.
+    Found 31-bit adder for signal <n0960> created at line 0.
+    Found 31-bit adder for signal <GND_4_o_b[15]_add_3_OUT> created at line 0.
+    Found 30-bit adder for signal <n0964> created at line 0.
+    Found 30-bit adder for signal <GND_4_o_b[15]_add_5_OUT> created at line 0.
+    Found 29-bit adder for signal <n0968> created at line 0.
+    Found 29-bit adder for signal <GND_4_o_b[15]_add_7_OUT> created at line 0.
+    Found 28-bit adder for signal <n0972> created at line 0.
+    Found 28-bit adder for signal <GND_4_o_b[15]_add_9_OUT> created at line 0.
+    Found 27-bit adder for signal <n0976> created at line 0.
+    Found 27-bit adder for signal <GND_4_o_b[15]_add_11_OUT> created at line 0.
+    Found 26-bit adder for signal <n0980> created at line 0.
+    Found 26-bit adder for signal <GND_4_o_b[15]_add_13_OUT> created at line 0.
+    Found 25-bit adder for signal <n0984> created at line 0.
+    Found 25-bit adder for signal <GND_4_o_b[15]_add_15_OUT> created at line 0.
+    Found 24-bit adder for signal <n0988> created at line 0.
+    Found 24-bit adder for signal <GND_4_o_b[15]_add_17_OUT> created at line 0.
+    Found 23-bit adder for signal <n0992> created at line 0.
+    Found 23-bit adder for signal <GND_4_o_b[15]_add_19_OUT> created at line 0.
+    Found 22-bit adder for signal <n0996> created at line 0.
+    Found 22-bit adder for signal <GND_4_o_b[15]_add_21_OUT> created at line 0.
+    Found 21-bit adder for signal <n1000> created at line 0.
+    Found 21-bit adder for signal <GND_4_o_b[15]_add_23_OUT> created at line 0.
+    Found 20-bit adder for signal <n1004> created at line 0.
+    Found 20-bit adder for signal <GND_4_o_b[15]_add_25_OUT> created at line 0.
+    Found 19-bit adder for signal <n1008> created at line 0.
+    Found 19-bit adder for signal <GND_4_o_b[15]_add_27_OUT> created at line 0.
+    Found 18-bit adder for signal <n1012> created at line 0.
+    Found 18-bit adder for signal <GND_4_o_b[15]_add_29_OUT> created at line 0.
+    Found 17-bit adder for signal <n1016> created at line 0.
+    Found 17-bit adder for signal <GND_4_o_b[15]_add_31_OUT> created at line 0.
+    Found 32-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 30-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 29-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 28-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 27-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 26-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 25-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 24-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 23-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 22-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 20-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 19-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 18-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 17-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Summary:
+	inferred  32 Adder/Subtractor(s).
+	inferred  17 Comparator(s).
+	inferred 241 Multiplexer(s).
+Unit <div_16u_16u> synthesized.
+
+Synthesizing Unit <cmp_11>.
+    Related source file is "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/cmp_11.v".
 WARNING:Xst:647 - Input <alufn<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <alufn<3:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit 4-to-1 multiplexer for signal <cmp> created at line 21.
     Summary:
 	inferred   1 Multiplexer(s).
-Unit <cmp_8> synthesized.
+Unit <cmp_11> synthesized.
 
-Synthesizing Unit <boole_9>.
-    Related source file is "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/boole_9.v".
+Synthesizing Unit <boole_12>.
+    Related source file is "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/boole_12.v".
     Found 3-bit adder for signal <n0278[2:0]> created at line 22.
     Found 3-bit adder for signal <n0281[2:0]> created at line 22.
     Found 3-bit adder for signal <n0284[2:0]> created at line 22.
@@ -197,17 +258,19 @@ Synthesizing Unit <boole_9>.
     Summary:
 	inferred  16 Adder/Subtractor(s).
 	inferred  32 Multiplexer(s).
-Unit <boole_9> synthesized.
+Unit <boole_12> synthesized.
 
-Synthesizing Unit <shift_10>.
-    Related source file is "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/shift_10.v".
+Synthesizing Unit <shift_13>.
+    Related source file is "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/shift_13.v".
 WARNING:Xst:647 - Input <alufn<3:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 16-bit shifter logical left for signal <a[15]_shift_bit[5]_shift_left_0_OUT> created at line 20
-    Found 16-bit shifter logical right for signal <a[15]_shift_bit[5]_shift_right_1_OUT> created at line 23
+    Found 16-bit shifter logical left for signal <a[15]_shift_bit[4]_shift_left_0_OUT> created at line 20
+    Found 16-bit shifter logical right for signal <a[15]_shift_bit[4]_shift_right_1_OUT> created at line 23
+    Found 16-bit shifter arithmetic right for signal <a[15]_shift_bit[4]_shift_right_2_OUT> created at line 26
+    Found 16-bit 4-to-1 multiplexer for signal <shift_out> created at line 18.
     Summary:
-	inferred   2 Multiplexer(s).
-	inferred   2 Combinational logic shifter(s).
-Unit <shift_10> synthesized.
+	inferred   4 Multiplexer(s).
+	inferred   3 Combinational logic shifter(s).
+Unit <shift_13> synthesized.
 
 Synthesizing Unit <reset_conditioner_2>.
     Related source file is "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/reset_conditioner_2.v".
@@ -219,58 +282,88 @@ Unit <reset_conditioner_2> synthesized.
 Synthesizing Unit <button_conditioner_3>.
     Related source file is "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/button_conditioner_3.v".
     Found 20-bit register for signal <M_ctr_q>.
-    Found 20-bit adder for signal <M_ctr_q[19]_GND_11_o_add_2_OUT> created at line 39.
+    Found 20-bit adder for signal <M_ctr_q[19]_GND_12_o_add_2_OUT> created at line 39.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  20 D-type flip-flop(s).
 Unit <button_conditioner_3> synthesized.
 
-Synthesizing Unit <pipeline_11>.
-    Related source file is "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/pipeline_11.v".
+Synthesizing Unit <pipeline_14>.
+    Related source file is "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/pipeline_14.v".
     Found 2-bit register for signal <M_pipe_q>.
     Summary:
 	inferred   2 D-type flip-flop(s).
-Unit <pipeline_11> synthesized.
+Unit <pipeline_14> synthesized.
 
-Synthesizing Unit <edge_detector_4>.
-    Related source file is "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/edge_detector_4.v".
+Synthesizing Unit <edge_detector_5>.
+    Related source file is "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/edge_detector_5.v".
     Found 1-bit register for signal <M_last_q>.
     Summary:
 	inferred   1 D-type flip-flop(s).
-Unit <edge_detector_4> synthesized.
+Unit <edge_detector_5> synthesized.
 
-Synthesizing Unit <multi_seven_seg_5>.
-    Related source file is "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/multi_seven_seg_5.v".
+Synthesizing Unit <multi_seven_seg_7>.
+    Related source file is "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/multi_seven_seg_7.v".
 WARNING:Xst:647 - Input <decimal> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 4-bit adder for signal <M_ctr_value[1]_GND_14_o_add_0_OUT> created at line 49.
+    Found 4-bit adder for signal <M_ctr_value[1]_GND_15_o_add_0_OUT> created at line 49.
     Found 31-bit shifter logical right for signal <n0011> created at line 49
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   1 Combinational logic shifter(s).
-Unit <multi_seven_seg_5> synthesized.
+Unit <multi_seven_seg_7> synthesized.
 
-Synthesizing Unit <counter_12>.
-    Related source file is "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/counter_12.v".
+Synthesizing Unit <counter_16>.
+    Related source file is "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/counter_16.v".
     Found 18-bit register for signal <M_ctr_q>.
-    Found 18-bit adder for signal <M_ctr_q[17]_GND_15_o_add_0_OUT> created at line 35.
+    Found 18-bit adder for signal <M_ctr_q[17]_GND_16_o_add_0_OUT> created at line 35.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  18 D-type flip-flop(s).
 	inferred   1 Multiplexer(s).
-Unit <counter_12> synthesized.
+Unit <counter_16> synthesized.
 
-Synthesizing Unit <digit_lut_13>.
-    Related source file is "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/digit_lut_13.v".
+Synthesizing Unit <digit_lut_17>.
+    Related source file is "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/digit_lut_17.v".
     Found 16x8-bit Read Only RAM for signal <segs>
     Summary:
 	inferred   1 RAM(s).
-Unit <digit_lut_13> synthesized.
+Unit <digit_lut_17> synthesized.
 
-Synthesizing Unit <decoder_14>.
-    Related source file is "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/decoder_14.v".
+Synthesizing Unit <decoder_18>.
+    Related source file is "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/decoder_18.v".
     Summary:
 	no macro.
-Unit <decoder_14> synthesized.
+Unit <decoder_18> synthesized.
+
+Synthesizing Unit <testcase_8>.
+    Related source file is "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/testcase_8.v".
+INFO:Xst:3210 - "C:/Users/ZhiYao/Documents/GitHub/1D_ALU_CI03_7_/work/planAhead/1D_ALU/1D_ALU.srcs/sources_1/imports/verilog/testcase_8.v" line 21: Output port <zvn> of the instance <alu> is unconnected or connected to loadless signal.
+    Found 16-bit register for signal <M_input_a_df_q>.
+    Found 16-bit register for signal <M_input_b_df_q>.
+    Found 16-bit register for signal <M_display_v_q>.
+    Found 1-bit register for signal <M_button_q>.
+    Found 5-bit register for signal <M_state_q>.
+    Found 6-bit register for signal <M_alufn_df_q>.
+    Found finite state machine <FSM_1> for signal <M_state_q>.
+    -----------------------------------------------------------------------
+    | States             | 22                                             |
+    | Transitions        | 44                                             |
+    | Inputs             | 1                                              |
+    | Outputs            | 43                                             |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00000                                          |
+    | Power Up State     | 00000                                          |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit 24-to-1 multiplexer for signal <M_display_v_d> created at line 75.
+    Summary:
+	inferred  55 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <testcase_8> synthesized.
 
 =========================================================================
 HDL Synthesis Report
@@ -278,41 +371,74 @@ HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  16x8-bit single-port Read Only RAM                    : 1
-# Multipliers                                          : 1
- 16x16-bit multiplier                                  : 1
-# Adders/Subtractors                                   : 20
- 16-bit addsub                                         : 1
- 18-bit adder                                          : 1
- 20-bit adder                                          : 1
- 3-bit adder                                           : 16
+# Multipliers                                          : 2
+ 16x16-bit multiplier                                  : 2
+# Adders/Subtractors                                   : 102
+ 16-bit addsub                                         : 2
+ 17-bit adder                                          : 4
+ 18-bit adder                                          : 5
+ 19-bit adder                                          : 4
+ 20-bit adder                                          : 6
+ 21-bit adder                                          : 4
+ 22-bit adder                                          : 4
+ 23-bit adder                                          : 4
+ 24-bit adder                                          : 4
+ 25-bit adder                                          : 4
+ 26-bit adder                                          : 4
+ 27-bit adder                                          : 4
+ 28-bit adder                                          : 4
+ 29-bit adder                                          : 4
+ 3-bit adder                                           : 32
+ 30-bit adder                                          : 4
+ 31-bit adder                                          : 4
+ 32-bit adder                                          : 4
  4-bit adder                                           : 1
-# Registers                                            : 11
- 1-bit register                                        : 2
- 16-bit register                                       : 3
+# Registers                                            : 20
+ 1-bit register                                        : 5
+ 16-bit register                                       : 6
  18-bit register                                       : 1
- 2-bit register                                        : 1
- 20-bit register                                       : 1
+ 2-bit register                                        : 2
+ 20-bit register                                       : 2
  4-bit register                                        : 1
- 6-bit register                                        : 1
+ 6-bit register                                        : 2
  8-bit register                                        : 1
-# Comparators                                          : 1
+# Comparators                                          : 35
  16-bit comparator greater                             : 1
-# Multiplexers                                         : 54
- 1-bit 2-to-1 multiplexer                              : 27
- 1-bit 4-to-1 multiplexer                              : 17
- 16-bit 2-to-1 multiplexer                             : 4
- 16-bit 4-to-1 multiplexer                             : 1
+ 16-bit comparator lessequal                           : 2
+ 17-bit comparator lessequal                           : 2
+ 18-bit comparator lessequal                           : 2
+ 19-bit comparator lessequal                           : 2
+ 20-bit comparator lessequal                           : 2
+ 21-bit comparator lessequal                           : 2
+ 22-bit comparator lessequal                           : 2
+ 23-bit comparator lessequal                           : 2
+ 24-bit comparator lessequal                           : 2
+ 25-bit comparator lessequal                           : 2
+ 26-bit comparator lessequal                           : 2
+ 27-bit comparator lessequal                           : 2
+ 28-bit comparator lessequal                           : 2
+ 29-bit comparator lessequal                           : 2
+ 30-bit comparator lessequal                           : 2
+ 31-bit comparator lessequal                           : 2
+ 32-bit comparator lessequal                           : 2
+# Multiplexers                                         : 582
+ 1-bit 2-to-1 multiplexer                              : 524
+ 1-bit 4-to-1 multiplexer                              : 34
+ 16-bit 2-to-1 multiplexer                             : 14
+ 16-bit 24-to-1 multiplexer                            : 1
+ 16-bit 4-to-1 multiplexer                             : 4
  18-bit 2-to-1 multiplexer                             : 1
  24-bit 2-to-1 multiplexer                             : 4
-# Logic shifters                                       : 3
- 16-bit shifter logical left                           : 1
- 16-bit shifter logical right                          : 1
+# Logic shifters                                       : 7
+ 16-bit shifter arithmetic right                       : 2
+ 16-bit shifter logical left                           : 2
+ 16-bit shifter logical right                          : 2
  31-bit shifter logical right                          : 1
 # Tristates                                            : 6
  1-bit tristate buffer                                 : 6
-# FSMs                                                 : 1
-# Xors                                                 : 1
- 1-bit xor2                                            : 1
+# FSMs                                                 : 2
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
 
 =========================================================================
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -326,11 +452,11 @@ Synthesizing (advanced) Unit <button_conditioner_3>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
 Unit <button_conditioner_3> synthesized (advanced).
 
-Synthesizing (advanced) Unit <counter_12>.
+Synthesizing (advanced) Unit <counter_16>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
-Unit <counter_12> synthesized (advanced).
+Unit <counter_16> synthesized (advanced).
 
-Synthesizing (advanced) Unit <digit_lut_13>.
+Synthesizing (advanced) Unit <digit_lut_17>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_segs> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
@@ -342,7 +468,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_segs> will be implemented on LUTs ei
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to signal <segs>          |          |
     -----------------------------------------------------------------------
-Unit <digit_lut_13> synthesized (advanced).
+Unit <digit_lut_17> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -350,80 +476,135 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  16x8-bit single-port distributed Read Only RAM        : 1
-# Multipliers                                          : 1
- 16x16-bit multiplier                                  : 1
-# Adders/Subtractors                                   : 18
- 16-bit addsub                                         : 1
- 3-bit adder                                           : 16
+# Multipliers                                          : 2
+ 16x16-bit multiplier                                  : 2
+# Adders/Subtractors                                   : 67
+ 16-bit adder carry in                                 : 32
+ 16-bit addsub                                         : 2
+ 3-bit adder                                           : 32
  4-bit adder                                           : 1
-# Counters                                             : 2
+# Counters                                             : 3
  18-bit up counter                                     : 1
- 20-bit up counter                                     : 1
-# Registers                                            : 70
- Flip-Flops                                            : 70
-# Comparators                                          : 1
+ 20-bit up counter                                     : 2
+# Registers                                            : 129
+ Flip-Flops                                            : 129
+# Comparators                                          : 35
  16-bit comparator greater                             : 1
-# Multiplexers                                         : 53
- 1-bit 2-to-1 multiplexer                              : 27
- 1-bit 4-to-1 multiplexer                              : 17
- 16-bit 2-to-1 multiplexer                             : 4
- 16-bit 4-to-1 multiplexer                             : 1
+ 16-bit comparator lessequal                           : 2
+ 17-bit comparator lessequal                           : 2
+ 18-bit comparator lessequal                           : 2
+ 19-bit comparator lessequal                           : 2
+ 20-bit comparator lessequal                           : 2
+ 21-bit comparator lessequal                           : 2
+ 22-bit comparator lessequal                           : 2
+ 23-bit comparator lessequal                           : 2
+ 24-bit comparator lessequal                           : 2
+ 25-bit comparator lessequal                           : 2
+ 26-bit comparator lessequal                           : 2
+ 27-bit comparator lessequal                           : 2
+ 28-bit comparator lessequal                           : 2
+ 29-bit comparator lessequal                           : 2
+ 30-bit comparator lessequal                           : 2
+ 31-bit comparator lessequal                           : 2
+ 32-bit comparator lessequal                           : 2
+# Multiplexers                                         : 581
+ 1-bit 2-to-1 multiplexer                              : 524
+ 1-bit 4-to-1 multiplexer                              : 34
+ 16-bit 2-to-1 multiplexer                             : 14
+ 16-bit 24-to-1 multiplexer                            : 1
+ 16-bit 4-to-1 multiplexer                             : 4
  24-bit 2-to-1 multiplexer                             : 4
-# Logic shifters                                       : 3
- 16-bit shifter logical left                           : 1
- 16-bit shifter logical right                          : 1
+# Logic shifters                                       : 7
+ 16-bit shifter arithmetic right                       : 2
+ 16-bit shifter logical left                           : 2
+ 16-bit shifter logical right                          : 2
  31-bit shifter logical right                          : 1
-# FSMs                                                 : 1
-# Xors                                                 : 1
- 1-bit xor2                                            : 1
+# FSMs                                                 : 2
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1293 - FF/Latch <M_display_value_q_0> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_display_value_q_2> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_display_value_q_8> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_check_input_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <M_check_input_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <FSM_0> on signal <M_state_q[1:3]> with sequential encoding.
+Optimizing FSM <FSM_0> on signal <M_state_q[1:3]> with user encoding.
 -------------------
  State | Encoding
 -------------------
  000   | 000
- 011   | 001
- 001   | 010
- 010   | 011
+ 011   | 011
+ 001   | 001
+ 010   | 010
  100   | 100
 -------------------
-WARNING:Xst:1426 - The value init of the FF/Latch M_display_value_q_3 hinder the constant cleaning in the block mojo_top_0.
-   You should achieve better results by setting this init to 1.
-WARNING:Xst:1426 - The value init of the FF/Latch M_display_value_q_7 hinder the constant cleaning in the block mojo_top_0.
-   You should achieve better results by setting this init to 1.
-WARNING:Xst:1426 - The value init of the FF/Latch M_display_value_q_11 hinder the constant cleaning in the block mojo_top_0.
-   You should achieve better results by setting this init to 1.
-WARNING:Xst:1426 - The value init of the FF/Latch M_display_value_q_15 hinder the constant cleaning in the block mojo_top_0.
-   You should achieve better results by setting this init to 1.
-INFO:Xst:2261 - The FF/Latch <M_display_value_q_4> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <M_display_value_q_6> <M_display_value_q_10> 
-INFO:Xst:2261 - The FF/Latch <M_display_value_q_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <M_display_value_q_13> 
-INFO:Xst:2261 - The FF/Latch <M_display_value_q_3> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <M_display_value_q_7> <M_display_value_q_11> <M_display_value_q_15> 
-INFO:Xst:2261 - The FF/Latch <M_display_value_q_5> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <M_display_value_q_9> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <testcase/FSM_1> on signal <M_state_q[1:5]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00000 | 00000
+ 00001 | 00001
+ 00010 | 00010
+ 00011 | 00011
+ 00100 | 00100
+ 00101 | 00101
+ 00110 | 00110
+ 00111 | 00111
+ 01000 | 01000
+ 01001 | 01001
+ 01010 | 01010
+ 01011 | 01011
+ 01100 | 01100
+ 01101 | 01101
+ 01110 | 01110
+ 01111 | 01111
+ 10000 | 10000
+ 10001 | 10001
+ 10010 | 10010
+ 10011 | 10011
+ 10100 | 10100
+ 10101 | 10101
+-------------------
+WARNING:Xst:1293 - FF/Latch <M_display_v_q_6> has a constant value of 0 in block <testcase_8>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <M_input_b_df_q_7> in Unit <testcase_8> is equivalent to the following 8 FFs/Latches, which will be removed : <M_input_b_df_q_8> <M_input_b_df_q_9> <M_input_b_df_q_10> <M_input_b_df_q_11> <M_input_b_df_q_12> <M_input_b_df_q_13> <M_input_b_df_q_14> <M_input_b_df_q_15> 
+INFO:Xst:2261 - The FF/Latch <M_input_a_df_q_8> in Unit <testcase_8> is equivalent to the following 3 FFs/Latches, which will be removed : <M_input_a_df_q_9> <M_input_a_df_q_10> <M_input_a_df_q_11> 
+INFO:Xst:2261 - The FF/Latch <M_display_v_q_0> in Unit <testcase_8> is equivalent to the following 3 FFs/Latches, which will be removed : <M_display_v_q_1> <M_display_v_q_2> <M_display_v_q_3> 
+INFO:Xst:2261 - The FF/Latch <M_input_a_df_q_12> in Unit <testcase_8> is equivalent to the following 2 FFs/Latches, which will be removed : <M_input_a_df_q_13> <M_input_a_df_q_14> 
+INFO:Xst:2261 - The FF/Latch <M_display_v_q_5> in Unit <testcase_8> is equivalent to the following FF/Latch, which will be removed : <M_display_v_q_7> 
 
 Optimizing unit <mojo_top_0> ...
 
-Optimizing unit <adder_7> ...
+Optimizing unit <testcase_8> ...
 
-Optimizing unit <shift_10> ...
+Optimizing unit <adder_10> ...
+
+Optimizing unit <div_16u_16u> ...
+WARNING:Xst:1293 - FF/Latch <testcase/M_display_v_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <M_display_value_q_0> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <M_display_value_q_2> 
+INFO:Xst:2261 - The FF/Latch <M_display_value_q_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <M_display_value_q_3> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 7.
+Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 29.
+FlipFlop testcase/M_input_a_df_q_12 has been replicated 4 time(s)
+FlipFlop testcase/M_input_a_df_q_15 has been replicated 4 time(s)
+FlipFlop testcase/M_input_b_df_q_0 has been replicated 3 time(s)
+FlipFlop testcase/M_input_b_df_q_1 has been replicated 3 time(s)
+FlipFlop testcase/M_input_b_df_q_2 has been replicated 3 time(s)
+FlipFlop testcase/M_input_b_df_q_3 has been replicated 3 time(s)
+FlipFlop testcase/M_input_b_df_q_4 has been replicated 4 time(s)
+FlipFlop testcase/M_input_b_df_q_5 has been replicated 3 time(s)
+FlipFlop testcase/M_input_b_df_q_6 has been replicated 3 time(s)
+FlipFlop testcase/M_input_b_df_q_7 has been replicated 3 time(s)
 
 Final Macro Processing ...
 
 Processing Unit <mojo_top_0> :
 	Found 2-bit shift register for signal <button_condd/sync/M_pipe_q_1>.
+	Found 2-bit shift register for signal <button_condd2/sync/M_pipe_q_1>.
 INFO:Xst:741 - HDL ADVISOR - A 4-bit shift register was found for signal <reset_cond/M_stage_q_3> and currently occupies 4 logic cells (2 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
 Unit <mojo_top_0> processed.
 
@@ -431,10 +612,10 @@ Unit <mojo_top_0> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 98
- Flip-Flops                                            : 98
-# Shift Registers                                      : 1
- 2-bit shift register                                  : 1
+# Registers                                            : 202
+ Flip-Flops                                            : 202
+# Shift Registers                                      : 2
+ 2-bit shift register                                  : 2
 
 =========================================================================
 
@@ -458,7 +639,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 101   |
+clk                                | BUFGP                  | 208   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -469,9 +650,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 7.900ns (Maximum Frequency: 126.582MHz)
-   Minimum input arrival time before clock: 4.753ns
-   Maximum output required time after clock: 15.167ns
-   Maximum combinational path delay: 9.741ns
+   Minimum period: 53.312ns (Maximum Frequency: 18.758MHz)
+   Minimum input arrival time before clock: 5.125ns
+   Maximum output required time after clock: 55.996ns
+   Maximum combinational path delay: 12.882ns
 
 =========================================================================

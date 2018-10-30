@@ -28,11 +28,15 @@ module mojo_top (
     
     reset_conditioner reset_cond;
     button_conditioner button_condd;
+    button_conditioner button_condd2;
     edge_detector edge (#RISE(1), #FALL(0));
+    edge_detector edge2 (#RISE(1), #FALL(0));
+
         .rst(rst) {
       multi_seven_seg seg_display; // Connecting to multi_seven_seg which would help displaying on the segment.
  
       fsm state = {ALUFN,INPUT_A,INPUT_B,AUTO,DISPLAY};
+      testcase testcase;
 
                 }
     dff display_value[4][4]; // Size of LED segments.
@@ -41,12 +45,11 @@ module mojo_top (
     dff input_a_st[16];
     dff input_b_st[16];
     dff send[1];
+    dff send2[1];
     dff check_input[8];
-    dff modify[1];
   }
   
   bin_to_dec digits (#DIGITS(5));
-
    always {
     
     io_led = io_dip;
@@ -57,8 +60,14 @@ module mojo_top (
     avr_rx = bz;            // Not using serial port.
     
     button_condd.in = io_button[3];
+    button_condd2.in = io_button[0];
+    
     edge.in = button_condd.out;
+    edge2.in = button_condd2.out;
+    
     send.d = edge.out;
+    send2.d = edge2.out;
+    
     seg_display.decimal = 4b0000; //To control decimal point.
     io_seg = ~seg_display.seg;
     io_sel = ~seg_display.sel;
@@ -68,7 +77,7 @@ module mojo_top (
     alu.b = input_b_st.q;
     digits.value = 0;
     led = check_input.q;
-    
+    testcase.button_alu = 0;
     case (state.q) { 
       state.ALUFN:
         check_input.d[7] = 0; 
@@ -132,8 +141,8 @@ module mojo_top (
         if (send.q){state.d = state.AUTO;}
       state.AUTO:
         mode.d = 5;                  
-           display_value.d = {4d8, 4d8, 4d8, 4d8};
-                  
+           display_value.d = testcase.display;
+           testcase.button_alu = send2.q;    
       }
     
    seg_display.values = display_value.q; //Displaying value from the state_machine on the seven segments.

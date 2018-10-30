@@ -19,7 +19,7 @@ module alu_1 (
   reg [4-1:0] M_add_call_alufn;
   reg [16-1:0] M_add_call_a;
   reg [16-1:0] M_add_call_b;
-  adder_7 add_call (
+  adder_10 add_call (
     .alufn(M_add_call_alufn),
     .a(M_add_call_a),
     .b(M_add_call_b),
@@ -32,7 +32,7 @@ module alu_1 (
   reg [1-1:0] M_cmp_call_z;
   reg [1-1:0] M_cmp_call_v;
   reg [1-1:0] M_cmp_call_n;
-  cmp_8 cmp_call (
+  cmp_11 cmp_call (
     .alufn(M_cmp_call_alufn),
     .z(M_cmp_call_z),
     .v(M_cmp_call_v),
@@ -44,7 +44,7 @@ module alu_1 (
   reg [4-1:0] M_bool_call_alufn;
   reg [16-1:0] M_bool_call_a;
   reg [16-1:0] M_bool_call_b;
-  boole_9 bool_call (
+  boole_12 bool_call (
     .alufn(M_bool_call_alufn),
     .a(M_bool_call_a),
     .b(M_bool_call_b),
@@ -54,8 +54,8 @@ module alu_1 (
   wire [16-1:0] M_shift_call_shift_out;
   reg [4-1:0] M_shift_call_alufn;
   reg [16-1:0] M_shift_call_a;
-  reg [6-1:0] M_shift_call_shift_bit;
-  shift_10 shift_call (
+  reg [5-1:0] M_shift_call_shift_bit;
+  shift_13 shift_call (
     .alufn(M_shift_call_alufn),
     .a(M_shift_call_a),
     .shift_bit(M_shift_call_shift_bit),
@@ -67,14 +67,14 @@ module alu_1 (
     M_add_call_b = b;
     M_add_call_alufn = alufn[0+3-:4];
     M_cmp_call_alufn = alufn[0+3-:4];
-    M_cmp_call_z = M_add_call_zvn[2+0-:1];
+    M_cmp_call_z = M_add_call_zvn[0+0-:1];
     M_cmp_call_v = M_add_call_zvn[1+0-:1];
-    M_cmp_call_n = M_add_call_zvn[0+0-:1];
+    M_cmp_call_n = M_add_call_zvn[2+0-:1];
     M_bool_call_a = a;
     M_bool_call_b = b;
     M_bool_call_alufn = alufn[0+3-:4];
     M_shift_call_a = a;
-    M_shift_call_shift_bit = b[0+5-:6];
+    M_shift_call_shift_bit = b[0+4-:5];
     M_shift_call_alufn = alufn[0+3-:4];
     
     case (alufn[4+1-:2])
