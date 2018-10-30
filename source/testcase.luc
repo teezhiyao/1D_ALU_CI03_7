@@ -38,15 +38,9 @@ always {
         state.ADDPOS:
             alufn_df.d = 6b000000;
             button.d = button_alu;
-<<<<<<< HEAD
-            input_a_df.d = 22;
-            input_b_df.d = 35;
-            if (alu.alu == 57){
-=======
             input_a_df.d = 16b0000000000010110;
             input_b_df.d = 16b0000000000100011;
             if (alu.alu == 16b0000000000111001){
->>>>>>> 584aa6ad45cf052e54be71e971d192ff43120be7
                 //indicate truth
               display_v.d = {4d1,4d10,4d10,4d15};}
             else{display_v.d = {4d1,4d10,4d10, 4d3};}
@@ -57,15 +51,10 @@ always {
         state.ADDNEG:
             button.d = button_alu;
             alufn_df.d = 6b000000;
-<<<<<<< HEAD
-            input_a_df.d = ~34;
-            input_b_df.d = ~21;
-            if (alu.alu == ~55){
-=======
+
             input_a_df.d = 16b1111111111011110;
             input_b_df.d = 16b1111111111101011;
             if (alu.alu == 16b1111111111001001){
->>>>>>> 584aa6ad45cf052e54be71e971d192ff43120be7
                 display_v.d = {4d2,4d10,4d10,4d15};
             }
             else{display_v.d = {4d2,4d10,4d10, 4d3};}
@@ -76,15 +65,9 @@ always {
         state.OVERFLOW:
             button.d = button_alu;
             alufn_df.d = 6b0;
-<<<<<<< HEAD
-            input_a_df.d = 32767;
-            input_b_df.d = 1;
-            if (alu.alu == -1){
-=======
             input_a_df.d = 16b0111111111111111;
             input_b_df.d = 16b0000000000000001;
             if (alu.alu == 16b1000000000000000){
->>>>>>> 584aa6ad45cf052e54be71e971d192ff43120be7
                 display_v.d = {4d3,4d10,4d10,4d15};
             }
             else{display_v.d = {4d3,4d10,4d10, 4d3};}
@@ -175,15 +158,10 @@ always {
 
         state.CMPLTV:
             alufn_df.d = 6h35;
-<<<<<<< HEAD
-            input_a_df.d = 2;
-            input_b_df.d = 8;
-            if (alu.alu == 1){
-=======
+
             input_a_df.d = 16b0000000000000010;
             input_b_df.d = 16b0000000000001000;
             if (alu.alu == 16b0000000000000001){
->>>>>>> 584aa6ad45cf052e54be71e971d192ff43120be7
                 display_v.d = {4d1,4d0,4d10,4d15};
             }
             else{display_v.d = {4d1,4d0,4d10,4d3};}

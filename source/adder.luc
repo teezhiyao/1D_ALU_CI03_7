@@ -20,11 +20,11 @@ module adder (
     case (alufn[1:0]) { // Alufn value controlling add or subtract operator
       
       b00: // Addition.
-        sum = $signed(a) + $signed(b);  
+        sum = a + b;  
       b01: // Subtraction.
-        sum = $signed(a) - $signed(b);  
+        sum = a - b;  
       b10: // Multiply.
-        sum = $signed(a) * $signed(b);
+        sum = a * b;
       b11: // TODO: Add divition function.
         sum = a/b;
         
