@@ -12,7 +12,7 @@ module mojo_top (
     input avr_tx,           // AVR TX (FPGA RX).
     output avr_rx,          // AVR RX (FPGA TX).
     input avr_rx_busy,      // AVR RX buffer full.
-    output io_led [24],   // LEDs on IO Shield.
+    output io_led [24],     // LEDs on IO Shield.
     output io_seg [8],      // 7-segment LEDs on IO Shield.
     output io_sel [4],      // Digit select on IO Shield.
     input io_button [5],    // 5 buttons on IO Shield.
@@ -41,7 +41,8 @@ module mojo_top (
       testcase testcase;
 
                 }
-    //Defining flip-flop/register that can store the value of different inputs/output
+    // Defining flip-flop/register that can store the value of different inputs/output.
+    
     dff display_value[4][4]; // Size of LED segments.
     dff alufn_st[6]; //alufn stored
     dff input_a_st[16]; //a stored

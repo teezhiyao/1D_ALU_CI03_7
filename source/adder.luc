@@ -1,13 +1,15 @@
-// Performs addition, subtration, multiplication, modulo.
+// Performs addition, subtration, multiplication, division.
 
 module adder ( 
     
   // Inputs from the ALU.
+    
   input alufn[4],
   input a[16],  
   input b[16],  
     
   // Outputs to the ALU.
+    
   output sum_out[16],
   output z_,
   output v,
@@ -27,7 +29,7 @@ module adder (
         sum = $signed(a) - $signed(b);  
       b10: // Multiply.
         sum = $signed(a) * $signed(b);
-      b11: // TODO: Add divition function.
+      b11: // Division.
         sum = a/b;
         
       default:
