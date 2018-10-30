@@ -6,15 +6,15 @@
 
 /*
    Parameters:
-     DIGITS = 4
+     DIGITS = 5
      LEADING_ZEROS = 0
 */
 module bin_to_dec_6 (
-    input [13:0] value,
-    output reg [15:0] digits
+    input [16:0] value,
+    output reg [19:0] digits
   );
   
-  localparam DIGITS = 3'h4;
+  localparam DIGITS = 3'h5;
   localparam LEADING_ZEROS = 1'h0;
   
   
@@ -22,20 +22,20 @@ module bin_to_dec_6 (
   integer j;
   integer scale;
   
-  reg [13:0] remainder;
+  reg [16:0] remainder;
   
-  reg [13:0] sub_value;
+  reg [16:0] sub_value;
   
   reg blank;
   
   always @* begin
-    for (i = 1'h0; i < 3'h4; i = i + 1) begin
+    for (i = 1'h0; i < 3'h5; i = i + 1) begin
       digits[(i)*4+3-:4] = 4'hb;
     end
     remainder = value;
     blank = 1'h1;
-    if (value < 14'h2710) begin
-      for (j = 4'h3; j >= $signed(1'h0); j = j - 1) begin
+    if (value < 17'h186a0) begin
+      for (j = 4'h4; j >= $signed(1'h0); j = j - 1) begin
         scale = $pow(4'ha, j);
         if (remainder < scale) begin
           if (j != 1'h0 && blank) begin

@@ -18,11 +18,11 @@ sig cmp;
     
     case(alufn[2:1]){ // Values of alufn that define comparator function.
       
-      01: // Compare equal.
+      b01: // Compare equal.
         cmp = z; 
-      10: // Compare less than.
+      b10: // Compare less than.
         cmp = n ^ v; // ^ represents XOR so n XOR V
-      11: //compare less than equal
+      b11: //compare less than equal
         cmp = z | (n^v); // | represents OR
       default:
         cmp = 0; // Xefault needed.

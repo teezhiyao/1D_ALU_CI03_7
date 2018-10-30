@@ -78,16 +78,16 @@ module alu_1 (
     M_shift_call_alufn = alufn[0+3-:4];
     
     case (alufn[4+1-:2])
-      1'h0: begin
+      2'h0: begin
         alu = M_add_call_sum_out;
       end
-      1'h1: begin
+      2'h1: begin
         alu = M_bool_call_boole_out;
       end
-      4'ha: begin
+      2'h2: begin
         alu = M_shift_call_shift_out;
       end
-      4'hb: begin
+      2'h3: begin
         alu = M_cmp_call_cmp_out;
       end
       default: begin

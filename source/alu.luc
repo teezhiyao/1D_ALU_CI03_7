@@ -42,13 +42,13 @@ module alu (
     
     // 2 most significant bit of alufn --> To select the component to use.
     case(alufn[5:4]){
-      00:       
+      b00:       
         alu = add_call.sum_out;
-      01:
+      b01:
         alu = bool_call.boole_out; // Calling the boolean component.
-      10:
+      b10:
         alu = shift_call.shift_out; // Using the shifter component.
-      11:
+      b11:
         alu = cmp_call.cmp_out; // Using the compare component.
         
       default:

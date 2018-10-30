@@ -23,13 +23,13 @@ module boole (
       
       // a and b input selectors 
       case(ab){ 
-        00:
+        b00:
         boole_out[i]=alufn[0]; 
-        01:
+        b01:
         boole_out[i] = alufn[1];
-        10:
+        b10:
         boole_out[i] = alufn[2]; 
-        11:
+        b11:
         boole_out[i]= alufn[3]; 
         default:
         boole_out[i]=alufn[0];    

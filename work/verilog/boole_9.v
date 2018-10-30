@@ -22,16 +22,16 @@ module boole_9 (
       ab = (b[(i)*1+0-:1] << 1'h1) + a[(i)*1+0-:1];
       
       case (ab)
-        1'h0: begin
+        2'h0: begin
           boole_out[(i)*1+0-:1] = alufn[0+0-:1];
         end
-        1'h1: begin
+        2'h1: begin
           boole_out[(i)*1+0-:1] = alufn[1+0-:1];
         end
-        4'ha: begin
+        2'h2: begin
           boole_out[(i)*1+0-:1] = alufn[2+0-:1];
         end
-        4'hb: begin
+        2'h3: begin
           boole_out[(i)*1+0-:1] = alufn[3+0-:1];
         end
         default: begin

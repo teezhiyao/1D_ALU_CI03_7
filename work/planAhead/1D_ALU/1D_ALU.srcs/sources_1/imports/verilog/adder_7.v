@@ -21,20 +21,20 @@ module adder_7 (
   always @* begin
     
     case (alufn[0+1-:2])
-      1'h0: begin
+      2'h0: begin
         sum = a + b;
       end
-      1'h1: begin
+      2'h1: begin
         sum = a - b;
       end
-      4'ha: begin
+      2'h2: begin
         sum = 1'h0;
       end
-      4'hb: begin
+      2'h3: begin
         sum = a * b;
       end
       default: begin
-        sum = 11'h457;
+        sum = 14'h270f;
       end
     endcase
     sum_out = sum[0+15-:16];

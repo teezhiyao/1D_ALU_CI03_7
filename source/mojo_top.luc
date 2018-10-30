@@ -45,7 +45,7 @@ module mojo_top (
     
   }
   
-  bin_to_dec digits (#DIGITS(4));
+  bin_to_dec digits (#DIGITS(5));
 
    always {
     
@@ -57,8 +57,6 @@ module mojo_top (
     avr_rx = bz;            // Not using serial port.
     
     button_condd.in = io_button[3];
-    // send.d = io_button[1];
-    // temp_send.d= send.q;
     edge.in = button_condd.out;
     send.d = edge.out;
     seg_display.decimal = 4b0000; //To control decimal point.
@@ -73,6 +71,8 @@ module mojo_top (
     
     case (state.q) { 
       state.ALUFN: 
+        if(io_dip[20]){state.d = state.AUTO;}
+      
         mode.d = 0;
         if (send.q) {
           state.d = state.INPUT_A;
@@ -85,6 +85,8 @@ module mojo_top (
 
       state.INPUT_A:  
         mode.d = 1;
+        if(io_dip[20]){state.d = state.AUTO;}
+        
         if (send.q) {
           state.d = state.INPUT_B;
           input_a_st.d = io_dip[15:0];
@@ -95,6 +97,8 @@ module mojo_top (
 
       state.INPUT_B: 
         mode.d = 3;
+        if(io_dip[20]){state.d = state.AUTO;}
+        
         if (send.q) {
           state.d = state.DISPLAY;
           input_b_st.d = io_dip[15:0];
@@ -105,7 +109,7 @@ module mojo_top (
         
       state.DISPLAY:
         mode.d = 4;
-        
+        if(io_dip[20]){state.d = state.AUTO;}
         // Set the LEDs on the right side to display z, v and n.
         
         check_input.d[2] = alu.zvn[2];
@@ -115,11 +119,11 @@ module mojo_top (
         if (io_dip[23]) {io_led = alufn_st.q;}
         else if (io_dip[22]) {io_led = input_a_st.q;}
         else if (io_dip[21]) {io_led = input_b_st.q;}
-        else { 
-          digits.value = alu.alu;
-          display_value.d = digits.digits;
+        else{
+        display_value.d = digits.digits[4:1];
+        io_led[17:0] = alu.alu;        
+        if((input_a_st.q) < input_b_st.q){ check_input.d[3] = 1;}
         }
-      
       state.AUTO:
         mode.d = 5;                  
                    

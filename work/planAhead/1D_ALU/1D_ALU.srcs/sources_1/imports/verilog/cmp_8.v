@@ -19,13 +19,13 @@ module cmp_8 (
   always @* begin
     
     case (alufn[1+1-:2])
-      1'h1: begin
+      2'h1: begin
         cmp = z;
       end
-      4'ha: begin
+      2'h2: begin
         cmp = n ^ v;
       end
-      4'hb: begin
+      2'h3: begin
         cmp = z | (n ^ v);
       end
       default: begin

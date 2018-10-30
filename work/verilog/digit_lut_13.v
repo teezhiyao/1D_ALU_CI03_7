@@ -41,7 +41,13 @@ module digit_lut_13 (
       4'h8: begin
         segs = 7'h7f;
       end
-      4'hb: begin
+      4'h9: begin
+        segs = 7'h67;
+      end
+      4'ha: begin
+        segs = 7'h00;
+      end
+      4'hf: begin
         segs = 7'h77;
       end
       4'hc: begin
@@ -53,8 +59,11 @@ module digit_lut_13 (
       4'he: begin
         segs = 7'h7c;
       end
+      4'hf: begin
+        segs = 7'h40;
+      end
       default: begin
-        segs = 7'h00;
+        segs = 7'h3f;
       end
     endcase
   end

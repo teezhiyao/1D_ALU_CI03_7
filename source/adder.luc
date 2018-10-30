@@ -20,17 +20,17 @@ module adder (
     
     case (alufn[1:0]) { // Alufn value controlling add or subtract operator
       
-      00: // Addition.
+      b00: // Addition.
         sum = a + b;  
-      01: // Subtraction.
+      b01: // Subtraction.
         sum = a - b;  
-      10: // TODO: Add aditional functionality.
+      b10: // TODO: Add aditional functionality.
         sum = 0;
-      11: // Multiply.
+      b11: // Multiply.
         sum = a * b;
         
       default:
-        sum = 1111;
+        sum = 9999;
         
     }
     
