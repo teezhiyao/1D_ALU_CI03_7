@@ -13,7 +13,7 @@ module adder (
     
 ) {
   
-  sig sum[16]; //9-bit output
+  sig sum[16]; // 9-bit output
   
   always {
     
