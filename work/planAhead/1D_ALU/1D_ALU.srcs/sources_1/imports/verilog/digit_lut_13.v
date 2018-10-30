@@ -47,7 +47,7 @@ module digit_lut_13 (
       4'ha: begin
         segs = 7'h00;
       end
-      4'hf: begin
+      4'hb: begin
         segs = 7'h77;
       end
       4'hc: begin

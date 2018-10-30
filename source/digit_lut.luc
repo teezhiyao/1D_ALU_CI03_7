@@ -18,7 +18,7 @@ module digit_lut (
         d8: segs = 7b1111111;
         d9: segs =  7b1100111;
         d10: segs = 7b0000000;
-        d15: segs = 7b1110111; //A
+        d11: segs = 7b1110111; //A
         d12: segs = 7b0111000; //L
         d13: segs = 7b0111110; //U
         d14: segs = 7b1111100; //B

@@ -88,6 +88,7 @@ module mojo_top_0 (
   reg [15:0] M_input_b_st_d, M_input_b_st_q = 1'h0;
   reg [0:0] M_send_d, M_send_q = 1'h0;
   reg [7:0] M_check_input_d, M_check_input_q = 1'h0;
+  reg [0:0] M_modify_d, M_modify_q = 1'h0;
   
   wire [20-1:0] M_digits_digits;
   reg [17-1:0] M_digits_value;
@@ -126,33 +127,45 @@ module mojo_top_0 (
     
     case (M_state_q)
       ALUFN_state: begin
+        M_check_input_d[7+0-:1] = 1'h0;
+        if (io_dip[20+0-:1]) begin
+          M_state_d = AUTO_state;
+        end
         M_mode_d = 1'h0;
         if (M_send_q) begin
           M_state_d = INPUT_A_state;
           M_alufn_st_d = io_dip[0+5-:6];
           M_check_input_d[7+0-:1] = 1'h1;
         end else begin
-          M_display_value_d = 16'hbcd9;
+          M_display_value_d = 16'hbcda;
         end
       end
       INPUT_A_state: begin
+        M_check_input_d[6+0-:1] = 1'h0;
         M_mode_d = 1'h1;
+        if (io_dip[20+0-:1]) begin
+          M_state_d = AUTO_state;
+        end
         if (M_send_q) begin
           M_state_d = INPUT_B_state;
           M_input_a_st_d = io_dip[0+15-:16];
           M_check_input_d[6+0-:1] = 1'h1;
         end else begin
-          M_display_value_d = 16'hb999;
+          M_display_value_d = 16'hbaaa;
         end
       end
       INPUT_B_state: begin
         M_mode_d = 2'h3;
+        M_check_input_d[5+0-:1] = 1'h0;
+        if (io_dip[20+0-:1]) begin
+          M_state_d = AUTO_state;
+        end
         if (M_send_q) begin
           M_state_d = DISPLAY_state;
           M_input_b_st_d = io_dip[0+15-:16];
           M_check_input_d[5+0-:1] = 1'h1;
         end else begin
-          M_display_value_d = 16'he999;
+          M_display_value_d = 16'heaaa;
         end
       end
       DISPLAY_state: begin
@@ -165,14 +178,19 @@ module mojo_top_0 (
         M_check_input_d[0+0-:1] = M_alu_zvn[0+0-:1];
         if (io_dip[23+0-:1]) begin
           io_led = M_alufn_st_q;
+        end
+        if (io_dip[23+0-:1] | M_send_q) begin
+          M_state_d = ALUFN_state;
         end else begin
           if (io_dip[22+0-:1]) begin
             io_led = M_input_a_st_q;
+            M_state_d = INPUT_A_state;
           end else begin
             if (io_dip[21+0-:1]) begin
               io_led = M_input_b_st_q;
+              M_state_d = INPUT_B_state;
             end else begin
-              M_display_value_d = M_digits_digits[4+15-:16];
+              M_display_value_d = M_digits_digits[0+15-:16];
               io_led[0+17-:18] = M_alu_alu;
               if ((M_input_a_st_q) < M_input_b_st_q) begin
                 M_check_input_d[3+0-:1] = 1'h1;
@@ -180,9 +198,13 @@ module mojo_top_0 (
             end
           end
         end
+        if (M_send_q) begin
+          M_state_d = AUTO_state;
+        end
       end
       AUTO_state: begin
         M_mode_d = 3'h5;
+        M_display_value_d = 16'h8888;
       end
     endcase
     M_seg_display_values = M_display_value_q;
@@ -196,6 +218,7 @@ module mojo_top_0 (
     M_input_b_st_q <= M_input_b_st_d;
     M_send_q <= M_send_d;
     M_check_input_q <= M_check_input_d;
+    M_modify_q <= M_modify_d;
     
     if (rst == 1'b1) begin
       M_state_q <= 1'h0;

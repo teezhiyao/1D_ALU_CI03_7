@@ -42,7 +42,7 @@ module mojo_top (
     dff input_b_st[16];
     dff send[1];
     dff check_input[8];
-    
+    dff modify[1];
   }
   
   bin_to_dec digits (#DIGITS(5));
@@ -70,7 +70,8 @@ module mojo_top (
     led = check_input.q;
     
     case (state.q) { 
-      state.ALUFN: 
+      state.ALUFN:
+        check_input.d[7] = 0; 
         if(io_dip[20]){state.d = state.AUTO;}
       
         mode.d = 0;
@@ -80,10 +81,11 @@ module mojo_top (
           // TODO: Modify so that the led will not light up is ALUFN input is invalid.
           check_input.d[7] = 1;
         } else {
-          display_value.d = {4d11, 4d12, 4d13, 4d9};
+          display_value.d = {4d11, 4d12, 4d13, 4d10};
         } // Array represents the 4 digit to be displayed. 4d9 represents default value as 9 is not defined in digit_lut .
 
-      state.INPUT_A:  
+      state.INPUT_A:
+        check_input.d[6] = 0;  
         mode.d = 1;
         if(io_dip[20]){state.d = state.AUTO;}
         
@@ -92,11 +94,12 @@ module mojo_top (
           input_a_st.d = io_dip[15:0];
           check_input.d[6] = 1;
         } else {
-          display_value.d = {4d11, 4d9, 4d9, 4d9};
+          display_value.d = {4d11, 4d10, 4d10, 4d10};
         } // Array represents the 4 digit to be displayed. 4d9 represents default value as 9 is not defined in digit_lut.
 
       state.INPUT_B: 
         mode.d = 3;
+        check_input.d[5] = 0;        
         if(io_dip[20]){state.d = state.AUTO;}
         
         if (send.q) {
@@ -104,7 +107,7 @@ module mojo_top (
           input_b_st.d = io_dip[15:0];
           check_input.d[5] = 1;
         } else {
-          display_value.d = {4d14, 4d9, 4d9, 4d9};
+          display_value.d = {4d14, 4d10, 4d10, 4d10};
         } // Array represents the 4 digit to be displayed. 4d9 represents default value as 9 is not defined in digit_lut.
         
       state.DISPLAY:
@@ -117,16 +120,23 @@ module mojo_top (
         check_input.d[0] = alu.zvn[0];
 
         if (io_dip[23]) {io_led = alufn_st.q;}
-        else if (io_dip[22]) {io_led = input_a_st.q;}
-        else if (io_dip[21]) {io_led = input_b_st.q;}
+        if (io_dip[23] | send.q ) {state.d = state.ALUFN;}
+        else if (io_dip[22]) {
+        io_led = input_a_st.q;
+        state.d = state.INPUT_A;}
+        else if (io_dip[21]) {
+        io_led = input_b_st.q;
+        state.d = state.INPUT_B;}
         else{
-        display_value.d = digits.digits[4:1];
+        display_value.d = digits.digits[3:0];
         io_led[17:0] = alu.alu;        
         if((input_a_st.q) < input_b_st.q){ check_input.d[3] = 1;}
         }
+        if (send.q){state.d = state.AUTO;}
       state.AUTO:
         mode.d = 5;                  
-                   
+           display_value.d = {4d8, 4d8, 4d8, 4d8};
+                  
       }
     
    seg_display.values = display_value.q; //Displaying value from the state_machine on the seven segments.
