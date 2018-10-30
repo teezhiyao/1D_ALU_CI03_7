@@ -1,19 +1,22 @@
 module alu (
 
   // Inputs from mojo_top.
+    
   input alufn[6],
   input a[16],  
   input b[16],  
     
   // Outputs to mojo_top.
+    
   output alu[16],
   output z_,
   output v,
-    output n
+  output n
     
 ) {  
   
-  // Modules of ALU.
+  // Declaring and initializing modules of the ALU.
+  
   adder add_call;
   cmp cmp_call;
   boole bool_call;
@@ -22,27 +25,32 @@ module alu (
   always {
     
     // Adder module.
+    
     add_call.a = a;
     add_call.b = b; 
     add_call.alufn = alufn[3:0]; 
     
     // Comparator module.
+    
     cmp_call.alufn = alufn[3:0];
     cmp_call.z_ = add_call.z_;
     cmp_call.v = add_call.v;
     cmp_call.n = add_call.n;
     
     // Boolean module.
+    
     bool_call.a = a;
     bool_call.b = b;
     bool_call.alufn=alufn[3:0];
     
-    // Assigning inputs of ALU to shifter module.
+    // Shifter module.
+    
     shift_call.a = a;
     shift_call.shift_bit = b[4:0];
     shift_call.alufn=alufn[3:0];
     
-    // 2 most significant bit of alufn --> To select the component to use.
+    // Select which component to use, based on the 2 most significant bits of alufn.
+    
     case(alufn[5:4]){
       b00:       
         alu = add_call.sum_out;
