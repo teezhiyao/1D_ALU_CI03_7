@@ -20,13 +20,13 @@ module adder_10 (
     
     case (alufn[0+1-:2])
       2'h0: begin
-        sum = a + b;
+        sum = $signed(a) + $signed(b);
       end
       2'h1: begin
-        sum = a - b;
+        sum = $signed(a) - $signed(b);
       end
       2'h2: begin
-        sum = a * b;
+        sum = $signed(a) * $signed(b);
       end
       2'h3: begin
         sum = a / b;

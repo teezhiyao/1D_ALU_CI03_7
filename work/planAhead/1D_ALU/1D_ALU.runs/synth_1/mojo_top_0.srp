@@ -2,8 +2,8 @@ Release 14.7 - xst P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.58 secs
  
 --> Reading design: mojo_top_0.prj
 
@@ -620,3 +620,520 @@ INFO:Xst:2261 - The FF/Latch <M_display_v_q_2> in Unit <testcase_8> is equivalen
 Optimizing unit <adder_10> ...
 
 Optimizing unit <div_16u_16u> ...
+INFO:Xst:2261 - The FF/Latch <M_display_value_q_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <M_display_value_q_7> 
+INFO:Xst:2261 - The FF/Latch <M_display_value_q_4> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <M_display_value_q_6> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 29.
+FlipFlop M_input_a_st_q_13 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_a_st_q_13 connected to a primary input has been replicated
+FlipFlop M_input_a_st_q_15 has been replicated 2 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_a_st_q_15 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_0 has been replicated 2 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_0 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_1 has been replicated 2 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_1 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_10 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_10 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_11 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_11 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_12 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_12 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_13 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_13 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_14 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_14 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_15 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_15 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_2 has been replicated 2 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_2 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_3 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_3 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_4 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_4 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_5 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_5 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_6 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_6 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_7 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_7 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_8 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_8 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_9 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_9 connected to a primary input has been replicated
+FlipFlop testcase/M_input_a_df_q_15 has been replicated 2 time(s)
+FlipFlop testcase/M_input_a_df_q_7 has been replicated 2 time(s)
+FlipFlop testcase/M_input_b_df_q_0 has been replicated 2 time(s)
+FlipFlop testcase/M_input_b_df_q_1 has been replicated 2 time(s)
+FlipFlop testcase/M_input_b_df_q_2 has been replicated 2 time(s)
+FlipFlop testcase/M_input_b_df_q_3 has been replicated 2 time(s)
+FlipFlop testcase/M_input_b_df_q_4 has been replicated 3 time(s)
+FlipFlop testcase/M_input_b_df_q_5 has been replicated 3 time(s)
+FlipFlop testcase/M_input_b_df_q_6 has been replicated 2 time(s)
+FlipFlop testcase/M_input_b_df_q_7 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <mojo_top_0> :
+	Found 2-bit shift register for signal <button_condd/sync/M_pipe_q_1>.
+	Found 2-bit shift register for signal <button_condd2/sync/M_pipe_q_1>.
+INFO:Xst:741 - HDL ADVISOR - A 4-bit shift register was found for signal <reset_cond/M_stage_q_3> and currently occupies 4 logic cells (2 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+Unit <mojo_top_0> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 224
+ Flip-Flops                                            : 224
+# Shift Registers                                      : 2
+ 2-bit shift register                                  : 2
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : mojo_top_0.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2240
+#      GND                         : 12
+#      INV                         : 24
+#      LUT1                        : 55
+#      LUT2                        : 31
+#      LUT3                        : 212
+#      LUT4                        : 324
+#      LUT5                        : 303
+#      LUT6                        : 489
+#      MUXCY                       : 471
+#      MUXF7                       : 8
+#      VCC                         : 11
+#      XORCY                       : 300
+# FlipFlops/Latches                : 226
+#      FD                          : 22
+#      FDE                         : 121
+#      FDR                         : 38
+#      FDRE                        : 40
+#      FDS                         : 5
+# Shift Registers                  : 2
+#      SRLC16E                     : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 77
+#      IBUF                        : 27
+#      OBUF                        : 44
+#      OBUFT                       : 6
+# DSPs                             : 2
+#      DSP48A1                     : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             226  out of  11440     1%  
+ Number of Slice LUTs:                 1440  out of   5720    25%  
+    Number used as Logic:              1438  out of   5720    25%  
+    Number used as Memory:                2  out of   1440     0%  
+       Number used as SRL:                2
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1535
+   Number with an unused Flip Flop:    1309  out of   1535    85%  
+   Number with an unused LUT:            95  out of   1535     6%  
+   Number of fully used LUT-FF pairs:   131  out of   1535     8%  
+   Number of unique control sets:        17
+
+IO Utilization: 
+ Number of IOs:                          87
+ Number of bonded IOBs:                  78  out of    102    76%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of DSP48A1s:                      2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 230   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 51.529ns (Maximum Frequency: 19.407MHz)
+   Minimum input arrival time before clock: 5.804ns
+   Maximum output required time after clock: 57.641ns
+   Maximum combinational path delay: 12.899ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 51.529ns (frequency: 19.407MHz)
+  Total number of paths / destination ports: 47791817193771065000 / 443
+-------------------------------------------------------------------------
+Delay:               51.529ns (Levels of Logic = 94)
+  Source:            testcase/M_input_a_df_q_15_1 (FF)
+  Destination:       testcase/M_display_v_q_2 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: testcase/M_input_a_df_q_15_1 to testcase/M_display_v_q_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.525   1.112  M_input_a_df_q_15_1 (M_input_a_df_q_15_1)
+     begin scope: 'testcase/alu:M_input_a_df_q_15_1'
+     begin scope: 'testcase/alu/add_call:M_input_a_df_q_15_1'
+     begin scope: 'testcase/alu/add_call/a[15]_b[15]_div_3:M_input_a_df_q_15_1'
+     LUT5:I0->O            1   0.254   0.682  o<13>31_SW6 (N166)
+     LUT6:I5->O            6   0.254   1.306  o<13>31 (o<13>)
+     LUT6:I1->O            3   0.254   1.042  Mmux_a[0]_GND_5_o_MUX_244_o161 (a[15]_GND_5_o_MUX_229_o)
+     LUT5:I1->O            0   0.254   0.000  Mcompar_o<12>_lutdi1 (Mcompar_o<12>_lutdi1)
+     MUXCY:DI->O           1   0.181   0.000  Mcompar_o<12>_cy<1> (Mcompar_o<12>_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<12>_cy<2> (Mcompar_o<12>_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<12>_cy<3> (Mcompar_o<12>_cy<3>)
+     MUXCY:CI->O          10   0.235   1.008  Mcompar_o<12>_cy<4> (o<12>)
+     LUT5:I4->O            7   0.254   1.138  Mmux_a[0]_GND_5_o_MUX_300_o141 (a[13]_GND_5_o_MUX_287_o)
+     LUT4:I1->O            1   0.235   0.000  Mcompar_o<11>_lut<1> (Mcompar_o<11>_lut<1>)
+     MUXCY:S->O            1   0.215   0.000  Mcompar_o<11>_cy<1> (Mcompar_o<11>_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<11>_cy<2> (Mcompar_o<11>_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<11>_cy<3> (Mcompar_o<11>_cy<3>)
+     MUXCY:CI->O          16   0.235   1.182  Mcompar_o<11>_cy<4> (o<11>)
+     LUT6:I5->O            8   0.254   1.220  Mmux_a[0]_GND_5_o_MUX_354_o151 (a[14]_GND_5_o_MUX_340_o)
+     LUT5:I1->O            1   0.254   0.000  Mcompar_o<10>_lut<2> (Mcompar_o<10>_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  Mcompar_o<10>_cy<2> (Mcompar_o<10>_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<10>_cy<3> (Mcompar_o<10>_cy<3>)
+     MUXCY:CI->O          28   0.235   1.453  Mcompar_o<10>_cy<4> (o<10>)
+     LUT3:I2->O            3   0.254   1.042  Mmux_a[0]_GND_5_o_MUX_406_o111 (a[10]_GND_5_o_MUX_396_o)
+     LUT4:I0->O            0   0.254   0.000  Mcompar_o<9>_lutdi (Mcompar_o<9>_lutdi)
+     MUXCY:DI->O           1   0.181   0.000  Mcompar_o<9>_cy<0> (Mcompar_o<9>_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<9>_cy<1> (Mcompar_o<9>_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<9>_cy<2> (Mcompar_o<9>_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<9>_cy<3> (Mcompar_o<9>_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<9>_cy<4> (Mcompar_o<9>_cy<4>)
+     MUXCY:CI->O          29   0.235   1.470  Mcompar_o<9>_cy<5> (o<9>)
+     LUT5:I4->O            5   0.254   1.117  Mmux_a[0]_GND_5_o_MUX_456_o121 (a[11]_GND_5_o_MUX_445_o)
+     LUT4:I0->O            0   0.254   0.000  Mcompar_o<8>_lutdi1 (Mcompar_o<8>_lutdi1)
+     MUXCY:DI->O           1   0.181   0.000  Mcompar_o<8>_cy<1> (Mcompar_o<8>_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<8>_cy<2> (Mcompar_o<8>_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<8>_cy<3> (Mcompar_o<8>_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<8>_cy<4> (Mcompar_o<8>_cy<4>)
+     MUXCY:CI->O          34   0.235   1.553  Mcompar_o<8>_cy<5> (o<8>)
+     LUT5:I4->O            5   0.254   1.117  Mmux_a[0]_GND_5_o_MUX_504_o151 (a[14]_GND_5_o_MUX_490_o)
+     LUT4:I0->O            0   0.254   0.000  Mcompar_o<7>_lutdi3 (Mcompar_o<7>_lutdi3)
+     MUXCY:DI->O           1   0.181   0.000  Mcompar_o<7>_cy<3> (Mcompar_o<7>_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<7>_cy<4> (Mcompar_o<7>_cy<4>)
+     MUXCY:CI->O          34   0.235   1.553  Mcompar_o<7>_cy<5> (o<7>)
+     LUT5:I4->O            7   0.254   1.186  Mmux_a[0]_GND_5_o_MUX_550_o141 (a[13]_GND_5_o_MUX_537_o)
+     LUT4:I0->O            0   0.254   0.000  Mcompar_o<6>_lutdi3 (Mcompar_o<6>_lutdi3)
+     MUXCY:DI->O           1   0.181   0.000  Mcompar_o<6>_cy<3> (Mcompar_o<6>_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<6>_cy<4> (Mcompar_o<6>_cy<4>)
+     MUXCY:CI->O          44   0.235   1.721  Mcompar_o<6>_cy<5> (o<6>)
+     LUT3:I2->O            5   0.254   1.117  Mmux_a[0]_GND_5_o_MUX_594_o131 (a[12]_GND_5_o_MUX_582_o)
+     LUT4:I0->O            0   0.254   0.000  Mcompar_o<5>_lutdi3 (Mcompar_o<5>_lutdi3)
+     MUXCY:DI->O           1   0.181   0.000  Mcompar_o<5>_cy<3> (Mcompar_o<5>_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<5>_cy<4> (Mcompar_o<5>_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<5>_cy<5> (Mcompar_o<5>_cy<5>)
+     MUXCY:CI->O          42   0.235   1.687  Mcompar_o<5>_cy<6> (o<5>)
+     LUT5:I4->O            7   0.254   1.186  Mmux_a[0]_GND_5_o_MUX_636_o121 (a[11]_GND_5_o_MUX_625_o)
+     LUT4:I0->O            0   0.254   0.000  Mcompar_o<4>_lutdi3 (Mcompar_o<4>_lutdi3)
+     MUXCY:DI->O           1   0.181   0.000  Mcompar_o<4>_cy<3> (Mcompar_o<4>_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<4>_cy<4> (Mcompar_o<4>_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<4>_cy<5> (Mcompar_o<4>_cy<5>)
+     MUXCY:CI->O          54   0.023   1.852  Mcompar_o<4>_cy<6> (o<4>)
+     LUT3:I2->O            6   0.254   1.152  Mmux_a[0]_GND_5_o_MUX_676_o116 (a[10]_GND_5_o_MUX_666_o)
+     LUT4:I0->O            0   0.254   0.000  Mcompar_o<3>_lutdi3 (Mcompar_o<3>_lutdi3)
+     MUXCY:DI->O           1   0.181   0.000  Mcompar_o<3>_cy<3> (Mcompar_o<3>_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<3>_cy<4> (Mcompar_o<3>_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<3>_cy<5> (Mcompar_o<3>_cy<5>)
+     MUXCY:CI->O          60   0.023   1.899  Mcompar_o<3>_cy<6> (o<3>)
+     LUT3:I2->O            3   0.254   1.042  Mmux_a[0]_GND_5_o_MUX_714_o191 (a[3]_GND_5_o_MUX_711_o)
+     LUT4:I0->O            0   0.254   0.000  Mcompar_o<2>_lutdi (Mcompar_o<2>_lutdi)
+     MUXCY:DI->O           1   0.181   0.000  Mcompar_o<2>_cy<0> (Mcompar_o<2>_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<2>_cy<1> (Mcompar_o<2>_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<2>_cy<2> (Mcompar_o<2>_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<2>_cy<3> (Mcompar_o<2>_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<2>_cy<4> (Mcompar_o<2>_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<2>_cy<5> (Mcompar_o<2>_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<2>_cy<6> (Mcompar_o<2>_cy<6>)
+     MUXCY:CI->O          45   0.023   1.737  Mcompar_o<2>_cy<7> (o<2>)
+     LUT5:I4->O            4   0.254   1.080  Mmux_a[0]_GND_5_o_MUX_750_o1141 (a[8]_GND_5_o_MUX_742_o)
+     LUT4:I0->O            0   0.254   0.000  Mcompar_o<1>_lutdi3 (Mcompar_o<1>_lutdi3)
+     MUXCY:DI->O           1   0.181   0.000  Mcompar_o<1>_cy<3> (Mcompar_o<1>_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<1>_cy<4> (Mcompar_o<1>_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<1>_cy<5> (Mcompar_o<1>_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<1>_cy<6> (Mcompar_o<1>_cy<6>)
+     MUXCY:CI->O          23   0.235   1.358  Mcompar_o<1>_cy<7> (o<1>)
+     LUT3:I2->O            2   0.254   1.002  Mmux_n095081 (n0950<1>)
+     LUT4:I0->O            0   0.254   0.000  Mcompar_o<0>_lutdi (Mcompar_o<0>_lutdi)
+     MUXCY:DI->O           1   0.181   0.000  Mcompar_o<0>_cy<0> (Mcompar_o<0>_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<0>_cy<1> (Mcompar_o<0>_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<0>_cy<2> (Mcompar_o<0>_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<0>_cy<3> (Mcompar_o<0>_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<0>_cy<4> (Mcompar_o<0>_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<0>_cy<5> (Mcompar_o<0>_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<0>_cy<6> (Mcompar_o<0>_cy<6>)
+     MUXCY:CI->O           3   0.235   0.994  Mcompar_o<0>_cy<7> (o<0>)
+     end scope: 'testcase/alu/add_call/a[15]_b[15]_div_3:o<0>'
+     end scope: 'testcase/alu/add_call:a[15]_b[15]_div_3_OUT<0>'
+     end scope: 'testcase/alu:a[15]_b[15]_div_3_OUT<0>'
+     LUT6:I3->O            1   0.235   0.682  M_state_q_M_display_v_d<3>11 (M_state_q_M_display_v_d<3>10)
+     LUT4:I3->O            1   0.254   0.000  M_state_q_M_display_v_d<3>12 (M_display_v_d<3>)
+     FD:D                      0.074          M_display_v_q_2
+    ----------------------------------------
+    Total                     51.529ns (13.838ns logic, 37.691ns route)
+                                       (26.9% logic, 73.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 150 / 120
+-------------------------------------------------------------------------
+Offset:              5.804ns (Levels of Logic = 3)
+  Source:            io_dip<22> (PAD)
+  Destination:       M_display_value_q_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: io_dip<22> to M_display_value_q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            46   1.328   1.862  io_dip_22_IBUF (io_dip_22_IBUF)
+     LUT2:I0->O            1   0.250   0.682  _n0222_inv_SW0 (N8)
+     LUT6:I5->O           14   0.254   1.126  _n0222_inv (_n0222_inv)
+     FDE:CE                    0.302          M_display_value_q_0
+    ----------------------------------------
+    Total                      5.804ns (2.134ns logic, 3.670ns route)
+                                       (36.8% logic, 63.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 64243441856053510000 / 42
+-------------------------------------------------------------------------
+Offset:              57.641ns (Levels of Logic = 116)
+  Source:            M_input_b_st_q_14_1 (FF)
+  Destination:       io_led<0> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: M_input_b_st_q_14_1 to io_led<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.525   1.137  M_input_b_st_q_14_1 (M_input_b_st_q_14_1)
+     begin scope: 'alu:M_input_b_st_q_14_1'
+     begin scope: 'alu/add_call:M_input_b_st_q_14_1'
+     begin scope: 'alu/add_call/a[15]_b[15]_div_3:M_input_b_st_q_14_1'
+     LUT6:I0->O            6   0.254   0.984  o<15>221 (o<15>221)
+     LUT3:I1->O            1   0.250   0.910  o<15>223 (o<15>22)
+     LUT6:I3->O            8   0.235   0.944  o<13>31 (o<13>)
+     LUT3:I2->O            4   0.254   1.080  Mmux_a[0]_GND_5_o_MUX_244_o141 (a[13]_GND_5_o_MUX_231_o)
+     LUT4:I0->O            0   0.254   0.000  Mcompar_o<12>_lutdi (Mcompar_o<12>_lutdi)
+     MUXCY:DI->O           1   0.181   0.000  Mcompar_o<12>_cy<0> (Mcompar_o<12>_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<12>_cy<1> (Mcompar_o<12>_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<12>_cy<2> (Mcompar_o<12>_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<12>_cy<3> (Mcompar_o<12>_cy<3>)
+     MUXCY:CI->O           9   0.235   0.976  Mcompar_o<12>_cy<4> (o<12>)
+     LUT6:I5->O            8   0.254   1.172  Mmux_a[0]_GND_5_o_MUX_300_o141 (a[13]_GND_5_o_MUX_287_o)
+     LUT4:I1->O            1   0.235   0.000  Mcompar_o<11>_lut<1> (Mcompar_o<11>_lut<1>)
+     MUXCY:S->O            1   0.215   0.000  Mcompar_o<11>_cy<1> (Mcompar_o<11>_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<11>_cy<2> (Mcompar_o<11>_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<11>_cy<3> (Mcompar_o<11>_cy<3>)
+     MUXCY:CI->O          15   0.235   1.155  Mcompar_o<11>_cy<4> (o<11>)
+     LUT6:I5->O            6   0.254   1.152  Mmux_a[0]_GND_5_o_MUX_354_o151 (a[14]_GND_5_o_MUX_340_o)
+     LUT5:I1->O            1   0.254   0.000  Mcompar_o<10>_lut<2> (Mcompar_o<10>_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  Mcompar_o<10>_cy<2> (Mcompar_o<10>_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<10>_cy<3> (Mcompar_o<10>_cy<3>)
+     MUXCY:CI->O          24   0.235   1.380  Mcompar_o<10>_cy<4> (o<10>)
+     LUT3:I2->O            3   0.254   1.042  Mmux_a[0]_GND_5_o_MUX_406_o111 (a[10]_GND_5_o_MUX_396_o)
+     LUT4:I0->O            0   0.254   0.000  Mcompar_o<9>_lutdi (Mcompar_o<9>_lutdi)
+     MUXCY:DI->O           1   0.181   0.000  Mcompar_o<9>_cy<0> (Mcompar_o<9>_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<9>_cy<1> (Mcompar_o<9>_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<9>_cy<2> (Mcompar_o<9>_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<9>_cy<3> (Mcompar_o<9>_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<9>_cy<4> (Mcompar_o<9>_cy<4>)
+     MUXCY:CI->O          24   0.235   1.380  Mcompar_o<9>_cy<5> (o<9>)
+     LUT5:I4->O            5   0.254   1.117  Mmux_a[0]_GND_5_o_MUX_456_o121 (a[11]_GND_5_o_MUX_445_o)
+     LUT4:I0->O            0   0.254   0.000  Mcompar_o<8>_lutdi1 (Mcompar_o<8>_lutdi1)
+     MUXCY:DI->O           1   0.181   0.000  Mcompar_o<8>_cy<1> (Mcompar_o<8>_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<8>_cy<2> (Mcompar_o<8>_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<8>_cy<3> (Mcompar_o<8>_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<8>_cy<4> (Mcompar_o<8>_cy<4>)
+     MUXCY:CI->O          32   0.235   1.520  Mcompar_o<8>_cy<5> (o<8>)
+     LUT3:I2->O            3   0.254   1.042  Mmux_a[0]_GND_5_o_MUX_504_o1141 (a[8]_GND_5_o_MUX_496_o)
+     LUT4:I0->O            0   0.254   0.000  Mcompar_o<7>_lutdi (Mcompar_o<7>_lutdi)
+     MUXCY:DI->O           1   0.181   0.000  Mcompar_o<7>_cy<0> (Mcompar_o<7>_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<7>_cy<1> (Mcompar_o<7>_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<7>_cy<2> (Mcompar_o<7>_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<7>_cy<3> (Mcompar_o<7>_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<7>_cy<4> (Mcompar_o<7>_cy<4>)
+     MUXCY:CI->O          30   0.235   1.487  Mcompar_o<7>_cy<5> (o<7>)
+     LUT5:I4->O            5   0.254   1.117  Mmux_a[0]_GND_5_o_MUX_550_o1151 (a[9]_GND_5_o_MUX_541_o)
+     LUT4:I0->O            0   0.254   0.000  Mcompar_o<6>_lutdi1 (Mcompar_o<6>_lutdi1)
+     MUXCY:DI->O           1   0.181   0.000  Mcompar_o<6>_cy<1> (Mcompar_o<6>_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<6>_cy<2> (Mcompar_o<6>_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<6>_cy<3> (Mcompar_o<6>_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<6>_cy<4> (Mcompar_o<6>_cy<4>)
+     MUXCY:CI->O          40   0.235   1.654  Mcompar_o<6>_cy<5> (o<6>)
+     LUT3:I2->O            3   0.254   1.042  Mmux_a[0]_GND_5_o_MUX_594_o1121 (a[6]_GND_5_o_MUX_588_o)
+     LUT4:I0->O            0   0.254   0.000  Mcompar_o<5>_lutdi (Mcompar_o<5>_lutdi)
+     MUXCY:DI->O           1   0.181   0.000  Mcompar_o<5>_cy<0> (Mcompar_o<5>_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<5>_cy<1> (Mcompar_o<5>_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<5>_cy<2> (Mcompar_o<5>_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<5>_cy<3> (Mcompar_o<5>_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<5>_cy<4> (Mcompar_o<5>_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<5>_cy<5> (Mcompar_o<5>_cy<5>)
+     MUXCY:CI->O          36   0.235   1.587  Mcompar_o<5>_cy<6> (o<5>)
+     LUT5:I4->O            5   0.254   1.117  Mmux_a[0]_GND_5_o_MUX_636_o1131 (a[7]_GND_5_o_MUX_629_o)
+     LUT4:I0->O            0   0.254   0.000  Mcompar_o<4>_lutdi1 (Mcompar_o<4>_lutdi1)
+     MUXCY:DI->O           1   0.181   0.000  Mcompar_o<4>_cy<1> (Mcompar_o<4>_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<4>_cy<2> (Mcompar_o<4>_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<4>_cy<3> (Mcompar_o<4>_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<4>_cy<4> (Mcompar_o<4>_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<4>_cy<5> (Mcompar_o<4>_cy<5>)
+     MUXCY:CI->O          50   0.235   1.821  Mcompar_o<4>_cy<6> (o<4>)
+     LUT3:I2->O            4   0.254   1.080  Mmux_a[0]_GND_5_o_MUX_676_o1101 (a[4]_GND_5_o_MUX_672_o)
+     LUT4:I0->O            0   0.254   0.000  Mcompar_o<3>_lutdi (Mcompar_o<3>_lutdi)
+     MUXCY:DI->O           1   0.181   0.000  Mcompar_o<3>_cy<0> (Mcompar_o<3>_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<3>_cy<1> (Mcompar_o<3>_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<3>_cy<2> (Mcompar_o<3>_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<3>_cy<3> (Mcompar_o<3>_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<3>_cy<4> (Mcompar_o<3>_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<3>_cy<5> (Mcompar_o<3>_cy<5>)
+     MUXCY:CI->O          51   0.023   1.829  Mcompar_o<3>_cy<6> (o<3>)
+     LUT3:I2->O            3   0.254   1.042  Mmux_a[0]_GND_5_o_MUX_714_o191 (a[3]_GND_5_o_MUX_711_o)
+     LUT4:I0->O            0   0.254   0.000  Mcompar_o<2>_lutdi (Mcompar_o<2>_lutdi)
+     MUXCY:DI->O           1   0.181   0.000  Mcompar_o<2>_cy<0> (Mcompar_o<2>_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<2>_cy<1> (Mcompar_o<2>_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<2>_cy<2> (Mcompar_o<2>_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<2>_cy<3> (Mcompar_o<2>_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<2>_cy<4> (Mcompar_o<2>_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<2>_cy<5> (Mcompar_o<2>_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<2>_cy<6> (Mcompar_o<2>_cy<6>)
+     MUXCY:CI->O          43   0.023   1.704  Mcompar_o<2>_cy<7> (o<2>)
+     LUT3:I2->O            2   0.254   1.002  Mmux_a[0]_GND_5_o_MUX_750_o181 (a[2]_GND_5_o_MUX_748_o)
+     LUT4:I0->O            0   0.254   0.000  Mcompar_o<1>_lutdi (Mcompar_o<1>_lutdi)
+     MUXCY:DI->O           1   0.181   0.000  Mcompar_o<1>_cy<0> (Mcompar_o<1>_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<1>_cy<1> (Mcompar_o<1>_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<1>_cy<2> (Mcompar_o<1>_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<1>_cy<3> (Mcompar_o<1>_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<1>_cy<4> (Mcompar_o<1>_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<1>_cy<5> (Mcompar_o<1>_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<1>_cy<6> (Mcompar_o<1>_cy<6>)
+     MUXCY:CI->O          16   0.023   1.182  Mcompar_o<1>_cy<7> (o<1>)
+     LUT3:I2->O            2   0.254   1.002  Mmux_n095081 (n0950<1>)
+     LUT4:I0->O            0   0.254   0.000  Mcompar_o<0>_lutdi (Mcompar_o<0>_lutdi)
+     MUXCY:DI->O           1   0.181   0.000  Mcompar_o<0>_cy<0> (Mcompar_o<0>_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<0>_cy<1> (Mcompar_o<0>_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<0>_cy<2> (Mcompar_o<0>_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<0>_cy<3> (Mcompar_o<0>_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<0>_cy<4> (Mcompar_o<0>_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<0>_cy<5> (Mcompar_o<0>_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_o<0>_cy<6> (Mcompar_o<0>_cy<6>)
+     MUXCY:CI->O           2   0.235   0.834  Mcompar_o<0>_cy<7> (o<0>)
+     end scope: 'alu/add_call/a[15]_b[15]_div_3:o<0>'
+     LUT5:I3->O            2   0.250   0.726  Mmux_sum317 (sum_out<0>)
+     LUT6:I5->O            1   0.254   0.790  zvn<0>3 (M_alu_zvn<0>)
+     end scope: 'alu/add_call:zvn<0>'
+     end scope: 'alu:zvn<0>'
+     LUT5:I3->O            1   0.250   0.000  Mmux_io_led413_G (N197)
+     MUXF7:I1->O           1   0.175   0.958  Mmux_io_led413 (Mmux_io_led411)
+     LUT6:I2->O            1   0.254   0.681  Mmux_io_led414 (io_led_0_OBUF)
+     OBUF:I->O                 2.912          io_led_0_OBUF (io_led<0>)
+    ----------------------------------------
+    Total                     57.641ns (17.996ns logic, 39.645ns route)
+                                       (31.2% logic, 68.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 145 / 24
+-------------------------------------------------------------------------
+Delay:               12.899ns (Levels of Logic = 8)
+  Source:            io_dip<22> (PAD)
+  Destination:       io_led<14> (PAD)
+
+  Data Path: io_dip<22> to io_led<14>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            46   1.328   1.754  io_dip_22_IBUF (io_dip_22_IBUF)
+     LUT3:I2->O            1   0.254   1.137  Mmux_io_led193 (Mmux_io_led192)
+     LUT6:I0->O            1   0.254   0.958  Mmux_io_led194 (Mmux_io_led193)
+     LUT6:I2->O            1   0.254   0.682  Mmux_io_led197 (Mmux_io_led196)
+     LUT6:I5->O            1   0.254   1.137  Mmux_io_led198 (Mmux_io_led197)
+     LUT6:I0->O            1   0.254   0.790  Mmux_io_led199 (Mmux_io_led198)
+     LUT6:I4->O            1   0.250   0.681  Mmux_io_led1910 (io_led_14_OBUF)
+     OBUF:I->O                 2.912          io_led_14_OBUF (io_led<14>)
+    ----------------------------------------
+    Total                     12.899ns (5.760ns logic, 7.139ns route)
+                                       (44.7% logic, 55.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   51.529|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 24.00 secs
+Total CPU time to Xst completion: 23.74 secs
+ 
+--> 
+
+Total memory usage is 271144 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   23 (   0 filtered)
+Number of infos    :   29 (   0 filtered)
+

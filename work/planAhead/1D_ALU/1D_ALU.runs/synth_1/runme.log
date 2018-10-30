@@ -574,3 +574,112 @@ INFO:Xst:2261 - The FF/Latch <M_display_v_q_2> in Unit <testcase_8> is equivalen
 Optimizing unit <adder_10> ...
 
 Optimizing unit <div_16u_16u> ...
+INFO:Xst:2261 - The FF/Latch <M_display_value_q_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <M_display_value_q_7> 
+INFO:Xst:2261 - The FF/Latch <M_display_value_q_4> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <M_display_value_q_6> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 29.
+FlipFlop M_input_a_st_q_13 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_a_st_q_13 connected to a primary input has been replicated
+FlipFlop M_input_a_st_q_15 has been replicated 2 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_a_st_q_15 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_0 has been replicated 2 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_0 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_1 has been replicated 2 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_1 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_10 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_10 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_11 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_11 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_12 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_12 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_13 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_13 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_14 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_14 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_15 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_15 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_2 has been replicated 2 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_2 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_3 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_3 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_4 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_4 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_5 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_5 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_6 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_6 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_7 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_7 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_8 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_8 connected to a primary input has been replicated
+FlipFlop M_input_b_st_q_9 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop M_input_b_st_q_9 connected to a primary input has been replicated
+FlipFlop testcase/M_input_a_df_q_15 has been replicated 2 time(s)
+FlipFlop testcase/M_input_a_df_q_7 has been replicated 2 time(s)
+FlipFlop testcase/M_input_b_df_q_0 has been replicated 2 time(s)
+FlipFlop testcase/M_input_b_df_q_1 has been replicated 2 time(s)
+FlipFlop testcase/M_input_b_df_q_2 has been replicated 2 time(s)
+FlipFlop testcase/M_input_b_df_q_3 has been replicated 2 time(s)
+FlipFlop testcase/M_input_b_df_q_4 has been replicated 3 time(s)
+FlipFlop testcase/M_input_b_df_q_5 has been replicated 3 time(s)
+FlipFlop testcase/M_input_b_df_q_6 has been replicated 2 time(s)
+FlipFlop testcase/M_input_b_df_q_7 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <mojo_top_0> :
+	Found 2-bit shift register for signal <button_condd/sync/M_pipe_q_1>.
+	Found 2-bit shift register for signal <button_condd2/sync/M_pipe_q_1>.
+INFO:Xst:741 - HDL ADVISOR - A 4-bit shift register was found for signal <reset_cond/M_stage_q_3> and currently occupies 4 logic cells (2 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+Unit <mojo_top_0> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 224
+ Flip-Flops                                            : 224
+# Shift Registers                                      : 2
+ 2-bit shift register                                  : 2
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 230   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 51.529ns (Maximum Frequency: 19.407MHz)
+   Minimum input arrival time before clock: 5.804ns
+   Maximum output required time after clock: 57.641ns
+   Maximum combinational path delay: 12.899ns
+
+=========================================================================

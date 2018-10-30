@@ -85,7 +85,7 @@ module testcase_8 (
         M_button_d = button_alu;
         M_input_a_df_d = 5'h16;
         M_input_b_df_d = 6'h23;
-        if (M_alu_alu == 7'h4d) begin
+        if (M_alu_alu == 6'h39) begin
           M_display_v_d = 16'h1aaf;
         end else begin
           M_display_v_d = 16'h1aa3;
@@ -97,9 +97,9 @@ module testcase_8 (
       ADDNEG_state: begin
         M_button_d = button_alu;
         M_alufn_df_d = 6'h00;
-        M_input_a_df_d = $signed(7'h5e);
-        M_input_b_df_d = $signed(6'h2b);
-        if (M_alu_alu == $signed(7'h49)) begin
+        M_input_a_df_d = 6'h1d;
+        M_input_b_df_d = 5'h0a;
+        if (M_alu_alu == 6'h08) begin
           M_display_v_d = 16'h2aaf;
         end else begin
           M_display_v_d = 16'h2aa3;
@@ -113,7 +113,7 @@ module testcase_8 (
         M_alufn_df_d = 6'h00;
         M_input_a_df_d = 15'h7fff;
         M_input_b_df_d = 1'h1;
-        if (M_alu_alu == 16'h8000) begin
+        if (M_alu_alu == $signed(2'h3)) begin
           M_display_v_d = 16'h3aaf;
         end else begin
           M_display_v_d = 16'h3aa3;
@@ -210,7 +210,7 @@ module testcase_8 (
         M_alufn_df_d = 6'h35;
         M_input_a_df_d = 2'h2;
         M_input_b_df_d = 4'h8;
-        if (M_alu_alu == 1'h0) begin
+        if (M_alu_alu == 1'h1) begin
           M_display_v_d = 16'h10af;
         end else begin
           M_display_v_d = 16'h10a3;

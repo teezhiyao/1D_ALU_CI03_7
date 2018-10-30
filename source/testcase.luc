@@ -40,7 +40,7 @@ always {
             button.d = button_alu;
             input_a_df.d = 22;
             input_b_df.d = 35;
-            if (alu.alu == 77){
+            if (alu.alu == 57){
                 //indicate truth
               display_v.d = {4d1,4d10,4d10,4d15};}
             else{display_v.d = {4d1,4d10,4d10, 4d3};}
@@ -51,9 +51,9 @@ always {
         state.ADDNEG:
             button.d = button_alu;
             alufn_df.d = 6b000000;
-            input_a_df.d = -34;
-            input_b_df.d = -21;
-            if (alu.alu == -55){
+            input_a_df.d = ~34;
+            input_b_df.d = ~21;
+            if (alu.alu == ~55){
                 display_v.d = {4d2,4d10,4d10,4d15};
             }
             else{display_v.d = {4d2,4d10,4d10, 4d3};}
@@ -66,7 +66,7 @@ always {
             alufn_df.d = 6b0;
             input_a_df.d = 32767;
             input_b_df.d = 1;
-            if (alu.alu == 32768){
+            if (alu.alu == -1){
                 display_v.d = {4d3,4d10,4d10,4d15};
             }
             else{display_v.d = {4d3,4d10,4d10, 4d3};}
@@ -159,7 +159,7 @@ always {
             alufn_df.d = 6h35;
             input_a_df.d = 2;
             input_b_df.d = 8;
-            if (alu.alu == 0){
+            if (alu.alu == 1){
                 display_v.d = {4d1,4d0,4d10,4d15};
             }
             else{display_v.d = {4d1,4d0,4d10,4d3};}
