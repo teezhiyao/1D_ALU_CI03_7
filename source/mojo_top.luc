@@ -125,7 +125,7 @@ module mojo_top (
         else if (io_dip[21]) {
         io_led = input_b_st.q;}
         else{
-        display_value.d = digits.digits[3:0];
+        //display_value.d = digits.digits[3:0];
         io_led[17:0] = alu.alu;        
         if((input_a_st.q) < input_b_st.q){ check_input.d[3] = 1;}
         }

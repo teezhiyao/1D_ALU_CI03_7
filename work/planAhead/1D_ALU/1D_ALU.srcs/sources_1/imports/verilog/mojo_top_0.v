@@ -185,7 +185,6 @@ module mojo_top_0 (
             if (io_dip[21+0-:1]) begin
               io_led = M_input_b_st_q;
             end else begin
-              M_display_value_d = M_digits_digits[0+15-:16];
               io_led[0+17-:18] = M_alu_alu;
               if ((M_input_a_st_q) < M_input_b_st_q) begin
                 M_check_input_d[3+0-:1] = 1'h1;

@@ -1,0 +1,45 @@
+module testcase (
+    input clk, // clock
+    input rst, // reset
+    input button, // switch between auto & manual
+    input trigger // toggle to next state
+
+)
+{
+    alu alu;
+  
+    .clk(clk){
+
+        .rst(rst){
+            fsm state = {START,ADDPOS,ADDNEG,OVERFLOW,SUBPOS,SUBNEG,UNDERFLOW,MULT,DIV,CMPLEV,CMPLEI,CMPLTV,CMPLTI,CMPEQ,XOR,AND,OR,A,SHL,SHR,SRA}; // 22 states
+        }
+    dff alufn_df[6];
+    dff input_a_df[16];
+    dff input_b_df[16];
+    }
+
+always {
+    alu.alufn = alufn_df.q;
+    alu.a = input_a_df.q;
+    alu.b = input_b_df.q;    
+    case(state.q){
+        state.START:
+            alufn_df.d = 0;
+            input_a_df.d = 0;
+            input_b_df.d = 0;
+            if (button) {
+                state.d = state.ADDPOS;
+            }
+        state.ADDPOS:
+            alufn_df.d = 6b0;
+            input_a_df.d = 22;
+            input_b_df.d = 35;
+            if (alu.alu == 77){
+                // indicate truth
+            }
+            if (button) {
+                state.d = state.ADDNEG;
+            }
+    }
+}
+}
