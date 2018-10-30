@@ -27,32 +27,33 @@ module mojo_top (
   .clk(clk) {
     
     reset_conditioner reset_cond;
+    //button conditioners to prevent the problem of bouncy buttons and edges
     button_conditioner button_condd;
     button_conditioner button_condd2;
+    //edge dectector that is used together with button conditioner to a           
     edge_detector edge (#RISE(1), #FALL(0));
     edge_detector edge2 (#RISE(1), #FALL(0));
 
         .rst(rst) {
       multi_seven_seg seg_display; // Connecting to multi_seven_seg which would help displaying on the segment.
  
-      fsm state = {ALUFN,INPUT_A,INPUT_B,AUTO,DISPLAY};
+      fsm state = {ALUFN,INPUT_A,INPUT_B,TESTER,DISPLAY};
       testcase testcase;
 
                 }
+    //Defining flip-flop/register that can store the value of different inputs/output
     dff display_value[4][4]; // Size of LED segments.
-    dff mode[5];
-    dff alufn_st[6];
-    dff input_a_st[16];
-    dff input_b_st[16];
-    dff send[1];
-    dff send2[1];
-    dff check_input[8];
+    dff alufn_st[6]; //alufn stored
+    dff input_a_st[16]; //a stored
+    dff input_b_st[16]; //b stored
+    dff send[1]; //for confirming/sending the value of alufn/a/b up into the mojo
+    dff send2[1]; //for sending button signal into testcase module
+    dff check_input[8]; 
   }
   
-  bin_to_dec digits (#DIGITS(4));
    always {
     
-    io_led = io_dip;
+    io_led = io_dip; //led on the io shield are all connected to the io dip
     reset_cond.in = ~rst_n; // Input raw inverted reset signal.
     rst = reset_cond.out;   // Conditioned reset.
     spi_miso = bz;          // Not using SPI.
@@ -62,7 +63,7 @@ module mojo_top (
     button_condd.in = io_button[3];
     button_condd2.in = io_button[0];
     
-    edge.in = button_condd.out;
+    edge.in = button_condd.out; 
     edge2.in = button_condd2.out;
     
     send.d = edge.out;
@@ -75,28 +76,39 @@ module mojo_top (
     alu.alufn = alufn_st.q;
     alu.a = input_a_st.q;
     alu.b = input_b_st.q;
-    digits.value = 0;
     led = check_input.q;
     testcase.button_alu = 0;
     case (state.q) { 
       state.ALUFN:
         check_input.d[7] = 0; 
-        if(io_dip[20]){state.d = state.AUTO;}
-      
-        mode.d = 0;
-        if (send.q) {
-          state.d = state.INPUT_A;
+        if(io_dip[20]){state.d = state.TESTER;} //dip switch 20 activates tester/auto mode
+          if (send.q) {
+          if(alufn_st.q != 6h00 | //Module will throw error 333 if ALUFN is not valid
+             alufn_st.q != 6h01 |
+             alufn_st.q != 6h02 |
+             alufn_st.q != 6h03 |
+             alufn_st.q != 6h18 |
+             alufn_st.q != 6h1E |
+             alufn_st.q != 6h16 |
+             alufn_st.q != 6h1A |
+             alufn_st.q != 6h20 |
+             alufn_st.q != 6h21 |
+             alufn_st.q != 6h23 |            
+             alufn_st.q != 6h33 |            
+             alufn_st.q != 6h37 ){
+          display_value.d = {4d3, 4d3, 4d3, 4d3};           
+            }
+          else{state.d = state.INPUT_A;
           alufn_st.d = io_dip[5:0];
           // TODO: Modify so that the led will not light up is ALUFN input is invalid.
-          check_input.d[7] = 1;
+          check_input.d[7] = 1;}
         } else {
           display_value.d = {4d11, 4d12, 4d13, 4d10};
-        } // Array represents the 4 digit to be displayed. 4d9 represents default value as 9 is not defined in digit_lut .
+        } 
 
       state.INPUT_A:
         check_input.d[6] = 0;  
-        mode.d = 1;
-        if(io_dip[20]){state.d = state.AUTO;}
+        if(io_dip[20]){state.d = state.TESTER;} //dip switch 20 activates tester/auto mode
         
         if (send.q) {
           state.d = state.INPUT_B;
@@ -104,12 +116,11 @@ module mojo_top (
           check_input.d[6] = 1;
         } else {
           display_value.d = {4d11, 4d10, 4d10, 4d10};
-        } // Array represents the 4 digit to be displayed. 4d9 represents default value as 9 is not defined in digit_lut.
+        } 
 
       state.INPUT_B: 
-        mode.d = 3;
         check_input.d[5] = 0;        
-        if(io_dip[20]){state.d = state.AUTO;}
+        if(io_dip[20]){state.d = state.TESTER;} //dip switch 20 activates tester/auto mode
         
         if (send.q) {
           state.d = state.DISPLAY;
@@ -117,35 +128,30 @@ module mojo_top (
           check_input.d[5] = 1;
         } else {
           display_value.d = {4d14, 4d10, 4d10, 4d10};
-        } // Array represents the 4 digit to be displayed. 4d9 represents default value as 9 is not defined in digit_lut.
+        } 
         
       state.DISPLAY:
-        mode.d = 4;
-        if(io_dip[20]){state.d = state.AUTO;}
-        // Set the LEDs on the right side to display z, v and n.
+        if(io_dip[20]){state.d = state.TESTER;} //dip switch 20 activates tester/auto mode
         
+        // Set the LEDs on the right side to display z, v and n.
         check_input.d[0] = alu.z_;
         check_input.d[1] = alu.v;
         check_input.d[2] = alu.n;
 
-        if (io_dip[23]) {io_led = alufn_st.q;}
-        else if (io_dip[22]) {
-        io_led = input_a_st.q;}
-        else if (io_dip[21]) {
-        io_led = input_b_st.q;}
+        if (io_dip[23]) {io_led = alufn_st.q;} //dip switch 23 allows access to stored alufn value
+        else if (io_dip[22]) {io_led = input_a_st.q;} //dip switch 22 allows access to stored a value
+        else if (io_dip[21]) {io_led = input_b_st.q;} //dip switch 21 allows access to stored b value
         else{
-        //display_value.d = digits.digits[3:0];
         io_led[17:0] = alu.alu;
         display_value.d = {4d0, 4d0,4d0, 4d0};          
-        if((input_a_st.q) < input_b_st.q){ check_input.d[3] = 1;}
         }
-        if (send.q){state.d = state.AUTO;}
-      state.AUTO:
-        mode.d = 5;
+        
+        state.TESTER:
         if(!io_dip[20]){state.d = state.ALUFN;}
                           
            display_value.d = testcase.display;
-           testcase.button_alu = send2.q;    
+           testcase.button_alu = send2.q;
+           check_input.d = testcase.check_input_alu;    
 
       }
     
