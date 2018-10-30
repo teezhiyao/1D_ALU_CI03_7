@@ -3,11 +3,13 @@
 module boole ( 
     
   // Inputs from ALU.
+    
   input alufn[4],
   input a[16],  
   input b[16], 
      
   // Output to ALU.
+    
   output boole_out[16]
     
 ) {
@@ -21,7 +23,8 @@ module boole (
       
       ab = (b[i] << 1) + a[i]; 
       
-      // a and b input selectors 
+      // a and b input selectors.
+      
       case(ab) { 
         
         b00:
@@ -34,7 +37,8 @@ module boole (
           boole_out[i]= alufn[3]; 
           
         default:
-          boole_out[i]=alufn[0];    
+          boole_out[i]=alufn[0];  
+            
       }
     } 
   }
