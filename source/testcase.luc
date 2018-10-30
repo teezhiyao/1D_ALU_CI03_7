@@ -38,9 +38,9 @@ always {
         state.ADDPOS:
             alufn_df.d = 6b000000;
             button.d = button_alu;
-            input_a_df.d = 22;
-            input_b_df.d = 35;
-            if (alu.alu == 77){
+            input_a_df.d = 16b0000000000010110;
+            input_b_df.d = 16b0000000000100011;
+            if (alu.alu == 16b0000000000111001){
                 //indicate truth
               display_v.d = {4d1,4d10,4d10,4d15};}
             else{display_v.d = {4d1,4d10,4d10, 4d3};}
@@ -51,9 +51,9 @@ always {
         state.ADDNEG:
             button.d = button_alu;
             alufn_df.d = 6b000000;
-            input_a_df.d = -34;
-            input_b_df.d = -21;
-            if (alu.alu == -55){
+            input_a_df.d = 16b1111111111011110;
+            input_b_df.d = 16b1111111111101011;
+            if (alu.alu == 16b1111111111001001){
                 display_v.d = {4d2,4d10,4d10,4d15};
             }
             else{display_v.d = {4d2,4d10,4d10, 4d3};}
@@ -64,9 +64,9 @@ always {
         state.OVERFLOW:
             button.d = button_alu;
             alufn_df.d = 6b0;
-            input_a_df.d = 32767;
-            input_b_df.d = 1;
-            if (alu.alu == 32768){
+            input_a_df.d = 16b0111111111111111;
+            input_b_df.d = 16b0000000000000001;
+            if (alu.alu == 16b1000000000000000){
                 display_v.d = {4d3,4d10,4d10,4d15};
             }
             else{display_v.d = {4d3,4d10,4d10, 4d3};}
@@ -78,9 +78,9 @@ always {
         state.SUBPOS:
             button.d = button_alu;
             alufn_df.d = 6h01;
-            input_a_df.d = 120;
-            input_b_df.d = 80;
-            if (alu.alu == 40){
+            input_a_df.d = 16b0000000001111000;
+            input_b_df.d = 16b0000000001010000;
+            if (alu.alu == 16b0000000000101000){
                 display_v.d = {4d4,4d10,4d10,4d15};
             }
             else{display_v.d = {4d4,4d10,4d10, 4d3};}
@@ -91,9 +91,9 @@ always {
         state.SUBNEG:
             button.d = button_alu;
             alufn_df.d = 6h01;
-            input_a_df.d = -32;
-            input_b_df.d = -23;
-            if (alu.alu == -9){
+            input_a_df.d = 16b1111111111100000;
+            input_b_df.d = 16b1111111111101001;
+            if (alu.alu == 16b1111111111110111){
                 display_v.d = {4d5,4d10,4d10,4d15};
             }
             else{display_v.d = {4d5,4d10,4d10,4d3};}
@@ -104,9 +104,9 @@ always {
         state.UNDERFLOW:
             button.d = button_alu;
             alufn_df.d = 6h01;
-            input_a_df.d = -32768;
-            input_b_df.d = 1;
-            if (alu.alu == -32769){
+            input_a_df.d = 16b1000000000000000;
+            input_b_df.d = 16b0000000000000001;
+            if (alu.alu == 16b0111111111111111){
                 display_v.d = {4d6,4d10,4d10,4d15};
             }
             else{display_v.d = {4d6,4d10,4d10,4d3};}
@@ -118,9 +118,9 @@ always {
         state.MULT:
             button.d = button_alu;
             alufn_df.d = 6h02;
-            input_a_df.d = 32;
-            input_b_df.d = 2;
-            if (alu.alu == 64){
+            input_a_df.d = 16b0000000000100000;
+            input_b_df.d = 16b0000000000000010;
+            if (alu.alu == 16b0000000001000000){
                 display_v.d = {4d7,4d10,4d10,4d15};
             }
             else{display_v.d = {4d7,4d10,4d10,4d15};}
@@ -132,9 +132,9 @@ always {
         state.DIV:
              button.d = button_alu;
            alufn_df.d = 6h03;
-            input_a_df.d = 32;
-            input_b_df.d = 8;
-            if (alu.alu == 4){
+            input_a_df.d = 16b0000000000100000;
+            input_b_df.d = 16b0000000000001000;
+            if (alu.alu == 16b0000000000000100){
                 display_v.d = {4d8,4d10,4d10,4d15};
             }
             else{display_v.d = {4d8,4d10,4d10,4d3};}
@@ -144,9 +144,9 @@ always {
         state.CMPLEV:
             button.d = button_alu;
             alufn_df.d = 6h37;
-            input_a_df.d = 8;
-            input_b_df.d = 8;
-            if (alu.alu == 1){
+            input_a_df.d = 16b0000000000001000;
+            input_b_df.d = 16b0000000000001000;
+            if (alu.alu == 16b0000000000000001){
                 display_v.d = {4d9,4d10,4d10,4d15};
             }
             else{display_v.d = {4d9,4d10,4d10,4d3};}
@@ -157,9 +157,9 @@ always {
 
         state.CMPLTV:
             alufn_df.d = 6h35;
-            input_a_df.d = 2;
-            input_b_df.d = 8;
-            if (alu.alu == 1){
+            input_a_df.d = 16b0000000000000010;
+            input_b_df.d = 16b0000000000001000;
+            if (alu.alu == 16b0000000000000001){
                 display_v.d = {4d1,4d0,4d10,4d15};
             }
             else{display_v.d = {4d1,4d0,4d10,4d3};}
@@ -170,9 +170,9 @@ always {
         
         state.CMPEQ:
             alufn_df.d = 6h33;            
-            input_a_df.d = 7;
-            input_b_df.d = 7;
-            if (alu.alu == 1){
+            input_a_df.d = 16b0000000000000111;
+            input_b_df.d = 16b0000000000000111;
+            if (alu.alu == 16b0000000000000001){
                 display_v.d = {4d1,4d1,4d10,4d15};
             }
             else{display_v.d = {4d1,4d1,4d10,4d3};}
@@ -183,9 +183,9 @@ always {
         
         state.XOR:
             alufn_df.d = 6h16;
-            input_a_df.d = 6;
-            input_b_df.d = 8;
-            if (alu.alu == 14){
+            input_a_df.d = 16b0000000000000110;
+            input_b_df.d = 16b0000000000001000;
+            if (alu.alu == 16b0000000000001110){
                 display_v.d = {4d1,4d2,4d10,4d15};
             }
             else{display_v.d = {4d1,4d2,4d10,4d3};}
@@ -195,9 +195,9 @@ always {
             }
         state.AND:
             alufn_df.d = 6h18;
-            input_a_df.d = 6;
-            input_b_df.d = 8;
-            if (alu.alu == 0){
+            input_a_df.d = 16b0000000000000110;
+            input_b_df.d = 16b0000000000001000;
+            if (alu.alu == 16b0000000000000000){
                 display_v.d = {4d1,4d3,4d10,4d15};
             }
             else{display_v.d = {4d1,4d3,4d10,4d3};}
@@ -207,9 +207,9 @@ always {
             }
         state.OR:
             alufn_df.d = 6h1E;
-            input_a_df.d = 6;
-            input_b_df.d = 8;
-            if (alu.alu == 14){
+            input_a_df.d = 16b0000000000000110;
+            input_b_df.d = 16b0000000000001000;
+            if (alu.alu == 16b0000000000001110){
                 display_v.d = {4d1,4d4,4d10,4d15};
             }
             else{display_v.d = {4d1,4d4,4d10,4d3};}
@@ -219,9 +219,9 @@ always {
             }
         state.SHL:
             alufn_df.d = 6h20;
-            input_a_df.d = 15;
-            input_b_df.d = 2;
-            if (alu.alu == 60){
+            input_a_df.d = 16b0000000000001111;
+            input_b_df.d = 16b0000000000000010;
+            if (alu.alu == 16b0000000000111100){
                 display_v.d = {4d1,4d5,4d10,4d15};
             }
             else{display_v.d = {4d1,4d5,4d10,4d3};}
@@ -231,9 +231,9 @@ always {
             }
         state.SHR:
             alufn_df.d = 6h21;
-            input_a_df.d = 64;
-            input_b_df.d = 3;
-            if (alu.alu == 8){
+            input_a_df.d = 16b0000000001000000;
+            input_b_df.d = 16b0000000000000011;
+            if (alu.alu == 16b0000000000001000){
                 display_v.d = {4d1,4d6,4d10,4d15};
             }
             else{display_v.d = {4d1,4d6,4d10,4d3};}
@@ -244,9 +244,9 @@ always {
         
         state.SRA:
             alufn_df.d = 6h23;
-            input_a_df.d = -8;
-            input_b_df.d = 4;
-            if (alu.alu == -1){
+            input_a_df.d = 16b1111111111111000;
+            input_b_df.d = 16b0000000000000100;
+            if (alu.alu == 16b1111111111111111){
                 display_v.d = {4d1,4d7,4d10,4d15};
             }
             else{display_v.d = {4d1,4d7,4d10,4d3};}
