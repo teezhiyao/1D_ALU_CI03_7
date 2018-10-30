@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="1D_ALU_help" board="Mojo V3" language="Lucid">
+<project name="1D_ALU" board="Mojo V3" language="Lucid">
   <files>
     <src>shift.luc</src>
     <src>decimal_counter.luc</src>
