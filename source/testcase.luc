@@ -18,7 +18,7 @@ module testcase (
 
     .clk(clk){
         .rst(rst){
-            fsm state = {START,ADDPOS,ADDNEG,OVERFLOW,SUBPOS,SUBNEG,UNDERFLOW,MULT,DIV,CMPLEV,CMPLEI,CMPLTV,CMPLTI,CMPEQ,XOR,AND,OR,A,B,SHL,SHR,SRA}; // 22 states
+            fsm state = {START,ADDPOS,ADDNEG,OVERFLOW,SUBPOS,SUBNEG,UNDERFLOW,MULT,DIV,CMPLEV,CMPLEI,CMPLTV,CMPLTI,CMPEQ,XOR,AND,OR,A,SHL,SHR,SRA}; // 22 states
             alu.alufn = alufn;
             alu.a = a;
             alu.b = b;
@@ -102,7 +102,7 @@ always {
             alufn = 6h01;
             out = -32769;
             a = −32768;
-            b = -1;
+            b = 1;
             if (alu.alu == out){
                 // indicate truth
             }
@@ -160,7 +160,7 @@ always {
 
         state.CMPLTV:
             alufn = 6h35;
-            out = 0;
+            out = 1;
             a = 2;
             b = 8;
             if (alu.alu == out){
@@ -239,18 +239,6 @@ always {
                 // indicate truth
             }
             if (button) {
-                state.d = state.B;
-            }
-        
-        state.B:
-            alufn = 6h1A;
-            out = 8;
-            a = 6;
-            b = 8;
-            if (alu.alu == out){
-                // indicate truth
-            }
-            if (button) {
                 state.d = state.SHL;
             }
 
@@ -280,8 +268,8 @@ always {
         
         state.SRA:
             alufn = 6h23;
-            out = 252;
-            a = 192; // -64
+            out = -4;
+            a = -64;
             b = 4;
             if (alu.alu == out){
                 // indicate truth
