@@ -67,7 +67,8 @@ always {
             input_b_df.d = 16b1111111111101011;
             alu_out.d = alu.alu; check_input.d[2] = alu.n;
             check_input.d[1] = alu.v;
-            check_input.d[0] = alu.z_;            if (alu.alu == 16b1111111111001001){
+            check_input.d[0] = alu.z_; 
+            if (alu.alu == 16b1111111111001001){
                 display_v.d = {4d2,4d10,4d10,4d15};
             }
             else{display_v.d = {4d2,4d10,4d10, 4d3};}
@@ -82,7 +83,8 @@ always {
             input_b_df.d = $signed(16b0000000000000001);
             alu_out.d = alu.alu; check_input.d[2] = alu.n;
             check_input.d[1] = alu.v;
-            check_input.d[0] = alu.z_;            if (alu.alu == 16b1000000000000000){
+            check_input.d[0] = alu.z_;
+            if (alu.alu == 16b1000000000000000){
                 display_v.d = {4d3,4d10,4d10,4d15};
             }
             else{display_v.d = {4d3,4d10,4d10, 4d3};}
@@ -98,7 +100,8 @@ always {
             input_b_df.d = 16b0000000001010000;
             alu_out.d = alu.alu; check_input.d[2] = alu.n;
             check_input.d[1] = alu.v;
-            check_input.d[0] = alu.z_;            if (alu.alu == 16b0000000000101000){
+            check_input.d[0] = alu.z_;
+            if (alu.alu == 16b0000000000101000){
                 display_v.d = {4d4,4d10,4d10,4d15};
             }
             else{display_v.d = {4d4,4d10,4d10, 4d3};}
@@ -113,7 +116,8 @@ always {
             input_b_df.d = 16b1111111111101001;
             alu_out.d = alu.alu; check_input.d[2] = alu.n;
             check_input.d[1] = alu.v;
-            check_input.d[0] = alu.z_;            if (alu.alu == 16b1111111111110111){
+            check_input.d[0] = alu.z_;
+            if (alu.alu == 16b1111111111110111){
                 display_v.d = {4d5,4d10,4d10,4d15};
             }
             else{display_v.d = {4d5,4d10,4d10,4d3};}
@@ -129,7 +133,8 @@ always {
             input_b_df.d = 16b0000000000000010;
             alu_out.d = alu.alu; check_input.d[2] = alu.n;
             check_input.d[1] = alu.v;
-            check_input.d[0] = alu.z_;            if (alu.alu == 16b0000000001000000){
+            check_input.d[0] = alu.z_;
+            if (alu.alu == 16b0000000001000000){
                 display_v.d = {4d7,4d10,4d10,4d15};
             }
             else{display_v.d = {4d7,4d10,4d10,4d15};}
@@ -145,7 +150,8 @@ always {
             input_b_df.d = 16b0000000000001000;
             alu_out.d = alu.alu; check_input.d[2] = alu.n;
             check_input.d[1] = alu.v;
-            check_input.d[0] = alu.z_;            if (alu.alu == 16b0000000000000100){
+            check_input.d[0] = alu.z_;
+            if (alu.alu == 16b0000000000000100){
                 display_v.d = {4d8,4d10,4d10,4d15};
             }
             else{display_v.d = {4d8,4d10,4d10,4d3};}
@@ -159,7 +165,8 @@ always {
             input_b_df.d = 16b0000000000001000;
             alu_out.d = alu.alu; check_input.d[2] = alu.n;
             check_input.d[1] = alu.v;
-            check_input.d[0] = alu.z_;            if (alu.alu == 16b0000000000000001){
+            check_input.d[0] = alu.z_;
+            if (alu.alu == 16b0000000000000001){
                 display_v.d = {4d9,4d10,4d10,4d15};
             }
             else{display_v.d = {4d9,4d10,4d10,4d3};}
@@ -174,7 +181,8 @@ always {
             input_b_df.d = 16b0000000000001000;
             alu_out.d = alu.alu; check_input.d[2] = alu.n;
             check_input.d[1] = alu.v;
-            check_input.d[0] = alu.z_;            if (alu.alu == 16b0000000000000001){
+            check_input.d[0] = alu.z_;
+            if (alu.alu == 16b0000000000000001){
                 display_v.d = {4d1,4d0,4d10,4d15};
             }
             else{display_v.d = {4d1,4d0,4d10,4d3};}
@@ -189,7 +197,8 @@ always {
             input_b_df.d = 16b0000000000000111;
             alu_out.d = alu.alu; check_input.d[2] = alu.n;
             check_input.d[1] = alu.v;
-            check_input.d[0] = alu.z_;            if (alu.alu == 16b0000000000000001){
+            check_input.d[0] = alu.z_;
+            if (alu.alu == 16b0000000000000001){
                 display_v.d = {4d1,4d1,4d10,4d15};
             }
             else{display_v.d = {4d1,4d1,4d10,4d3};}
@@ -204,7 +213,8 @@ always {
             input_b_df.d = 16b0000000000001000;
             alu_out.d = alu.alu; check_input.d[2] = alu.n;
             check_input.d[1] = alu.v;
-            check_input.d[0] = alu.z_;            if (alu.alu == 16b0000000000001110){
+            check_input.d[0] = alu.z_;
+            if (alu.alu == 16b0000000000001110){
                 display_v.d = {4d1,4d2,4d10,4d15};
             }
             else{display_v.d = {4d1,4d2,4d10,4d3};}
@@ -218,7 +228,8 @@ always {
             input_b_df.d = 16b0000000000001000;
             alu_out.d = alu.alu; check_input.d[2] = alu.n;
             check_input.d[1] = alu.v;
-            check_input.d[0] = alu.z_;            if (alu.alu == 16b0000000000000000){
+            check_input.d[0] = alu.z_;
+            if (alu.alu == 16b0000000000000000){
                 display_v.d = {4d1,4d3,4d10,4d15};
             }
             else{display_v.d = {4d1,4d3,4d10,4d3};}
@@ -232,7 +243,8 @@ always {
             input_b_df.d = 16b0000000000001000;
             alu_out.d = alu.alu; check_input.d[2] = alu.n;
             check_input.d[1] = alu.v;
-            check_input.d[0] = alu.z_;            if (alu.alu == 16b0000000000001110){
+            check_input.d[0] = alu.z_;
+            if (alu.alu == 16b0000000000001110){
                 display_v.d = {4d1,4d4,4d10,4d15};
             }
             else{display_v.d = {4d1,4d4,4d10,4d3};}
@@ -246,7 +258,8 @@ always {
             input_b_df.d = 16b0000000000000010;
             alu_out.d = alu.alu; check_input.d[2] = alu.n;
             check_input.d[1] = alu.v;
-            check_input.d[0] = alu.z_;            if (alu.alu == 16b0000000000111100){
+            check_input.d[0] = alu.z_;
+            if (alu.alu == 16b0000000000111100){
                 display_v.d = {4d1,4d5,4d10,4d15};
             }
             else{display_v.d = {4d1,4d5,4d10,4d3};}
@@ -260,7 +273,8 @@ always {
             input_b_df.d = 16b0000000000000011;
             alu_out.d = alu.alu; check_input.d[2] = alu.n;
             check_input.d[1] = alu.v;
-            check_input.d[0] = alu.z_;            if (alu.alu == 16b0000000000001000){
+            check_input.d[0] = alu.z_;
+            if (alu.alu == 16b0000000000001000){
                 display_v.d = {4d1,4d6,4d10,4d15};
             }
             else{display_v.d = {4d1,4d6,4d10,4d3};}
@@ -275,7 +289,8 @@ always {
             input_b_df.d = 16b0000000000000100;
             alu_out.d = alu.alu; check_input.d[2] = alu.n;
             check_input.d[1] = alu.v;
-            check_input.d[0] = alu.z_;            if (alu.alu == 16b1111111111111111){
+            check_input.d[0] = alu.z_;
+            if (alu.alu == 16b1111111111111111){
                 display_v.d = {4d1,4d7,4d10,4d15};
             }
             else{display_v.d = {4d1,4d7,4d10,4d3};}
