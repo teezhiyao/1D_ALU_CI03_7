@@ -119,21 +119,6 @@ always {
             else{display_v.d = {4d5,4d10,4d10,4d3};}
         
             if (button.q) {
-                state.d = state.UNDERFLOW;
-            }
-        state.UNDERFLOW:
-            button.d = button_alu;
-            alufn_df.d = 6h01;
-            input_a_df.d = 16b1000000000000000;
-            input_b_df.d = 16b0000000000000001;
-            alu_out.d = alu.alu; check_input.d[2] = alu.n;
-            check_input.d[1] = alu.v;
-            check_input.d[0] = alu.z_;            if (alu.alu == 16b0111111111111111){
-                display_v.d = {4d6,4d10,4d10,4d15};
-            }
-            else{display_v.d = {4d6,4d10,4d10,4d3};}
-        
-            if (button.q) {
                 state.d = state.MULT;
             }
         
