@@ -11,7 +11,7 @@ module testcase (
       .clk(clk){
 
         .rst(rst){
-            fsm state = {START,ADDPOS,ADDNEG,OVERFLOW,SUBPOS,SUBNEG,UNDERFLOW,MULT,DIV,CMPLEV,CMPLTV,CMPEQ,XOR,AND,OR,SHL,SHR,SRA}; // 22 states
+            fsm state = {START,ADDPOS,ADDNEG,OVERFLOW,SUBPOS,SUBNEG,MULT,DIV,CMPLEV,CMPLTV,CMPEQ,XOR,AND,OR,SHL,SHR,SRA}; // 17 states
         }
     dff alufn_df[6];
     dff input_a_df[16];
