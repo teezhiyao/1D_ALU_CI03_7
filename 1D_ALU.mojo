@@ -3,6 +3,7 @@
   <files>
     <src>shift.luc</src>
     <src>adder.luc</src>
+    <src>testcase.luc</src>
     <src>digit_lut.luc</src>
     <src>multi_seven_seg.luc</src>
     <src top="true">mojo_top.luc</src>
