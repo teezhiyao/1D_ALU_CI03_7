@@ -8,9 +8,14 @@ module cmp (
 
   input a[16],  
   input b[16], 
+    
   // Output to ALU.
     
-  output cmp_out[16]
+  output cmp_out[16],
+  output z_,
+  output v,
+  output n
+   
     
 ) {
   
@@ -37,6 +42,9 @@ module cmp (
       }
     
     cmp_out[15:1] = 15b0;
+    z_ = adder.z_;
+    n = adder.n;
+    v = adder.v;
 
   }
   

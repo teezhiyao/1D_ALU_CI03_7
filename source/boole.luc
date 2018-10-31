@@ -3,11 +3,13 @@
 module boole ( 
     
   // Inputs from ALU.
+    
   input alufn[4],
   input a[16],  
   input b[16], 
      
   // Output to ALU.
+    
   output boole_out[16]
     
 ) {
@@ -36,6 +38,8 @@ module boole (
         default:
           boole_out[i]=alufn[0];    
       }
+      
     } 
+    
   }
 }

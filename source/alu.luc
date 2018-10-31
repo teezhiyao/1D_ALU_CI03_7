@@ -66,9 +66,9 @@ module alu (
          
     }
     
-    z_= add_call.z_;
-    v = add_call.v;
-    n = add_call.n;
+    z_= add_call.z_ | cmp_call.z_;
+    v = add_call.v | cmp_call.v;
+    n = add_call.n | cmp_call.n;
     
   }  
 }
