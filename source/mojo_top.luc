@@ -82,27 +82,12 @@ module mojo_top (
       state.ALUFN:
         check_input.d[7] = 0; 
         if(io_dip[20]){state.d = state.TESTER;} //dip switch 20 activates tester/auto mode
-          if (send.q) {
-          if(alufn_st.q != 6h00 | //Module will throw error 333 if ALUFN is not valid
-             alufn_st.q != 6h01 |
-             alufn_st.q != 6h02 |
-             alufn_st.q != 6h03 |
-             alufn_st.q != 6h18 |
-             alufn_st.q != 6h1E |
-             alufn_st.q != 6h16 |
-             alufn_st.q != 6h1A |
-             alufn_st.q != 6h20 |
-             alufn_st.q != 6h21 |
-             alufn_st.q != 6h23 |            
-             alufn_st.q != 6h33 |            
-             alufn_st.q != 6h37 ){
-          display_value.d = {4d3, 4d3, 4d3, 4d3};           
-            }
-          else{state.d = state.INPUT_A;
+          if (send.q ){                          
+          state.d = state.INPUT_A;
           alufn_st.d = io_dip[5:0];
           // TODO: Modify so that the led will not light up is ALUFN input is invalid.
           check_input.d[7] = 1;}
-        } else {
+        else {
           display_value.d = {4d11, 4d12, 4d13, 4d10};
         } 
 
