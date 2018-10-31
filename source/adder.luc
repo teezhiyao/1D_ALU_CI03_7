@@ -30,7 +30,7 @@ module adder (
       b10: // Multiply.
         sum = $signed(a) * $signed(b);
       b11: // Division.
-        sum = a/b;
+        sum = $signed(a) / $signed(b);
         
       default:
         sum = 9999;
