@@ -135,9 +135,9 @@ always {
             check_input.d[1] = alu.v;
             check_input.d[0] = alu.z_;
             if (alu.alu == 16b0000000001000000){
-                display_v.d = {4d7,4d10,4d10,4d15};
+                display_v.d = {4d6,4d10,4d10,4d15};
             }
-            else{display_v.d = {4d7,4d10,4d10,4d15};}
+            else{display_v.d = {4d6,4d10,4d10,4d15};}
         
             if (button.q) {
                 state.d = state.DIV;
@@ -152,9 +152,9 @@ always {
             check_input.d[1] = alu.v;
             check_input.d[0] = alu.z_;
             if (alu.alu == 16b0000000000000100){
-                display_v.d = {4d8,4d10,4d10,4d15};
+                display_v.d = {4d7,4d10,4d10,4d15};
             }
-            else{display_v.d = {4d8,4d10,4d10,4d3};}
+            else{display_v.d = {4d7,4d10,4d10,4d3};}
                     if (button.q) {
                 state.d = state.CMPLEV;
             }
@@ -167,9 +167,9 @@ always {
             check_input.d[1] = alu.v;
             check_input.d[0] = alu.z_;
             if (alu.alu == 16b0000000000000001){
-                display_v.d = {4d9,4d10,4d10,4d15};
+                display_v.d = {4d8,4d10,4d10,4d15};
             }
-            else{display_v.d = {4d9,4d10,4d10,4d3};}
+            else{display_v.d = {4d8,4d10,4d10,4d3};}
 
                     if (button.q) {
                 state.d = state.CMPLTV;
@@ -183,9 +183,9 @@ always {
             check_input.d[1] = alu.v;
             check_input.d[0] = alu.z_;
             if (alu.alu == 16b0000000000000001){
-                display_v.d = {4d1,4d0,4d10,4d15};
+                display_v.d = {4d9,4d10,4d10,4d15};
             }
-            else{display_v.d = {4d1,4d0,4d10,4d3};}
+            else{display_v.d = {4d9,4d10,4d10,4d3};}
 
                     if (button.q) {
                 state.d = state.CMPEQ;
@@ -199,9 +199,9 @@ always {
             check_input.d[1] = alu.v;
             check_input.d[0] = alu.z_;
             if (alu.alu == 16b0000000000000001){
-                display_v.d = {4d1,4d1,4d10,4d15};
+                display_v.d = {4d1,4d0,4d10,4d15};
             }
-            else{display_v.d = {4d1,4d1,4d10,4d3};}
+            else{display_v.d = {4d1,4d0,4d10,4d3};}
         
             if (button.q) {
                 state.d = state.XOR;
@@ -215,9 +215,9 @@ always {
             check_input.d[1] = alu.v;
             check_input.d[0] = alu.z_;
             if (alu.alu == 16b0000000000001110){
-                display_v.d = {4d1,4d2,4d10,4d15};
+                display_v.d = {4d1,4d1,4d10,4d15};
             }
-            else{display_v.d = {4d1,4d2,4d10,4d3};}
+            else{display_v.d = {4d1,4d1,4d10,4d3};}
 
                     if (button.q) {
                 state.d = state.AND;
@@ -230,9 +230,9 @@ always {
             check_input.d[1] = alu.v;
             check_input.d[0] = alu.z_;
             if (alu.alu == 16b0000000000000000){
-                display_v.d = {4d1,4d3,4d10,4d15};
+                display_v.d = {4d1,4d2,4d10,4d15};
             }
-            else{display_v.d = {4d1,4d3,4d10,4d3};}
+            else{display_v.d = {4d1,4d2,4d10,4d3};}
         
             if (button.q) {
                 state.d = state.OR;
@@ -245,9 +245,9 @@ always {
             check_input.d[1] = alu.v;
             check_input.d[0] = alu.z_;
             if (alu.alu == 16b0000000000001110){
-                display_v.d = {4d1,4d4,4d10,4d15};
+                display_v.d = {4d1,4d3,4d10,4d15};
             }
-            else{display_v.d = {4d1,4d4,4d10,4d3};}
+            else{display_v.d = {4d1,4d3,4d10,4d3};}
         
             if (button.q) {
                 state.d = state.SHL;
@@ -260,9 +260,9 @@ always {
             check_input.d[1] = alu.v;
             check_input.d[0] = alu.z_;
             if (alu.alu == 16b0000000000111100){
-                display_v.d = {4d1,4d5,4d10,4d15};
+                display_v.d = {4d1,4d4,4d10,4d15};
             }
-            else{display_v.d = {4d1,4d5,4d10,4d3};}
+            else{display_v.d = {4d1,4d4,4d10,4d3};}
         
             if (button.q) {
                 state.d = state.SHR;
@@ -275,9 +275,9 @@ always {
             check_input.d[1] = alu.v;
             check_input.d[0] = alu.z_;
             if (alu.alu == 16b0000000000001000){
-                display_v.d = {4d1,4d6,4d10,4d15};
+                display_v.d = {4d1,4d5,4d10,4d15};
             }
-            else{display_v.d = {4d1,4d6,4d10,4d3};}
+            else{display_v.d = {4d1,4d5,4d10,4d3};}
         
             if (button.q) {
                 state.d = state.SRA;
@@ -291,9 +291,9 @@ always {
             check_input.d[1] = alu.v;
             check_input.d[0] = alu.z_;
             if (alu.alu == 16b1111111111111111){
-                display_v.d = {4d1,4d7,4d10,4d15};
+                display_v.d = {4d1,4d6,4d10,4d15};
             }
-            else{display_v.d = {4d1,4d7,4d10,4d3};}
+            else{display_v.d = {4d1,4d6,4d10,4d3};}
         
             if (button.q) {
                 state.d = state.START;
